@@ -1,0 +1,22 @@
+/* MIXINS
+============================================= */
+/* line 59, ../../sass/mixins/mixins.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 62, ../../sass/mixins/mixins.scss */
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+/* line 66, ../../sass/mixins/mixins.scss */
+#wrapper #container {
+  padding: 0 0 30px 0;
+}
+
+/* line 70, ../../sass/mixins/mixins.scss */
+#footer {
+  height: 30px;
+}

@@ -1,0 +1,15 @@
+@import 'vars-modules/variables.scss';
+
+// this loops through and crates images in css
+
+$socials : facebook googleplus twitter linkedin;
+
+@each $social in $socials {
+
+  .social-#{$social} {
+
+    background-image: url("/img/#{$social}.svg");
+
+  }
+
+}

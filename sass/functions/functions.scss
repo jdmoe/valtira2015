@@ -1,0 +1,29 @@
+/* FUNCTIONS
+============================================= */
+
+// adjust font-color based on background color
+
+@function set-font-color($background-color, $valwhte) {
+    $font-color: $valwhte;
+
+    @if lightness($background-color) > 50% {
+        $font-color: invert($valwhte);
+    }
+
+    @return $font-color;
+ }
+
+ @function sfc($background-color, $valwhte) {
+    @return set-font-color($background-color, $valwhte);
+ }
+
+// inverts top nav link colors to blac if bg is white
+
+ @function set-button-text-color($color) {
+    @if (lightness( $color ) > 40) {
+      @return #000000;
+    }
+    @else {
+      @return #FFFFFF;
+    }
+}

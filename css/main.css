@@ -1,0 +1,1067 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* FUNCTIONS
+============================================= */
+/* MIXINS
+============================================= */
+/* line 59, ../sass/mixins/mixins.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 62, ../sass/mixins/mixins.scss */
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+/* line 66, ../sass/mixins/mixins.scss */
+#wrapper #container {
+  padding: 0 0 30px 0;
+}
+
+/* line 70, ../sass/mixins/mixins.scss */
+#footer {
+  height: 30px;
+}
+
+/*  VARIABLES
+============================================= */
+/* CLEARFIX
+============================================= */
+/* line 23, ../sass/vars-modules/variables.scss */
+.left {
+  width: 100%;
+  background: orange;
+  height: 400px;
+}
+
+/* line 29, ../sass/vars-modules/variables.scss */
+.gray-bg {
+  padding: 30px;
+  background: #F1F4F9;
+}
+
+/* line 34, ../sass/vars-modules/variables.scss */
+.right {
+  width: 100%;
+  background: seagreen;
+  height: 400px;
+}
+
+/* line 44, ../sass/vars-modules/variables.scss */
+.down-button {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 90%;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 57, ../sass/vars-modules/variables.scss */
+.content-blocks > h2, .footer-blocks > h2 {
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+/* line 62, ../sass/vars-modules/variables.scss */
+.header-blocks > h2 {
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+/* line 67, ../sass/vars-modules/variables.scss */
+.purp-btn {
+  color: #422544;
+  border: 2px solid #422544 !important;
+}
+
+/* line 72, ../sass/vars-modules/variables.scss */
+.red-btn {
+  color: #e05350;
+  border: 2px solid #e05350 !important;
+}
+
+/* line 77, ../sass/vars-modules/variables.scss */
+.green-btn {
+  color: #5dcf5b;
+  border: 2px solid #5dcf5b !important;
+}
+
+/* line 82, ../sass/vars-modules/variables.scss */
+.blue-btn {
+  color: #526ef2;
+  border: 2px solid #526ef2 !important;
+}
+
+/* line 87, ../sass/vars-modules/variables.scss */
+.content-blocks {
+  padding: 80px 0;
+  background: transparent;
+}
+
+/* line 92, ../sass/vars-modules/variables.scss */
+.header-blocks {
+  padding: 30em 0;
+  background: transparent;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 99, ../sass/vars-modules/variables.scss */
+.footer-blocks {
+  padding: 50px 0;
+  background: transparent;
+}
+
+/* line 104, ../sass/vars-modules/variables.scss */
+.content-blocks > h3 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 35px;
+}
+
+/* line 111, ../sass/vars-modules/variables.scss */
+.header-blocks > h3 {
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 75px;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 120, ../sass/vars-modules/variables.scss */
+  .header-blocks > h3, .content-blocks > h3 {
+    font-size: 17px;
+    line-height: 33px;
+    font-weight: 200;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  /* line 127, ../sass/vars-modules/variables.scss */
+  .header-blocks > h2 {
+    font-size: 50px;
+    margin-top: 120px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+  }
+
+  /* line 133, ../sass/vars-modules/variables.scss */
+  .content-blocks > h2, .footer-blocks > h2 {
+    font-size: 25px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+  }
+}
+/* line 139, ../sass/vars-modules/variables.scss */
+.footer-social {
+  margin-top: 0;
+  height: 0px;
+  padding: 0;
+}
+
+/* line 145, ../sass/vars-modules/variables.scss */
+.footer-links li {
+  display: inline;
+  list-style-type: none;
+  padding: 8px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+}
+
+/* line 156, ../sass/vars-modules/variables.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn, .content-blocks > h2, .footer-blocks > h2, .header-blocks > h2 {
+  text-transform: uppercase;
+}
+
+/* line 160, ../sass/vars-modules/variables.scss */
+.grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
+  width: 75px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 167, ../sass/vars-modules/variables.scss */
+.wht-underline {
+  background: white;
+}
+
+/* line 169, ../sass/vars-modules/variables.scss */
+.grn-underline {
+  background: #5dcf5b;
+}
+
+/* line 171, ../sass/vars-modules/variables.scss */
+.blu-underline {
+  background: #526ef2;
+}
+
+/* line 173, ../sass/vars-modules/variables.scss */
+.red-underline {
+  background: #e05350;
+}
+
+/* line 175, ../sass/vars-modules/variables.scss */
+.prp-underline {
+  background: #422544;
+}
+
+/* line 177, ../sass/vars-modules/variables.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn {
+  padding-top: 12px !important;
+  curser: pointer;
+  font-size: 14px;
+  width: 200px;
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+  -webkit-box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+  box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+}
+
+/* line 191, ../sass/vars-modules/variables.scss */
+.dynamic-containers {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  background: #e05350;
+}
+
+/* line 198, ../sass/vars-modules/variables.scss */
+.threejs-container {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  background: #5dcf5b;
+}
+
+/* SCROLL UP BTN
+============================================= */
+/* line 208, ../sass/vars-modules/variables.scss */
+#cd-nav ul {
+  /* mobile first */
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  right: 5%;
+  bottom: 20px;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: 100% 100%;
+  transition: transform 0.3s, visibility 0s 0.3s;
+}
+
+/* line 224, ../sass/vars-modules/variables.scss */
+#cd-nav ul.is-visible {
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.3s, visibility 0s 0s;
+}
+
+/* line 230, ../sass/vars-modules/variables.scss */
+.cd-nav-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  width: 44px;
+  height: 44px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* BURGER ANIMATION
+============================================= */
+/* line 248, ../sass/vars-modules/variables.scss */
+.c-hamburger {
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  z-index: 9;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 56px;
+  font-size: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* line 267, ../sass/vars-modules/variables.scss */
+.c-hamburger:focus {
+  outline: none;
+}
+
+/* line 271, ../sass/vars-modules/variables.scss */
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: white;
+}
+
+/* line 282, ../sass/vars-modules/variables.scss */
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+}
+
+/* line 292, ../sass/vars-modules/variables.scss */
+.c-hamburger span::before {
+  top: -10px;
+}
+
+/* line 296, ../sass/vars-modules/variables.scss */
+.c-hamburger span::after {
+  bottom: -10px;
+}
+
+/* line 300, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx {
+  background-color: #422544;
+}
+
+/* line 304, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+/* line 309, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+/* line 314, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+/* line 318, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+/* line 323, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active {
+  background-color: #5dcf5b;
+}
+
+/* line 327, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+/* line 331, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+/* line 336, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* line 342, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+/*  VARIABLES
+============================================= */
+/* CLEARFIX
+============================================= */
+/* line 23, ../sass/vars-modules/variables.scss */
+.left {
+  width: 100%;
+  background: orange;
+  height: 400px;
+}
+
+/* line 29, ../sass/vars-modules/variables.scss */
+.gray-bg {
+  padding: 30px;
+  background: #F1F4F9;
+}
+
+/* line 34, ../sass/vars-modules/variables.scss */
+.right {
+  width: 100%;
+  background: seagreen;
+  height: 400px;
+}
+
+/* line 44, ../sass/vars-modules/variables.scss */
+.down-button {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 90%;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 57, ../sass/vars-modules/variables.scss */
+.content-blocks > h2, .footer-blocks > h2 {
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+/* line 62, ../sass/vars-modules/variables.scss */
+.header-blocks > h2 {
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+/* line 67, ../sass/vars-modules/variables.scss */
+.purp-btn {
+  color: #422544;
+  border: 2px solid #422544 !important;
+}
+
+/* line 72, ../sass/vars-modules/variables.scss */
+.red-btn {
+  color: #e05350;
+  border: 2px solid #e05350 !important;
+}
+
+/* line 77, ../sass/vars-modules/variables.scss */
+.green-btn {
+  color: #5dcf5b;
+  border: 2px solid #5dcf5b !important;
+}
+
+/* line 82, ../sass/vars-modules/variables.scss */
+.blue-btn {
+  color: #526ef2;
+  border: 2px solid #526ef2 !important;
+}
+
+/* line 87, ../sass/vars-modules/variables.scss */
+.content-blocks {
+  padding: 80px 0;
+  background: transparent;
+}
+
+/* line 92, ../sass/vars-modules/variables.scss */
+.header-blocks {
+  padding: 30em 0;
+  background: transparent;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 99, ../sass/vars-modules/variables.scss */
+.footer-blocks {
+  padding: 50px 0;
+  background: transparent;
+}
+
+/* line 104, ../sass/vars-modules/variables.scss */
+.content-blocks > h3 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 35px;
+}
+
+/* line 111, ../sass/vars-modules/variables.scss */
+.header-blocks > h3 {
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 75px;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 120, ../sass/vars-modules/variables.scss */
+  .header-blocks > h3, .content-blocks > h3 {
+    font-size: 17px;
+    line-height: 33px;
+    font-weight: 200;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  /* line 127, ../sass/vars-modules/variables.scss */
+  .header-blocks > h2 {
+    font-size: 50px;
+    margin-top: 120px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+  }
+
+  /* line 133, ../sass/vars-modules/variables.scss */
+  .content-blocks > h2, .footer-blocks > h2 {
+    font-size: 25px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+  }
+}
+/* line 139, ../sass/vars-modules/variables.scss */
+.footer-social {
+  margin-top: 0;
+  height: 0px;
+  padding: 0;
+}
+
+/* line 145, ../sass/vars-modules/variables.scss */
+.footer-links li {
+  display: inline;
+  list-style-type: none;
+  padding: 8px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+}
+
+/* line 156, ../sass/vars-modules/variables.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn, .content-blocks > h2, .footer-blocks > h2, .header-blocks > h2 {
+  text-transform: uppercase;
+}
+
+/* line 160, ../sass/vars-modules/variables.scss */
+.grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
+  width: 75px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 167, ../sass/vars-modules/variables.scss */
+.wht-underline {
+  background: white;
+}
+
+/* line 169, ../sass/vars-modules/variables.scss */
+.grn-underline {
+  background: #5dcf5b;
+}
+
+/* line 171, ../sass/vars-modules/variables.scss */
+.blu-underline {
+  background: #526ef2;
+}
+
+/* line 173, ../sass/vars-modules/variables.scss */
+.red-underline {
+  background: #e05350;
+}
+
+/* line 175, ../sass/vars-modules/variables.scss */
+.prp-underline {
+  background: #422544;
+}
+
+/* line 177, ../sass/vars-modules/variables.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn {
+  padding-top: 12px !important;
+  curser: pointer;
+  font-size: 14px;
+  width: 200px;
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+  -webkit-box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+  box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
+}
+
+/* line 191, ../sass/vars-modules/variables.scss */
+.dynamic-containers {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  background: #e05350;
+}
+
+/* line 198, ../sass/vars-modules/variables.scss */
+.threejs-container {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  background: #5dcf5b;
+}
+
+/* SCROLL UP BTN
+============================================= */
+/* line 208, ../sass/vars-modules/variables.scss */
+#cd-nav ul {
+  /* mobile first */
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  right: 5%;
+  bottom: 20px;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: 100% 100%;
+  transition: transform 0.3s, visibility 0s 0.3s;
+}
+
+/* line 224, ../sass/vars-modules/variables.scss */
+#cd-nav ul.is-visible {
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.3s, visibility 0s 0s;
+}
+
+/* line 230, ../sass/vars-modules/variables.scss */
+.cd-nav-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  width: 44px;
+  height: 44px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* BURGER ANIMATION
+============================================= */
+/* line 248, ../sass/vars-modules/variables.scss */
+.c-hamburger {
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  z-index: 9;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 56px;
+  font-size: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* line 267, ../sass/vars-modules/variables.scss */
+.c-hamburger:focus {
+  outline: none;
+}
+
+/* line 271, ../sass/vars-modules/variables.scss */
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: white;
+}
+
+/* line 282, ../sass/vars-modules/variables.scss */
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+}
+
+/* line 292, ../sass/vars-modules/variables.scss */
+.c-hamburger span::before {
+  top: -10px;
+}
+
+/* line 296, ../sass/vars-modules/variables.scss */
+.c-hamburger span::after {
+  bottom: -10px;
+}
+
+/* line 300, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx {
+  background-color: #422544;
+}
+
+/* line 304, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+/* line 309, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+/* line 314, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+/* line 318, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+/* line 323, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active {
+  background-color: #5dcf5b;
+}
+
+/* line 327, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+/* line 331, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+/* line 336, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* line 342, ../sass/vars-modules/variables.scss */
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+/* line 9, ../sass/loops/loops.scss */
+.social-facebook {
+  background-image: url("/img/facebook.svg");
+}
+
+/* line 9, ../sass/loops/loops.scss */
+.social-googleplus {
+  background-image: url("/img/googleplus.svg");
+}
+
+/* line 9, ../sass/loops/loops.scss */
+.social-twitter {
+  background-image: url("/img/twitter.svg");
+}
+
+/* line 9, ../sass/loops/loops.scss */
+.social-linkedin {
+  background-image: url("/img/linkedin.svg");
+}
+
+/* CREDENTIALS
+=============================================
+
+#E05350 valtira red
+#6E3772 valtira purple
+#526EF2 valtira blue
+#5DCF5B valtira green
+#381E3A valtira link hovered
+
+/* GLOBALS
+============================================= */
+/* line 24, ../sass/main.scss */
+header,
+header h3 {
+  color: white;
+}
+
+/* line 29, ../sass/main.scss */
+main,
+main h3 {
+  color: #4a4a4a;
+}
+
+/* line 33, ../sass/main.scss */
+h2 {
+  font-weight: 600 !important;
+}
+
+/* line 37, ../sass/main.scss */
+body {
+  overflow-x: hidden;
+}
+
+/* line 41, ../sass/main.scss */
+small {
+  font-size: 80%;
+  position: relative;
+  top: 80px;
+  letter-spacing: 2px;
+  /* margin-top: 30px; */
+  /* left: 50%; */
+  /* right: 50%; */
+  /* width: 300px; */
+}
+
+/* HEADER / NESTING / INVERT COLORS
+============================================= */
+/* line 55, ../sass/main.scss */
+nav.header-nav {
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  margin: 0 auto;
+  background: transparent;
+  width: 100%;
+  z-index: 8;
+}
+/* line 65, ../sass/main.scss */
+nav.header-nav ul {
+  background: transparent;
+}
+/* line 69, ../sass/main.scss */
+nav.header-nav li {
+  list-style-type: none;
+  display: inline;
+}
+/* line 74, ../sass/main.scss */
+nav.header-nav a {
+  padding: 0 12px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* line 85, ../sass/main.scss */
+nav.whitebg li a {
+  color: black;
+}
+
+/* line 89, ../sass/main.scss */
+.header-nav a:hover {
+  text-decoration: none;
+  color: gray;
+  opacity: 0.9;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 97, ../sass/main.scss */
+  .header-nav {
+    display: none;
+  }
+}
+/* CLASSES
+============================================= */
+/* line 171, ../sass/main.scss */
+.tiny-underline, .content-blocks > h3, .footer-blocks > h3 {
+  margin-top: 1em;
+}
+
+/* line 187, ../sass/main.scss */
+.footer-social li {
+  display: inline-block;
+}
+
+/* line 199, ../sass/main.scss */
+.footer-links a:hover {
+  text-decoration: none;
+  color: #381e3a;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 217, ../sass/main.scss */
+.footer-links li a {
+  color: white;
+}
+
+/* line 221, ../sass/main.scss */
+.home {
+  height: 100vh;
+  background: url("../img/computer.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 226, ../sass/main.scss */
+.services {
+  height: 100vh;
+  background: url("../img/future.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 231, ../sass/main.scss */
+.social-circles {
+  width: 50px;
+  height: 50px;
+  background: #999999;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: url("../img/googleplus.svg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* line 238, ../sass/main.scss */
+.social-circles:hover {
+  background: url("../img/roll-googleplus.svg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 246, ../sass/main.scss */
+.down-button:hover {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  background: rgba(110, 55, 114, 0.8);
+}
+
+/* line 251, ../sass/main.scss */
+.glyphicon-chevron-down:before {
+  content: "\e114";
+  position: relative;
+  top: 20px;
+  left: 0;
+  color: white;
+}
+
+/* line 267, ../sass/main.scss */
+.card {
+  background: white;
+  width: 530px;
+  box-shadow: 1px 1px 3px #888;
+  min-height: 350px;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 707px) {
+  /* line 277, ../sass/main.scss */
+  .card {
+    margin: 10px -15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 287, ../sass/main.scss */
+  .card {
+    width: 360px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  /* line 293, ../sass/main.scss */
+  .card {
+    width: 450px;
+  }
+}
+/* IDs
+============================================= */
+/* line 302, ../sass/main.scss */
+#footer {
+  background: #422544;
+  height: 410px;
+  color: white;
+}
+
+/* line 308, ../sass/main.scss */
+#valtLogo {
+  position: fixed;
+  left: 30px;
+  top: 10px;
+  z-index: 100;
+  width: 60px;
+}
+
+/* line 316, ../sass/main.scss */
+#mainbox {
+  font-family: calibri;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}

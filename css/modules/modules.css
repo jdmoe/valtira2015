@@ -1,0 +1,365 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* FUNCTIONS
+============================================= */
+/* MIXINS
+============================================= */
+/* line 59, ../../sass/mixins/mixins.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 62, ../../sass/mixins/mixins.scss */
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+/* line 66, ../../sass/mixins/mixins.scss */
+#wrapper #container {
+  padding: 0 0 30px 0;
+}
+
+/* line 70, ../../sass/mixins/mixins.scss */
+#footer {
+  height: 30px;
+}
+
+/* GLOBALS
+=============================================
+
+#E05350 valtira red
+#6E3772 valtira purple
+#526EF2 valtira blue
+#5DCF5B valtira green
+#381E3A valtira link hovered
+
+  VARIABLES
+============================================= */
+/* CLEARFIX
+============================================= */
+/* line 31, ../../sass/main.scss */
+.content-blocks > h2 {
+  font-size: 45px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 #cccccc, 0 1px 0 #c9c9c9, 0 1px 0 #bbbbbb, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.25), 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* line 44, ../../sass/main.scss */
+.purp-btn {
+  color: #6e3772;
+  border: 2px solid #6e3772 !important;
+}
+
+/* line 49, ../../sass/main.scss */
+.red-btn {
+  color: #e05350;
+  border: 2px solid #e05350 !important;
+}
+
+/* line 54, ../../sass/main.scss */
+.green-btn {
+  color: #5dcf5b;
+  border: 2px solid #5dcf5b !important;
+}
+
+/* line 59, ../../sass/main.scss */
+.blue-btn {
+  color: #526ef2;
+  border: 2px solid #526ef2 !important;
+}
+
+/* line 64, ../../sass/main.scss */
+.content-blocks {
+  padding: 20px 0px;
+  background: transparent;
+}
+
+/* line 69, ../../sass/main.scss */
+.content-blocks > h3 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 35px;
+}
+
+/* line 76, ../../sass/main.scss */
+.footer-social {
+  margin-top: 14px;
+  height: 60px;
+}
+
+/* line 81, ../../sass/main.scss */
+.footer-links li {
+  display: inline;
+  list-style-type: none;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+}
+
+/* line 91, ../../sass/main.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn, .content-blocks > h2 {
+  text-transform: uppercase;
+}
+
+/* line 95, ../../sass/main.scss */
+.grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
+  width: 65px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 102, ../../sass/main.scss */
+.wht-underline {
+  background: white;
+}
+
+/* line 104, ../../sass/main.scss */
+.grn-underline {
+  background: #5dcf5b;
+}
+
+/* line 106, ../../sass/main.scss */
+.blu-underline {
+  background: #526ef2;
+}
+
+/* line 108, ../../sass/main.scss */
+.red-underline {
+  background: #e05350;
+}
+
+/* line 110, ../../sass/main.scss */
+.prp-underline {
+  background: #6e3772;
+}
+
+/* line 112, ../../sass/main.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn {
+  padding-top: 12px !important;
+  curser: pointer;
+  font-size: 14px;
+  width: 200px;
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+}
+
+/* line 123, ../../sass/main.scss */
+.threejs-container {
+  width: 100%;
+  height: 400px;
+  position: static;
+  left: 0;
+  background: #5dcf5b;
+}
+
+/* for, each, LOOPS
+============================================= */
+/* GLOBALS
+============================================= */
+/* line 139, ../../sass/main.scss */
+header,
+header h3 {
+  color: white;
+}
+
+/* line 144, ../../sass/main.scss */
+main,
+main h3 {
+  color: #4a4a4a;
+}
+
+/* CLASSES
+============================================= */
+/* line 208, ../../sass/main.scss */
+.tiny-underline, .content-blocks > h3 {
+  margin-top: 1em;
+}
+
+/* line 219, ../../sass/main.scss */
+.footer-social li {
+  display: inline-block;
+}
+
+/* line 227, ../../sass/main.scss */
+.footer-links a:hover {
+  text-decoration: none;
+  color: #381e3a;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 241, ../../sass/main.scss */
+.jumbotron {
+  height: 650px;
+  background: url("../img/computer.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 246, ../../sass/main.scss */
+.social-circles {
+  width: 50px;
+  height: 50px;
+  background: #999999;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: url("../img/googleplus.svg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* line 252, ../../sass/main.scss */
+.social-circles:hover {
+  background: url("../img/roll-googleplus.svg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* IDs
+============================================= */
+/* line 259, ../../sass/main.scss */
+#footer {
+  background: #6e3772;
+  height: 350px;
+  color: white;
+}
+
+/* CLEARFIX
+============================================= */
+/* line 6, ../../sass/modules/modules.scss */
+.content-blocks > h2 {
+  font-size: 45px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 #cccccc, 0 1px 0 #c9c9c9, 0 1px 0 #bbbbbb, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.25), 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* line 19, ../../sass/modules/modules.scss */
+.purp-btn {
+  color: #6e3772;
+  border: 2px solid #6e3772 !important;
+}
+
+/* line 24, ../../sass/modules/modules.scss */
+.red-btn {
+  color: #e05350;
+  border: 2px solid #e05350 !important;
+}
+
+/* line 29, ../../sass/modules/modules.scss */
+.green-btn {
+  color: #5dcf5b;
+  border: 2px solid #5dcf5b !important;
+}
+
+/* line 34, ../../sass/modules/modules.scss */
+.blue-btn {
+  color: #526ef2;
+  border: 2px solid #526ef2 !important;
+}
+
+/* line 39, ../../sass/modules/modules.scss */
+.content-blocks {
+  padding: 20px 0px;
+  background: transparent;
+}
+
+/* line 44, ../../sass/modules/modules.scss */
+.content-blocks > h3 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 35px;
+}
+
+/* line 51, ../../sass/modules/modules.scss */
+.footer-social {
+  margin-top: 14px;
+  height: 60px;
+}
+
+/* line 56, ../../sass/modules/modules.scss */
+.footer-links li {
+  display: inline;
+  list-style-type: none;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+}
+
+/* line 66, ../../sass/modules/modules.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn, .content-blocks > h2 {
+  text-transform: uppercase;
+}
+
+/* line 70, ../../sass/modules/modules.scss */
+.grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
+  width: 65px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 77, ../../sass/modules/modules.scss */
+.wht-underline {
+  background: white;
+}
+
+/* line 79, ../../sass/modules/modules.scss */
+.grn-underline {
+  background: #5dcf5b;
+}
+
+/* line 81, ../../sass/modules/modules.scss */
+.blu-underline {
+  background: #526ef2;
+}
+
+/* line 83, ../../sass/modules/modules.scss */
+.red-underline {
+  background: #e05350;
+}
+
+/* line 85, ../../sass/modules/modules.scss */
+.prp-underline {
+  background: #6e3772;
+}
+
+/* line 87, ../../sass/modules/modules.scss */
+.purp-btn, .green-btn, .blue-btn, .red-btn {
+  padding-top: 12px !important;
+  curser: pointer;
+  font-size: 14px;
+  width: 200px;
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+}
+
+/* line 98, ../../sass/modules/modules.scss */
+.threejs-container {
+  width: 100%;
+  height: 400px;
+  position: static;
+  left: 0;
+  background: #5dcf5b;
+}

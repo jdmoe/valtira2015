@@ -1,0 +1,99 @@
+/* MIXINS
+============================================= */
+
+@mixin text-inset($colour, $opacity: 0.7) {
+
+  @if lightness($colour) < 50% {
+    // if the text colour is a dark colour
+    // we need a white shadow, bottom, right
+    text-shadow: 1px 1px 1px rgba(#fff, $opacity);
+  } @else {
+    // it's not dark, so it must be light so we
+    // need a black shadow, top, left
+    text-shadow: -1px -1px 1px rgba(#000, $opacity);
+  }
+
+  // set the text colour
+  color: $colour;
+
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
+
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin btn-background($btn-background) {
+    background-color: $btn-background;
+    &:hover {
+    background-color: lighten($btn-background,10%);
+    @include transition(color, .3s ease);
+    }
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin sticky-footer(
+    $footer-height,
+    $wrapper-selector: unquote("#wrapper"),
+    $container-selector: unquote("#container"),
+    $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%;
+  }
+  #{$wrapper-selector} {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    #{$container-selector} {
+      padding: 0 0 $footer-height 0;
+    }
+  }
+  #{$footer-selector} {
+    height: $footer-height;
+  }
+}
+
+@include sticky-footer(30px);
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-smlarge {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}

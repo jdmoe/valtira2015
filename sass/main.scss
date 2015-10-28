@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import 'functions/functions.scss';
+
+@import 'mixins/mixins.scss';
+
+@import 'vars-modules/variables.scss';
+
+@import 'loops/loops.scss';
+
+/* CREDENTIALS
+=============================================
+
+#E05350 valtira red
+#6E3772 valtira purple
+#526EF2 valtira blue
+#5DCF5B valtira green
+#381E3A valtira link hovered
+
+/* GLOBALS
+============================================= */
+
+header,
+header h3 {
+    color: sfc($valwhte, black);
+}
+
+main,
+main h3 {
+    color: sfc(black, $gray-text);
+}
+
+h2 {
+    font-weight: 600 !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+small {
+    font-size: 80%;
+    position: relative;
+    top: 80px;
+    letter-spacing: 2px;
+    /* margin-top: 30px; */
+    /* left: 50%; */
+    /* right: 50%; */
+    /* width: 300px; */
+}
+
+/* HEADER / NESTING / INVERT COLORS
+============================================= */
+
+nav.header-nav {
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    margin:0 auto;
+    background:transparent;
+    width: 100%;
+    z-index: 8;
+
+    ul {
+    background: transparent;
+    }
+
+        li {
+        list-style-type: none;
+        display: inline;
+        }
+
+            a {
+            padding:0 12px;
+            font-size: 20px;
+            color: #fff;
+            font-weight: 100;
+            letter-spacing: 2px;
+            color: set-button-text-color(black);
+            }
+
+}
+
+nav.whitebg li a {
+    color: set-button-text-color(white);
+}
+
+.header-nav a:hover {
+    text-decoration: none;
+    color: gray;
+    opacity: 0.9;
+    @include transition(0.2s);
+}
+
+@include bp-medium {
+    .header-nav {
+        display: none;
+    }
+}
+
+
+/* CLASSES
+============================================= */
+
+.purp-btn {
+    @extend %btn;
+    @extend %purple-buttons;
+    @extend %inset;
+}
+
+.green-btn {
+    @extend %btn;
+    @extend %green-buttons;
+    @extend %inset;
+}
+
+.blue-btn {
+    @extend %btn;
+    @extend %blue-buttons;
+    @extend %inset;
+}
+
+.red-btn {
+    @extend %btn;
+    @extend %red-buttons;
+    @extend %inset;
+}
+
+.grn-underline {
+    @extend %tiny-underline-grn;
+    @extend %tiny-underline;
+}
+
+.red-underline {
+    @extend %tiny-underline-red;
+    @extend %tiny-underline;
+}
+
+.blu-underline {
+    @extend %tiny-underline-blu;
+    @extend %tiny-underline;
+}
+
+.prp-underline {
+    @extend %tiny-underline-prp;
+    @extend %tiny-underline;
+}
+
+.wht-underline {
+    @extend %tiny-underline-wht;
+    @extend %tiny-underline;
+}
+
+.content-blocks {
+    @extend %content-blocks;
+}
+
+.header-blocks {
+    @extend %header-blocks;
+}
+
+.footer-blocks {
+    @extend %footer-blocks;
+}
+
+.tiny-underline {
+    @extend %tiny-underline;
+}
+
+.tiny-underline, .content-blocks > h3, .footer-blocks > h3 {  margin-top: 1em; }
+
+.content-blocks > h2, .footer-blocks > h2 {
+    @extend %reset-H1;
+    @extend %inset;
+}
+
+.header-blocks > h2 {
+    @extend %page-Header;
+    @extend %inset;
+}
+
+.footer-social {
+    @extend %footer-social;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.content-blocks > h3 {
+    @extend %content-blocks-h3;
+}
+
+.header-blocks > h3 {
+    @extend %header-blocks-h3;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: $link-hovered;
+    @include transition(0.2s);
+}
+
+.threejs-container {
+    @extend %threejs-container;
+}
+
+.dynamic-containers {
+    @extend %dynamic-containers;
+}
+
+.footer-links li {
+    @extend %footer-links;
+}
+
+.footer-links li a {
+    color: $valwhte;
+}
+
+.home {
+    height: 100vh;
+    @include cover-background('../img/computer.png');
+}
+
+.services {
+    height: 100vh;
+    @include cover-background('../img/future.jpg');
+}
+
+.social-circles {
+    @include circle(50px, #999);
+    @include cover-background('../img/googleplus.svg');
+    cursor: pointer;
+    text-align: center;
+}
+
+.social-circles:hover {
+    @include cover-background('../img/roll-googleplus.svg');
+}
+
+.down-button {
+    @extend %down-button;
+}
+
+.down-button:hover {
+    @include transition(0.4s);
+    background:rgba(110, 55, 114, 0.8);
+}
+
+.glyphicon-chevron-down:before {
+    content: "\e114";
+    position: relative;
+    top: 20px;
+    left: 0;
+    color: $valwhte;
+}
+
+.left {
+    @extend %leftCard;
+}
+
+.right {
+    @extend %rightCard;
+}
+
+.card{
+    background: $valwhte;
+    width: 530px;
+    box-shadow: 1px 1px 3px #888;
+    min-height: 350px;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 707px) {
+    .card{
+    margin: 10px -15px;
+    }
+}
+
+.gray-bg {
+    @extend %gray-bg;
+}
+
+@media screen and (max-width: 991px) {
+    .card{
+        width: 360px;
+    }
+}
+
+@include bp-smlarge {
+    .card{
+        width: 450px;
+    }
+}
+
+
+/* IDs
+============================================= */
+
+#footer {
+    background: $valpurp;
+    height: 410px;
+    color: sfc($valwhte, black);
+}
+
+#valtLogo {
+    position:fixed;
+    left: 30px;
+    top: 10px;
+    z-index: 100;
+    width: 60px;
+}
+
+#mainbox{
+    font-family: calibri;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
