@@ -86,7 +86,7 @@
   }
 }
 
-@mixin bp-medium {
+@mixin bp-mediumz {
   @media only screen and (max-width: 40em) {
     @content;
   }

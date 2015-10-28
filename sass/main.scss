@@ -11,6 +11,16 @@
 /* CREDENTIALS
 =============================================
 
+----            ----
+ ----          ----
+  ----        ----
+   ----      ----
+    ----    ----
+     ----  ----
+      --------
+       ------
+        ----
+
 #E05350 valtira red
 #6E3772 valtira purple
 #526EF2 valtira blue
@@ -61,24 +71,21 @@ nav.header-nav {
     background:transparent;
     width: 100%;
     z-index: 8;
-
-    ul {
-    background: transparent;
-    }
-
-        li {
-        list-style-type: none;
-        display: inline;
+        ul {
+        background: transparent;
         }
-
-            a {
-            padding:0 12px;
-            font-size: 20px;
-            color: #fff;
-            font-weight: 100;
-            letter-spacing: 2px;
-            color: set-button-text-color(black);
+            li {
+            list-style-type: none;
+            display: inline;
             }
+                a {
+                padding:0 12px;
+                font-size: 20px;
+                color: #fff;
+                font-weight: 100;
+                letter-spacing: 2px;
+                color: set-button-text-color(black);
+                }
 
 }
 
@@ -93,7 +100,7 @@ nav.whitebg li a {
     @include transition(0.2s);
 }
 
-@include bp-medium {
+@include bp-mediumz {
     .header-nav {
         display: none;
     }
@@ -107,6 +114,18 @@ nav.whitebg li a {
     @extend %btn;
     @extend %purple-buttons;
     @extend %inset;
+}
+
+.green-btn {
+    @extend %btn;
+    @extend %green-buttons;
+    @extend %inset;
+}
+
+.white-btn {
+    @extend %btn;
+    @extend %inset;
+    @extend %white-buttons;
 }
 
 .green-btn {
@@ -168,6 +187,11 @@ nav.whitebg li a {
     @extend %tiny-underline;
 }
 
+.tiny-underline-left {
+    @extend %tiny-underline-left;
+    @extend %tiny-underline-prp;
+}
+
 .tiny-underline, .content-blocks > h3, .footer-blocks > h3 {  margin-top: 1em; }
 
 .content-blocks > h2, .footer-blocks > h2 {
@@ -208,6 +232,29 @@ nav.whitebg li a {
 
 .dynamic-containers {
     @extend %dynamic-containers;
+}
+
+.breakers {
+    @extend %dynamic-containers;
+}
+
+.cloud-based {
+    @include cover-background('../img/computer.png');
+}
+.cloud-based h2, .cloud-based h3 {
+    color: sfc($valwhte, black);
+}
+
+.cloud-based h2 {
+    font-size: 23px;
+}
+
+.cloud-based h3 {
+    font-size: 19px;
+}
+
+.inner-header-blocks {
+    @extend %inner-header-blocks;
 }
 
 .footer-links li {
@@ -264,7 +311,36 @@ nav.whitebg li a {
     @extend %rightCard;
 }
 
-.card{
+.card-descr > p {
+    @extend %cardContent;
+}
+
+.card-descr > h2 {
+    @extend %cardHeader;
+}
+
+#mainbox .card-img1 {
+    @include cover-background("../img/services/stock1.png");
+}
+
+#mainbox .card-img2 {
+    @include cover-background("../img/services/stock2.png");
+}
+
+#mainbox .card-img3 {
+    @include cover-background("../img/services/stock3.jpg");
+}
+
+.card {
+    background: $valwhte;
+    width: 530px;
+    box-shadow: 1px 1px 3px #888;
+    min-height: 350px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-img {
     background: $valwhte;
     width: 530px;
     box-shadow: 1px 1px 3px #888;
@@ -314,9 +390,9 @@ nav.whitebg li a {
 }
 
 #mainbox{
-    font-family: calibri;
     box-sizing: border-box;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    @extend %cardContent;
 }
