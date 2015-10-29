@@ -14,31 +14,33 @@
 </head>
 <body>
 
+<!-- hamburger -->
+
+<button class="c-hamburger c-hamburger--htx">
+    <span>toggle menu</span>
+</button>
+
 <!-- header -->
 
-<a href="index.html"><img src="img/valtLogo.png" id="valtLogo" width="130px" alt="valtLogo" /><span></span></a>
-
-    <nav class="header-nav home">
+<header>
+    <div class="jumbotron home">
+    <nav class="topNav">
         <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="">Work</a></li>
-        <li><a href="">Contact</a></li>
+            <a href="#"><li class="brand"><img src="img/valtLogo.png" id="valtLogo" alt="valtira" /><span class="valtiraTxt"> Valtira</span></li></a>
+            <a href="#"><li>Home</li></a>
+            <a href="services.html"><li>Services</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
         </ul>
     </nav>
-    <button class="c-hamburger c-hamburger--htx">
-        <span>toggle menu</span>
-    </button>
-    <header>
-        <div class="jumbotron home">
-            <div class="header-blocks">
-                <h2>Welcome to Valtira</h2>
-                <div class="grn-underline"></div>
-                <h3>We Do Work That Matters</h3>
-                <a href="#next"><div class="down-button bounce"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
-            </div>
+        <div class="header-blocks">
+            <h2>Welcome to Valtira</h2>
+            <div class="grn-underline"></div>
+            <h3>We Do Work That Matters</h3>
+            <a href="#next"><div class="down-button bounce"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
         </div>
-    </header>
+    </div>
+</header>
 
 <!-- content blocks -->
 
@@ -145,23 +147,35 @@
 <!-- footer -->
 
 <footer id="footer">
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
+            <ul class="lower-links">
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Approach</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 text-center">
             <div class="footer-blocks">
-                <ul class="footer-links">
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
                 <h2>work that matters</h2>
                 <div class="red-underline"></div>
             </div>
         </div>
     </div>
+
+<!-- content blocks -->
+
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 text-center">
             <ul class="footer-social">
@@ -169,30 +183,10 @@
                 <li class="social-circles"></li>
                 <li class="social-circles"></li>
             </ul>
+            <small>1201 S. Marquette Avenue #330 Minneapolis, Minnesota 55403   |   &copy; 2015 Valtira LLC </small>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 text-center">
-        <small>1201 S. Marquette Avenue #330 Minneapolis, Minnesota 55403   |   &copy; 2015 Valtira LLC </small>
-        </div>
-    </div>
-
-<!-- popup up button -->
-
-<div id="cd-nav">
-    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-
-    <nav id="cd-main-nav">
-        <ul>
-            <li><a href="#0">Homepage</a></li>
-            <li><a href="#0">Services</a></li>
-            <li><a href="#0">Portfolio</a></li>
-            <li><a href="#0">Pricing</a></li>
-            <li><a href="#0">Contact</a></li>
-        </ul>
-    </nav>
 </div>
-
 </footer>
 </body>
 

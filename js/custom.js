@@ -52,7 +52,4 @@ $.extend({
     });
   }
 
-// show scroll up button when bottom of screen is reached
-
-
 })(window); // end scripts

@@ -58,24 +58,24 @@ html, body {
 }
 
 /* line 30, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   padding: 20px;
   letter-spacing: 1px;
   line-height: 30px;
 }
 
 /* line 39, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   text-align: left;
 }
 
 /* line 43, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
+.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
   font-family: Open Sans;
 }
 
 /* line 47, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   font-size: 17px;
 }
 
@@ -174,7 +174,7 @@ html, body {
 
 /* line 138, ../sass/vars-modules/variables.scss */
 .header-blocks {
-  padding: 30em 0;
+  padding: 20em 0;
   background: transparent;
   margin: auto;
   text-align: center;
@@ -220,7 +220,7 @@ html, body {
   }
 
   /* line 180, ../sass/vars-modules/variables.scss */
-  .card-descr > p, #mainbox {
+  .card-descr > ul, #mainbox {
     padding: 10px;
     letter-spacing: 2px;
     line-height: 26px;
@@ -229,7 +229,7 @@ html, body {
   }
 
   /* line 188, ../sass/vars-modules/variables.scss */
-  .card-descr > p, #mainbox {
+  .card-descr > ul, #mainbox {
     font-size: 16px;
   }
 
@@ -271,28 +271,20 @@ html, body {
 /* line 213, ../sass/vars-modules/variables.scss */
 .footer-social {
   margin-top: 0;
-  height: 0px;
   padding: 0;
 }
 
-/* line 219, ../sass/vars-modules/variables.scss */
+/* line 218, ../sass/vars-modules/variables.scss */
 .footer-links li {
-  display: inline;
   list-style-type: none;
-  padding: 8px;
-  margin: 0 auto;
-  letter-spacing: 2px;
-  font-size: 18px;
-  font-weight: 100;
-  color: white;
 }
 
-/* line 230, ../sass/vars-modules/variables.scss */
+/* line 222, ../sass/vars-modules/variables.scss */
 .purp-btn, .green-btn, .white-btn, .blue-btn, .red-btn, .content-blocks > h2, .footer-blocks > h2, .header-blocks > h2 {
   text-transform: uppercase;
 }
 
-/* line 234, ../sass/vars-modules/variables.scss */
+/* line 226, ../sass/vars-modules/variables.scss */
 .grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
   width: 75px;
   height: 2px;
@@ -300,7 +292,7 @@ html, body {
   margin-top: 20px;
 }
 
-/* line 241, ../sass/vars-modules/variables.scss */
+/* line 233, ../sass/vars-modules/variables.scss */
 .tiny-underline-left {
   width: 75px;
   height: 2px;
@@ -309,32 +301,32 @@ html, body {
   margin: 20px 0 0 20px;
 }
 
-/* line 249, ../sass/vars-modules/variables.scss */
+/* line 241, ../sass/vars-modules/variables.scss */
 .wht-underline {
   background: white;
 }
 
-/* line 251, ../sass/vars-modules/variables.scss */
+/* line 243, ../sass/vars-modules/variables.scss */
 .grn-underline {
   background: #5dcf5b;
 }
 
-/* line 253, ../sass/vars-modules/variables.scss */
+/* line 245, ../sass/vars-modules/variables.scss */
 .blu-underline {
   background: #526ef2;
 }
 
-/* line 255, ../sass/vars-modules/variables.scss */
+/* line 247, ../sass/vars-modules/variables.scss */
 .red-underline {
   background: #e05350;
 }
 
-/* line 257, ../sass/vars-modules/variables.scss */
+/* line 249, ../sass/vars-modules/variables.scss */
 .prp-underline, .tiny-underline-left {
   background: #422544;
 }
 
-/* line 259, ../sass/vars-modules/variables.scss */
+/* line 251, ../sass/vars-modules/variables.scss */
 .purp-btn, .green-btn, .white-btn, .blue-btn, .red-btn {
   padding-top: 12px !important;
   curser: pointer;
@@ -349,7 +341,7 @@ html, body {
   box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
 }
 
-/* line 273, ../sass/vars-modules/variables.scss */
+/* line 265, ../sass/vars-modules/variables.scss */
 .dynamic-containers, .breakers {
   width: 100%;
   height: 450px;
@@ -357,7 +349,7 @@ html, body {
   background: #e05350;
 }
 
-/* line 280, ../sass/vars-modules/variables.scss */
+/* line 272, ../sass/vars-modules/variables.scss */
 .threejs-container {
   width: 100%;
   height: 560px;
@@ -367,7 +359,7 @@ html, body {
 
 /* SCROLL UP BTN
 ============================================= */
-/* line 290, ../sass/vars-modules/variables.scss */
+/* line 282, ../sass/vars-modules/variables.scss */
 #cd-nav ul {
   /* mobile first */
   position: fixed;
@@ -383,14 +375,14 @@ html, body {
   transition: transform 0.3s, visibility 0s 0.3s;
 }
 
-/* line 306, ../sass/vars-modules/variables.scss */
+/* line 298, ../sass/vars-modules/variables.scss */
 #cd-nav ul.is-visible {
   visibility: visible;
   transform: scale(1);
   transition: transform 0.3s, visibility 0s 0s;
 }
 
-/* line 312, ../sass/vars-modules/variables.scss */
+/* line 304, ../sass/vars-modules/variables.scss */
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
@@ -406,7 +398,7 @@ html, body {
 
 /* BURGER ANIMATION
 ============================================= */
-/* line 330, ../sass/vars-modules/variables.scss */
+/* line 322, ../sass/vars-modules/variables.scss */
 .c-hamburger {
   position: fixed;
   overflow: hidden;
@@ -426,12 +418,12 @@ html, body {
   transition: background 0.3s;
 }
 
-/* line 349, ../sass/vars-modules/variables.scss */
+/* line 341, ../sass/vars-modules/variables.scss */
 .c-hamburger:focus {
   outline: none;
 }
 
-/* line 353, ../sass/vars-modules/variables.scss */
+/* line 345, ../sass/vars-modules/variables.scss */
 .c-hamburger span {
   display: block;
   position: absolute;
@@ -442,7 +434,7 @@ html, body {
   background: white;
 }
 
-/* line 364, ../sass/vars-modules/variables.scss */
+/* line 356, ../sass/vars-modules/variables.scss */
 .c-hamburger span::before,
 .c-hamburger span::after {
   position: absolute;
@@ -454,76 +446,76 @@ html, body {
   content: "";
 }
 
-/* line 374, ../sass/vars-modules/variables.scss */
+/* line 366, ../sass/vars-modules/variables.scss */
 .c-hamburger span::before {
   top: -10px;
 }
 
-/* line 378, ../sass/vars-modules/variables.scss */
+/* line 370, ../sass/vars-modules/variables.scss */
 .c-hamburger span::after {
   bottom: -10px;
 }
 
-/* line 382, ../sass/vars-modules/variables.scss */
+/* line 374, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx {
   background-color: #422544;
 }
 
-/* line 386, ../sass/vars-modules/variables.scss */
+/* line 378, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span {
   transition: background 0s 0.3s;
 }
 
-/* line 391, ../sass/vars-modules/variables.scss */
+/* line 383, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
   transition-duration: 0.3s, 0.3s;
   transition-delay: 0.3s, 0s;
 }
 
-/* line 396, ../sass/vars-modules/variables.scss */
+/* line 388, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before {
   transition-property: top, transform;
 }
 
-/* line 400, ../sass/vars-modules/variables.scss */
+/* line 392, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::after {
   transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
-/* line 405, ../sass/vars-modules/variables.scss */
+/* line 397, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active {
   background-color: #5dcf5b;
 }
 
-/* line 409, ../sass/vars-modules/variables.scss */
+/* line 401, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span {
   background: none;
 }
 
-/* line 413, ../sass/vars-modules/variables.scss */
+/* line 405, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-/* line 418, ../sass/vars-modules/variables.scss */
+/* line 410, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
 
-/* line 424, ../sass/vars-modules/variables.scss */
+/* line 416, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
   transition-delay: 0s, 0.3s;
 }
 
 /* ============================================================
-  SECTIONS
+  SECTIONS parallax
 ============================================================ */
-/* line 433, ../sass/vars-modules/variables.scss */
+/* line 425, ../sass/vars-modules/variables.scss */
 div.breakers.cloud-based {
   background-position: 100% 100%;
   background-repeat: no-repeat;
@@ -531,6 +523,71 @@ div.breakers.cloud-based {
   background-size: cover;
 }
 
+/* ============================================================
+  SHOW hidden BTN
+============================================================ */
+/* line 436, ../sass/vars-modules/variables.scss */
+#cd-nav ul {
+  /* mobile first */
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  right: 5%;
+  bottom: 20px;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: 100% 100%;
+  transition: transform 0.3s, visibility 0s 0.3s;
+}
+
+/* line 452, ../sass/vars-modules/variables.scss */
+#cd-nav ul.is-visible {
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.3s, visibility 0s 0s;
+}
+
+/* line 458, ../sass/vars-modules/variables.scss */
+.cd-nav-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  width: 44px;
+  height: 44px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 1170px) {
+  /* line 473, ../sass/vars-modules/variables.scss */
+  #cd-nav ul {
+    /* the navigation moves to the top */
+    position: absolute;
+    width: auto;
+    max-width: none;
+    bottom: auto;
+    top: 36px;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0s;
+  }
+
+  /* line 485, ../sass/vars-modules/variables.scss */
+  #cd-nav.is-fixed ul {
+    position: fixed;
+    width: 90%;
+    max-width: 400px;
+    bottom: 20px;
+    top: auto;
+    visibility: hidden;
+    transform: scale(0);
+  }
+}
 /* MIXINS
 ============================================= */
 /* line 59, ../sass/mixins/mixins.scss */
@@ -565,24 +622,24 @@ html, body {
 }
 
 /* line 30, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   padding: 20px;
   letter-spacing: 1px;
   line-height: 30px;
 }
 
 /* line 39, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   text-align: left;
 }
 
 /* line 43, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
+.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
   font-family: Open Sans;
 }
 
 /* line 47, ../sass/vars-modules/variables.scss */
-.card-descr > p, #mainbox {
+.card-descr > ul, #mainbox {
   font-size: 17px;
 }
 
@@ -681,7 +738,7 @@ html, body {
 
 /* line 138, ../sass/vars-modules/variables.scss */
 .header-blocks {
-  padding: 30em 0;
+  padding: 20em 0;
   background: transparent;
   margin: auto;
   text-align: center;
@@ -727,7 +784,7 @@ html, body {
   }
 
   /* line 180, ../sass/vars-modules/variables.scss */
-  .card-descr > p, #mainbox {
+  .card-descr > ul, #mainbox {
     padding: 10px;
     letter-spacing: 2px;
     line-height: 26px;
@@ -736,7 +793,7 @@ html, body {
   }
 
   /* line 188, ../sass/vars-modules/variables.scss */
-  .card-descr > p, #mainbox {
+  .card-descr > ul, #mainbox {
     font-size: 16px;
   }
 
@@ -778,28 +835,20 @@ html, body {
 /* line 213, ../sass/vars-modules/variables.scss */
 .footer-social {
   margin-top: 0;
-  height: 0px;
   padding: 0;
 }
 
-/* line 219, ../sass/vars-modules/variables.scss */
+/* line 218, ../sass/vars-modules/variables.scss */
 .footer-links li {
-  display: inline;
   list-style-type: none;
-  padding: 8px;
-  margin: 0 auto;
-  letter-spacing: 2px;
-  font-size: 18px;
-  font-weight: 100;
-  color: white;
 }
 
-/* line 230, ../sass/vars-modules/variables.scss */
+/* line 222, ../sass/vars-modules/variables.scss */
 .purp-btn, .green-btn, .white-btn, .blue-btn, .red-btn, .content-blocks > h2, .footer-blocks > h2, .header-blocks > h2 {
   text-transform: uppercase;
 }
 
-/* line 234, ../sass/vars-modules/variables.scss */
+/* line 226, ../sass/vars-modules/variables.scss */
 .grn-underline, .red-underline, .blu-underline, .prp-underline, .wht-underline, .tiny-underline {
   width: 75px;
   height: 2px;
@@ -807,7 +856,7 @@ html, body {
   margin-top: 20px;
 }
 
-/* line 241, ../sass/vars-modules/variables.scss */
+/* line 233, ../sass/vars-modules/variables.scss */
 .tiny-underline-left {
   width: 75px;
   height: 2px;
@@ -816,32 +865,32 @@ html, body {
   margin: 20px 0 0 20px;
 }
 
-/* line 249, ../sass/vars-modules/variables.scss */
+/* line 241, ../sass/vars-modules/variables.scss */
 .wht-underline {
   background: white;
 }
 
-/* line 251, ../sass/vars-modules/variables.scss */
+/* line 243, ../sass/vars-modules/variables.scss */
 .grn-underline {
   background: #5dcf5b;
 }
 
-/* line 253, ../sass/vars-modules/variables.scss */
+/* line 245, ../sass/vars-modules/variables.scss */
 .blu-underline {
   background: #526ef2;
 }
 
-/* line 255, ../sass/vars-modules/variables.scss */
+/* line 247, ../sass/vars-modules/variables.scss */
 .red-underline {
   background: #e05350;
 }
 
-/* line 257, ../sass/vars-modules/variables.scss */
+/* line 249, ../sass/vars-modules/variables.scss */
 .prp-underline, .tiny-underline-left {
   background: #422544;
 }
 
-/* line 259, ../sass/vars-modules/variables.scss */
+/* line 251, ../sass/vars-modules/variables.scss */
 .purp-btn, .green-btn, .white-btn, .blue-btn, .red-btn {
   padding-top: 12px !important;
   curser: pointer;
@@ -856,7 +905,7 @@ html, body {
   box-shadow: 2px 9px 5px -6px rgba(0, 0, 0, 0.58);
 }
 
-/* line 273, ../sass/vars-modules/variables.scss */
+/* line 265, ../sass/vars-modules/variables.scss */
 .dynamic-containers, .breakers {
   width: 100%;
   height: 450px;
@@ -864,7 +913,7 @@ html, body {
   background: #e05350;
 }
 
-/* line 280, ../sass/vars-modules/variables.scss */
+/* line 272, ../sass/vars-modules/variables.scss */
 .threejs-container {
   width: 100%;
   height: 560px;
@@ -874,7 +923,7 @@ html, body {
 
 /* SCROLL UP BTN
 ============================================= */
-/* line 290, ../sass/vars-modules/variables.scss */
+/* line 282, ../sass/vars-modules/variables.scss */
 #cd-nav ul {
   /* mobile first */
   position: fixed;
@@ -890,14 +939,14 @@ html, body {
   transition: transform 0.3s, visibility 0s 0.3s;
 }
 
-/* line 306, ../sass/vars-modules/variables.scss */
+/* line 298, ../sass/vars-modules/variables.scss */
 #cd-nav ul.is-visible {
   visibility: visible;
   transform: scale(1);
   transition: transform 0.3s, visibility 0s 0s;
 }
 
-/* line 312, ../sass/vars-modules/variables.scss */
+/* line 304, ../sass/vars-modules/variables.scss */
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
@@ -913,7 +962,7 @@ html, body {
 
 /* BURGER ANIMATION
 ============================================= */
-/* line 330, ../sass/vars-modules/variables.scss */
+/* line 322, ../sass/vars-modules/variables.scss */
 .c-hamburger {
   position: fixed;
   overflow: hidden;
@@ -933,12 +982,12 @@ html, body {
   transition: background 0.3s;
 }
 
-/* line 349, ../sass/vars-modules/variables.scss */
+/* line 341, ../sass/vars-modules/variables.scss */
 .c-hamburger:focus {
   outline: none;
 }
 
-/* line 353, ../sass/vars-modules/variables.scss */
+/* line 345, ../sass/vars-modules/variables.scss */
 .c-hamburger span {
   display: block;
   position: absolute;
@@ -949,7 +998,7 @@ html, body {
   background: white;
 }
 
-/* line 364, ../sass/vars-modules/variables.scss */
+/* line 356, ../sass/vars-modules/variables.scss */
 .c-hamburger span::before,
 .c-hamburger span::after {
   position: absolute;
@@ -961,76 +1010,76 @@ html, body {
   content: "";
 }
 
-/* line 374, ../sass/vars-modules/variables.scss */
+/* line 366, ../sass/vars-modules/variables.scss */
 .c-hamburger span::before {
   top: -10px;
 }
 
-/* line 378, ../sass/vars-modules/variables.scss */
+/* line 370, ../sass/vars-modules/variables.scss */
 .c-hamburger span::after {
   bottom: -10px;
 }
 
-/* line 382, ../sass/vars-modules/variables.scss */
+/* line 374, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx {
   background-color: #422544;
 }
 
-/* line 386, ../sass/vars-modules/variables.scss */
+/* line 378, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span {
   transition: background 0s 0.3s;
 }
 
-/* line 391, ../sass/vars-modules/variables.scss */
+/* line 383, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
   transition-duration: 0.3s, 0.3s;
   transition-delay: 0.3s, 0s;
 }
 
-/* line 396, ../sass/vars-modules/variables.scss */
+/* line 388, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before {
   transition-property: top, transform;
 }
 
-/* line 400, ../sass/vars-modules/variables.scss */
+/* line 392, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::after {
   transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
-/* line 405, ../sass/vars-modules/variables.scss */
+/* line 397, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active {
   background-color: #5dcf5b;
 }
 
-/* line 409, ../sass/vars-modules/variables.scss */
+/* line 401, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span {
   background: none;
 }
 
-/* line 413, ../sass/vars-modules/variables.scss */
+/* line 405, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-/* line 418, ../sass/vars-modules/variables.scss */
+/* line 410, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
 
-/* line 424, ../sass/vars-modules/variables.scss */
+/* line 416, ../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
   transition-delay: 0s, 0.3s;
 }
 
 /* ============================================================
-  SECTIONS
+  SECTIONS parallax
 ============================================================ */
-/* line 433, ../sass/vars-modules/variables.scss */
+/* line 425, ../sass/vars-modules/variables.scss */
 div.breakers.cloud-based {
   background-position: 100% 100%;
   background-repeat: no-repeat;
@@ -1038,6 +1087,71 @@ div.breakers.cloud-based {
   background-size: cover;
 }
 
+/* ============================================================
+  SHOW hidden BTN
+============================================================ */
+/* line 436, ../sass/vars-modules/variables.scss */
+#cd-nav ul {
+  /* mobile first */
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  right: 5%;
+  bottom: 20px;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: 100% 100%;
+  transition: transform 0.3s, visibility 0s 0.3s;
+}
+
+/* line 452, ../sass/vars-modules/variables.scss */
+#cd-nav ul.is-visible {
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.3s, visibility 0s 0s;
+}
+
+/* line 458, ../sass/vars-modules/variables.scss */
+.cd-nav-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  width: 44px;
+  height: 44px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 1170px) {
+  /* line 473, ../sass/vars-modules/variables.scss */
+  #cd-nav ul {
+    /* the navigation moves to the top */
+    position: absolute;
+    width: auto;
+    max-width: none;
+    bottom: auto;
+    top: 36px;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0s;
+  }
+
+  /* line 485, ../sass/vars-modules/variables.scss */
+  #cd-nav.is-fixed ul {
+    position: fixed;
+    width: 90%;
+    max-width: 400px;
+    bottom: 20px;
+    top: auto;
+    visibility: hidden;
+    transform: scale(0);
+  }
+}
 /* line 9, ../sass/loops/loops.scss */
 .social-facebook {
   background-image: url("/img/facebook.svg");
@@ -1115,72 +1229,103 @@ small {
 
 /* HEADER / NESTING / INVERT COLORS
 ============================================= */
-/* line 65, ../sass/main.scss */
-nav.header-nav {
-  height: 30px;
+/* line 64, ../sass/main.scss */
+.brand {
   position: absolute;
-  top: 20px;
-  text-align: center;
-  margin: 0 auto;
-  background: transparent;
-  width: 100%;
-  z-index: 8;
-}
-/* line 74, ../sass/main.scss */
-nav.header-nav ul {
-  background: transparent;
-}
-/* line 77, ../sass/main.scss */
-nav.header-nav li {
-  list-style-type: none;
-  display: inline;
-}
-/* line 81, ../sass/main.scss */
-nav.header-nav a {
-  padding: 0 12px;
-  font-size: 20px;
-  color: #fff;
-  font-weight: 100;
-  letter-spacing: 2px;
-  color: white;
+  left: 0;
 }
 
+/* line 69, ../sass/main.scss */
+.brand span.valtiraTxt {
+  position: relative;
+  top: -5px;
+  letter-spacing: 1px;
+}
+
+/* line 74, ../sass/main.scss */
+nav.topNav {
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  position: absolute;
+  height: 56px;
+  top: 0;
+  width: 100%;
+}
+/* line 83, ../sass/main.scss */
+nav.topNav ul {
+  z-index: 5;
+  width: 780px;
+  height: 56px;
+  text-align: center;
+  position: relative;
+  top: 0;
+  display: inline-block;
+}
 /* line 92, ../sass/main.scss */
-nav.whitebg li a {
+nav.topNav ul li {
+  cursor: pointer;
+  padding: 15px;
+  color: white;
+  height: 56px;
+  display: inline-block;
+}
+
+/* line 102, ../sass/main.scss */
+nav.whitebg ul li {
   color: black;
 }
 
-/* line 96, ../sass/main.scss */
-.header-nav a:hover {
-  text-decoration: none;
-  color: gray;
-  opacity: 0.9;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+@media screen and (max-width: 700px) {
+  /* line 108, ../sass/main.scss */
+  nav.topNav ul {
+    width: 500px;
+  }
 }
+@media screen and (max-width: 500px) {
+  /* line 114, ../sass/main.scss */
+  nav.topNav ul {
+    width: 400px;
+  }
 
-@media only screen and (max-width: 40em) {
-  /* line 104, ../sass/main.scss */
-  .header-nav {
+  /* line 117, ../sass/main.scss */
+  nav.topNav ul li:not(.brand) {
     display: none;
   }
 }
 /* CLASSES
 ============================================= */
-/* line 195, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 .tiny-underline, .content-blocks > h3, .footer-blocks > h3 {
   margin-top: 1em;
 }
 
-/* line 211, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
+.lower-links {
+  text-align: center;
+  margin-left: -4em;
+  position: relative;
+  top: 20px;
+}
+
+/* line 226, ../sass/main.scss */
+.lower-links li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* line 232, ../sass/main.scss */
+.lower-links li:hover {
+  color: orange;
+}
+
+/* line 240, ../sass/main.scss */
 .footer-social li {
   display: inline-block;
 }
 
-/* line 223, ../sass/main.scss */
+/* line 252, ../sass/main.scss */
 .footer-links a:hover {
   text-decoration: none;
   color: #381e3a;
@@ -1191,7 +1336,7 @@ nav.whitebg li a {
   transition: 0.2s;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .cloud-based {
   background: url("../img/computer.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1200,27 +1345,27 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 244, ../sass/main.scss */
+/* line 273, ../sass/main.scss */
 .cloud-based h2, .cloud-based h3 {
   color: white;
 }
 
-/* line 248, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 .cloud-based h2 {
   font-size: 23px;
 }
 
-/* line 252, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 .cloud-based h3 {
   font-size: 19px;
 }
 
-/* line 264, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 .footer-links li a {
   color: white;
 }
 
-/* line 268, ../sass/main.scss */
+/* line 297, ../sass/main.scss */
 .home {
   height: 100vh;
   background: url("../img/computer.png") no-repeat center;
@@ -1230,7 +1375,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 273, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 .services {
   height: 100vh;
   background: url("../img/future.jpg") no-repeat center;
@@ -1240,7 +1385,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 278, ../sass/main.scss */
+/* line 307, ../sass/main.scss */
 .social-circles {
   width: 50px;
   height: 50px;
@@ -1257,7 +1402,7 @@ nav.whitebg li a {
   text-align: center;
 }
 
-/* line 285, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 .social-circles:hover {
   background: url("../img/roll-googleplus.svg") no-repeat center;
   -webkit-background-size: cover;
@@ -1266,7 +1411,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 293, ../sass/main.scss */
+/* line 322, ../sass/main.scss */
 .down-button:hover {
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
@@ -1276,7 +1421,7 @@ nav.whitebg li a {
   background: rgba(110, 55, 114, 0.8);
 }
 
-/* line 298, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 .glyphicon-chevron-down:before {
   content: "\e114";
   position: relative;
@@ -1285,7 +1430,18 @@ nav.whitebg li a {
   color: white;
 }
 
-/* line 322, ../sass/main.scss */
+/* line 347, ../sass/main.scss */
+.card-descr ul > li {
+  list-style-type: none;
+  /* float: left; */
+  /* padding: 0; */
+  /* padding: 0; */
+  /* padding: 0; */
+  padding: 5px 0 0 0;
+  /* height: 500px; */
+}
+
+/* line 361, ../sass/main.scss */
 #mainbox .card-img1 {
   background: url("../img/services/stock1.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1294,7 +1450,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 326, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 #mainbox .card-img2 {
   background: url("../img/services/stock2.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1303,7 +1459,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 330, ../sass/main.scss */
+/* line 369, ../sass/main.scss */
 #mainbox .card-img3 {
   background: url("../img/services/stock3.jpg") no-repeat center;
   -webkit-background-size: cover;
@@ -1312,7 +1468,7 @@ nav.whitebg li a {
   background-size: cover;
 }
 
-/* line 334, ../sass/main.scss */
+/* line 373, ../sass/main.scss */
 .card {
   background: white;
   width: 530px;
@@ -1320,9 +1476,24 @@ nav.whitebg li a {
   min-height: 350px;
   padding: 10px;
   margin: 10px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
-/* line 343, ../sass/main.scss */
+/* line 383, ../sass/main.scss */
+.card:hover {
+  opacity: 0.8;
+}
+
+/* line 387, ../sass/main.scss */
+.card a {
+  text-decoration: none;
+}
+
+/* line 391, ../sass/main.scss */
 .card-img {
   background: white;
   width: 530px;
@@ -1333,45 +1504,43 @@ nav.whitebg li a {
 }
 
 @media screen and (max-width: 707px) {
-  /* line 353, ../sass/main.scss */
+  /* line 401, ../sass/main.scss */
   .card {
     margin: 10px -15px;
   }
 }
 @media screen and (max-width: 991px) {
-  /* line 363, ../sass/main.scss */
+  /* line 411, ../sass/main.scss */
   .card {
     width: 360px;
   }
 }
 @media only screen and (max-width: 1199px) {
-  /* line 369, ../sass/main.scss */
+  /* line 417, ../sass/main.scss */
   .card {
     width: 450px;
   }
 }
 /* IDs
 ============================================= */
-/* line 378, ../sass/main.scss */
+/* line 425, ../sass/main.scss */
 #footer {
   background: #422544;
   height: 410px;
   color: white;
 }
 
-/* line 384, ../sass/main.scss */
-#valtLogo {
-  position: fixed;
-  left: 30px;
-  top: 10px;
-  z-index: 100;
-  width: 60px;
-}
-
-/* line 392, ../sass/main.scss */
+/* line 431, ../sass/main.scss */
 #mainbox {
   box-sizing: border-box;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+}
+
+/* line 439, ../sass/main.scss */
+#valtLogo {
+  width: 50px;
+  position: relative;
+  top: -5px;
 }
