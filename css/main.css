@@ -70,7 +70,7 @@ html, body {
 }
 
 /* line 43, ../sass/vars-modules/variables.scss */
-.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
+.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2, .lower-links li a {
   font-family: Open Sans;
 }
 
@@ -182,7 +182,7 @@ html, body {
 
 /* line 145, ../sass/vars-modules/variables.scss */
 .footer-blocks {
-  padding: 20px 0;
+  padding: 30px 0;
   background: transparent;
 }
 
@@ -634,7 +634,7 @@ html, body {
 }
 
 /* line 43, ../sass/vars-modules/variables.scss */
-.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2 {
+.card-descr > ul, #mainbox, .card-descr > h2, .content-blocks > h2, .footer-blocks > h2, .lower-links li a {
   font-family: Open Sans;
 }
 
@@ -746,7 +746,7 @@ html, body {
 
 /* line 145, ../sass/vars-modules/variables.scss */
 .footer-blocks {
-  padding: 20px 0;
+  padding: 30px 0;
   background: transparent;
 }
 
@@ -1219,30 +1219,19 @@ body {
 small {
   font-size: 80%;
   position: relative;
-  top: 80px;
+  top: 45px;
   letter-spacing: 2px;
-  /* margin-top: 30px; */
-  /* left: 50%; */
-  /* right: 50%; */
-  /* width: 300px; */
 }
 
 /* HEADER / NESTING / INVERT COLORS
 ============================================= */
-/* line 64, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .brand {
   position: absolute;
   left: 0;
 }
 
-/* line 69, ../sass/main.scss */
-.brand span.valtiraTxt {
-  position: relative;
-  top: -5px;
-  letter-spacing: 1px;
-}
-
-/* line 74, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 nav.topNav {
   height: 30px;
   background: rgba(255, 255, 255, 0.3);
@@ -1252,8 +1241,9 @@ nav.topNav {
   top: 0;
   width: 100%;
 }
-/* line 83, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 nav.topNav ul {
+  margin-right: 3em;
   z-index: 5;
   width: 780px;
   height: 56px;
@@ -1262,7 +1252,7 @@ nav.topNav ul {
   top: 0;
   display: inline-block;
 }
-/* line 92, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 nav.topNav ul li {
   cursor: pointer;
   padding: 15px;
@@ -1271,36 +1261,36 @@ nav.topNav ul li {
   display: inline-block;
 }
 
-/* line 102, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 nav.whitebg ul li {
   color: black;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 108, ../sass/main.scss */
+  /* line 99, ../sass/main.scss */
   nav.topNav ul {
     width: 500px;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 114, ../sass/main.scss */
+  /* line 105, ../sass/main.scss */
   nav.topNav ul {
     width: 400px;
   }
 
-  /* line 117, ../sass/main.scss */
+  /* line 108, ../sass/main.scss */
   nav.topNav ul li:not(.brand) {
     display: none;
   }
 }
 /* CLASSES
 ============================================= */
-/* line 207, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 .tiny-underline, .content-blocks > h3, .footer-blocks > h3 {
   margin-top: 1em;
 }
 
-/* line 219, ../sass/main.scss */
+/* line 210, ../sass/main.scss */
 .lower-links {
   text-align: center;
   margin-left: -4em;
@@ -1308,24 +1298,31 @@ nav.whitebg ul li {
   top: 20px;
 }
 
-/* line 226, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
 .lower-links li {
   display: inline-block;
   cursor: pointer;
   padding: 10px;
 }
 
-/* line 232, ../sass/main.scss */
-.lower-links li:hover {
-  color: orange;
+/* line 223, ../sass/main.scss */
+.lower-links li a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
 }
 
-/* line 240, ../sass/main.scss */
+/* line 230, ../sass/main.scss */
+.lower-links li a:hover {
+  color: #526ef2;
+}
+
+/* line 238, ../sass/main.scss */
 .footer-social li {
   display: inline-block;
 }
 
-/* line 252, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 .footer-links a:hover {
   text-decoration: none;
   color: #381e3a;
@@ -1336,7 +1333,7 @@ nav.whitebg ul li {
   transition: 0.2s;
 }
 
-/* line 270, ../sass/main.scss */
+/* line 268, ../sass/main.scss */
 .cloud-based {
   background: url("../img/computer.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1345,27 +1342,27 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 273, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 .cloud-based h2, .cloud-based h3 {
   color: white;
 }
 
-/* line 277, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 .cloud-based h2 {
   font-size: 23px;
 }
 
-/* line 281, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .cloud-based h3 {
   font-size: 19px;
 }
 
-/* line 293, ../sass/main.scss */
+/* line 291, ../sass/main.scss */
 .footer-links li a {
   color: white;
 }
 
-/* line 297, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 .home {
   height: 100vh;
   background: url("../img/computer.png") no-repeat center;
@@ -1375,7 +1372,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 302, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 .services {
   height: 100vh;
   background: url("../img/future.jpg") no-repeat center;
@@ -1385,7 +1382,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 307, ../sass/main.scss */
+/* line 305, ../sass/main.scss */
 .social-circles {
   width: 50px;
   height: 50px;
@@ -1402,7 +1399,7 @@ nav.whitebg ul li {
   text-align: center;
 }
 
-/* line 314, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 .social-circles:hover {
   background: url("../img/roll-googleplus.svg") no-repeat center;
   -webkit-background-size: cover;
@@ -1411,7 +1408,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 322, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 .down-button:hover {
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
@@ -1421,7 +1418,7 @@ nav.whitebg ul li {
   background: rgba(110, 55, 114, 0.8);
 }
 
-/* line 327, ../sass/main.scss */
+/* line 325, ../sass/main.scss */
 .glyphicon-chevron-down:before {
   content: "\e114";
   position: relative;
@@ -1430,18 +1427,13 @@ nav.whitebg ul li {
   color: white;
 }
 
-/* line 347, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 .card-descr ul > li {
   list-style-type: none;
-  /* float: left; */
-  /* padding: 0; */
-  /* padding: 0; */
-  /* padding: 0; */
   padding: 5px 0 0 0;
-  /* height: 500px; */
 }
 
-/* line 361, ../sass/main.scss */
+/* line 354, ../sass/main.scss */
 #mainbox .card-img1 {
   background: url("../img/services/stock1.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1450,7 +1442,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 365, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 #mainbox .card-img2 {
   background: url("../img/services/stock2.png") no-repeat center;
   -webkit-background-size: cover;
@@ -1459,7 +1451,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 369, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 #mainbox .card-img3 {
   background: url("../img/services/stock3.jpg") no-repeat center;
   -webkit-background-size: cover;
@@ -1468,7 +1460,7 @@ nav.whitebg ul li {
   background-size: cover;
 }
 
-/* line 373, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 .card {
   background: white;
   width: 530px;
@@ -1483,17 +1475,17 @@ nav.whitebg ul li {
   transition: 0.2s;
 }
 
-/* line 383, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .card:hover {
   opacity: 0.8;
 }
 
-/* line 387, ../sass/main.scss */
+/* line 380, ../sass/main.scss */
 .card a {
   text-decoration: none;
 }
 
-/* line 391, ../sass/main.scss */
+/* line 384, ../sass/main.scss */
 .card-img {
   background: white;
   width: 530px;
@@ -1504,43 +1496,54 @@ nav.whitebg ul li {
 }
 
 @media screen and (max-width: 707px) {
-  /* line 401, ../sass/main.scss */
+  /* line 394, ../sass/main.scss */
   .card {
     margin: 10px -15px;
   }
 }
 @media screen and (max-width: 991px) {
-  /* line 411, ../sass/main.scss */
+  /* line 404, ../sass/main.scss */
   .card {
     width: 360px;
   }
 }
 @media only screen and (max-width: 1199px) {
-  /* line 417, ../sass/main.scss */
+  /* line 410, ../sass/main.scss */
   .card {
     width: 450px;
   }
 }
 /* IDs
 ============================================= */
-/* line 425, ../sass/main.scss */
+/* line 418, ../sass/main.scss */
 #footer {
   background: #422544;
   height: 410px;
   color: white;
 }
 
-/* line 431, ../sass/main.scss */
+/* line 424, ../sass/main.scss */
 #mainbox {
   box-sizing: border-box;
   justify-content: center;
   display: flex;
+  padding: 0;
   flex-wrap: wrap;
 }
 
-/* line 439, ../sass/main.scss */
+/* line 433, ../sass/main.scss */
 #valtLogo {
   width: 50px;
-  position: relative;
-  top: -5px;
+  position: absolute;
+  top: 0.5em;
+  left: 1em;
+}
+
+/* line 440, ../sass/main.scss */
+.brand span.valtiraTxt {
+  position: absolute;
+  top: 1em;
+  left: 5.5em;
+  letter-spacing: 1px;
+  color: white;
 }
