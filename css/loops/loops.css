@@ -25,9 +25,26 @@ html, body {
 ============================================= */
 /* CLEARFIX
 ============================================= */
+@media only screen and (max-width: 40em) {
+  /* line 209, ../../sass/vars-modules/variables.scss */
+  .content-blocks > p,
+  .footer-blocks > p {
+    padding: 10px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  /* line 217, ../../sass/vars-modules/variables.scss */
+  .content-blocks > p,
+  .footer-blocks > p {
+    font-size: 16px;
+  }
+}
 /* SCROLL UP BTN
 ============================================= */
-/* line 282, ../../sass/vars-modules/variables.scss */
+/* line 316, ../../sass/vars-modules/variables.scss */
 #cd-nav ul {
   /* mobile first */
   position: fixed;
@@ -43,14 +60,14 @@ html, body {
   transition: transform 0.3s, visibility 0s 0.3s;
 }
 
-/* line 298, ../../sass/vars-modules/variables.scss */
+/* line 332, ../../sass/vars-modules/variables.scss */
 #cd-nav ul.is-visible {
   visibility: visible;
   transform: scale(1);
   transition: transform 0.3s, visibility 0s 0s;
 }
 
-/* line 304, ../../sass/vars-modules/variables.scss */
+/* line 338, ../../sass/vars-modules/variables.scss */
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
@@ -66,7 +83,7 @@ html, body {
 
 /* BURGER ANIMATION
 ============================================= */
-/* line 322, ../../sass/vars-modules/variables.scss */
+/* line 356, ../../sass/vars-modules/variables.scss */
 .c-hamburger {
   position: fixed;
   overflow: hidden;
@@ -86,12 +103,12 @@ html, body {
   transition: background 0.3s;
 }
 
-/* line 341, ../../sass/vars-modules/variables.scss */
+/* line 375, ../../sass/vars-modules/variables.scss */
 .c-hamburger:focus {
   outline: none;
 }
 
-/* line 345, ../../sass/vars-modules/variables.scss */
+/* line 379, ../../sass/vars-modules/variables.scss */
 .c-hamburger span {
   display: block;
   position: absolute;
@@ -102,7 +119,7 @@ html, body {
   background: white;
 }
 
-/* line 356, ../../sass/vars-modules/variables.scss */
+/* line 390, ../../sass/vars-modules/variables.scss */
 .c-hamburger span::before,
 .c-hamburger span::after {
   position: absolute;
@@ -114,67 +131,67 @@ html, body {
   content: "";
 }
 
-/* line 366, ../../sass/vars-modules/variables.scss */
+/* line 400, ../../sass/vars-modules/variables.scss */
 .c-hamburger span::before {
   top: -10px;
 }
 
-/* line 370, ../../sass/vars-modules/variables.scss */
+/* line 404, ../../sass/vars-modules/variables.scss */
 .c-hamburger span::after {
   bottom: -10px;
 }
 
-/* line 374, ../../sass/vars-modules/variables.scss */
+/* line 408, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx {
   background-color: #422544;
 }
 
-/* line 378, ../../sass/vars-modules/variables.scss */
+/* line 412, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx span {
   transition: background 0s 0.3s;
 }
 
-/* line 383, ../../sass/vars-modules/variables.scss */
+/* line 417, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
   transition-duration: 0.3s, 0.3s;
   transition-delay: 0.3s, 0s;
 }
 
-/* line 388, ../../sass/vars-modules/variables.scss */
+/* line 422, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::before {
   transition-property: top, transform;
 }
 
-/* line 392, ../../sass/vars-modules/variables.scss */
+/* line 426, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx span::after {
   transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
-/* line 397, ../../sass/vars-modules/variables.scss */
+/* line 431, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active {
   background-color: #5dcf5b;
 }
 
-/* line 401, ../../sass/vars-modules/variables.scss */
+/* line 435, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span {
   background: none;
 }
 
-/* line 405, ../../sass/vars-modules/variables.scss */
+/* line 439, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-/* line 410, ../../sass/vars-modules/variables.scss */
+/* line 444, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
 
-/* line 416, ../../sass/vars-modules/variables.scss */
+/* line 450, ../../sass/vars-modules/variables.scss */
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
   transition-delay: 0s, 0.3s;
@@ -183,7 +200,7 @@ html, body {
 /* ============================================================
   SECTIONS parallax
 ============================================================ */
-/* line 425, ../../sass/vars-modules/variables.scss */
+/* line 459, ../../sass/vars-modules/variables.scss */
 div.breakers.cloud-based {
   background-position: 100% 100%;
   background-repeat: no-repeat;
@@ -194,7 +211,7 @@ div.breakers.cloud-based {
 /* ============================================================
   SHOW hidden BTN
 ============================================================ */
-/* line 436, ../../sass/vars-modules/variables.scss */
+/* line 470, ../../sass/vars-modules/variables.scss */
 #cd-nav ul {
   /* mobile first */
   position: fixed;
@@ -210,14 +227,14 @@ div.breakers.cloud-based {
   transition: transform 0.3s, visibility 0s 0.3s;
 }
 
-/* line 452, ../../sass/vars-modules/variables.scss */
+/* line 486, ../../sass/vars-modules/variables.scss */
 #cd-nav ul.is-visible {
   visibility: visible;
   transform: scale(1);
   transition: transform 0.3s, visibility 0s 0s;
 }
 
-/* line 458, ../../sass/vars-modules/variables.scss */
+/* line 492, ../../sass/vars-modules/variables.scss */
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
@@ -232,7 +249,7 @@ div.breakers.cloud-based {
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 473, ../../sass/vars-modules/variables.scss */
+  /* line 507, ../../sass/vars-modules/variables.scss */
   #cd-nav ul {
     /* the navigation moves to the top */
     position: absolute;
@@ -245,7 +262,7 @@ div.breakers.cloud-based {
     transition: all 0s;
   }
 
-  /* line 485, ../../sass/vars-modules/variables.scss */
+  /* line 519, ../../sass/vars-modules/variables.scss */
   #cd-nav.is-fixed ul {
     position: fixed;
     width: 90%;
