@@ -1,4 +1,4 @@
-(function(window) {
+(function() {
 
 "use strict";
 
@@ -20,12 +20,12 @@ $.extend({
       });
     });
   }
-}); setInterval("$.show()",100);
+}); setInterval("$.show();", 100);
 
 // for smooth scroll to hash
     $('a[href*=#]:not([href=#])').click(function() {
     // grab all hashes on page but not if a hash does not have a name attatched ie. (#name)
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);
         // store found has inside target variable
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var n=!1;$(".cd-nav-trigger").on("click",function(i){i.preventDefault(),n||($(this).parents(".csstransitions").length>0&&(n=!0),$("body").toggleClass("navigation-is-open"),$(".cd-navigation-wrapper").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",function(){n=!1}))})});

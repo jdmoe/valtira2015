@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
 @import 'functions/functions.scss';
 
 @import 'mixins/mixins.scss';
@@ -22,9 +24,13 @@
         ----
 
 #E05350 valtira red
+
 #6E3772 valtira purple
+
 #526EF2 valtira blue
+
 #5DCF5B valtira green
+
 #381E3A valtira link hovered
 
 /* GLOBALS
@@ -41,7 +47,11 @@ main h3 {
 }
 
 h2 {
-    font-weight: 600 !important;
+    font-weight: 600;
+}
+
+pre {
+    @extend %pre;
 }
 
 body {
@@ -63,10 +73,10 @@ small {
 }
 nav.topNav {
     height: 30px;
-    background: rgba(255, 255, 255, 0.3);
     text-align: center;
     position: absolute;
     height: 56px;
+    z-index: 2;
     top: 0;
     width: 100%;
 
@@ -81,6 +91,7 @@ nav.topNav {
         display: inline-block;
 
             li {
+            letter-spacing: 3px;
             cursor: pointer;
             padding: 15px;
             color: $valwhte;
@@ -90,10 +101,16 @@ nav.topNav {
     }
 }
 
-nav.whitebg ul li {
-    color: sfc(orange, black);
-
+.brand .valtiraTxt {
+    position: relative;
+    left: 1em;
+    letter-spacing: 2px;
+    color: $valwhte;
+    font-size: 17px;
+    top: 0.7em;
+    @extend %inset;
 }
+
 
 @media screen and (max-width: 700px) {
    nav.topNav ul {
@@ -101,7 +118,7 @@ nav.whitebg ul li {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
    nav.topNav ul {
         width: 400px;
     }
@@ -112,6 +129,30 @@ nav.whitebg ul li {
 
 /* CLASSES
 ============================================= */
+
+#mainbox .card h2 {
+    @extend %headerFont;
+}
+
+.homepageHeader {
+    @extend %centeredInScreen;
+}
+
+.homepageHeader p {
+    @extend %mainFont;
+}
+
+.homepageHeader h1 {
+    margin: 0;
+    letter-spacing: 0.3em;
+    @extend %inset;
+    @include transition(0.4s);
+    @extend %mainFont;
+}
+
+.homepageHeader p {
+    margin: 1em;
+}
 
 .purp-btn {
     @extend %btn;
@@ -182,6 +223,21 @@ nav.whitebg ul li {
     @extend %header-blocks;
 }
 
+.inner-header-blocks h2,
+.inner-header-blocks p {
+    color: $valwhte;
+    @extend %mainFont;
+}
+
+.header-blocks p {
+    margin-top: 2em;
+    font-size: 26px !important;
+    letter-spacing: 3px;
+    color: $valwhte;
+    z-index: 999;
+    opacity: 1;
+}
+
 .footer-blocks {
     @extend %footer-blocks;
 }
@@ -190,12 +246,19 @@ nav.whitebg ul li {
     @extend %tiny-underline;
 }
 
-.tiny-underline-left {
+.tiny-underline-left-purp {
     @extend %tiny-underline-left;
     @extend %tiny-underline-prp;
 }
 
-.tiny-underline, .content-blocks > p, .footer-blocks > p {
+.tiny-underline-left-grn {
+    @extend %tiny-underline-left;
+    @extend %tiny-underline-grn;
+}
+
+.tiny-underline,
+.content-blocks > p,
+.footer-blocks > p {
     margin-top: 1em;
     @extend %mainFontSize;
     @include transition(0.4s);
@@ -210,6 +273,7 @@ nav.whitebg ul li {
 .content-blocks > h2, .footer-blocks > h2 {
     @extend %content-blocks-h2;
     @extend %inset;
+    font-weight: 500;
 }
 
 .header-blocks > h1 {
@@ -276,7 +340,7 @@ nav.whitebg ul li {
 }
 
 .cloud-based {
-    @include cover-background('../img/computer.png');
+    @include cover-background('../img/services/breaker.png');
 }
 .cloud-based .content-blocks > p, .cloud-based h2 {
     color: sfc($valwhte, black);
@@ -372,13 +436,14 @@ nav.whitebg ul li {
 }
 
 .card {
-    background: $valwhte;
+    background: $valcard;
     width: 565px;
     box-shadow: 1px 1px 3px #888;
     min-height: 350px;
     padding: 10px;
     position: relative;
     margin: 10px;
+    color: $gray-text;
     @include transition(0.2s);
 }
 
@@ -399,24 +464,26 @@ nav.whitebg ul li {
     @extend %gray-bg;
 }
 
-#triangle-left {
-    position: absolute;
-    /* right: 20px; */
-    /* height: 30px; */
-    border-top: 400px solid transparent;
-    border-right: 47px solid white;
-    /* border-bottom: 0px solid transparent; */
-    left: -47px;
-    z-index: 3;
-    top: 0;
+.jumbotron .jumboOverlay {
+    @extend %jumboOverlay;
 }
+
+.servicesHeader .jumboOverlay {
+    @extend %serviceOverlay;
+}
+
+.servicesHeader {
+    @extend %servicesHeader;
+}
+
+/* IDs
+============================================= */
+
 
 #triangle-left {
     position: absolute;
-    /* right: 20px; */
-    /* height: 30px; */
     border-top: 400px solid transparent;
-    border-right: 47px solid white;
+    border-right: 47px solid $valcard;
     /* border-bottom: 0px solid transparent; */
     left: -47px;
     z-index: 3;
@@ -429,13 +496,10 @@ nav.whitebg ul li {
     top: 0;
     width: 0;
     height: 0;
-    border-top: 401px solid $valwhte;
+    border-top: 401px solid $valcard;
     border-right: 45px solid transparent;
     z-index: 2;
 }
-
-/* IDs
-============================================= */
 
 #footer {
     background: $valpurp;

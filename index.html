@@ -6,50 +6,94 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/link-hover.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/slitslider.css" />
+    <link rel='stylesheet' type="text/css" href="css/pincustom.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
 </head>
 <body>
 
+
 <!-- hamburger -->
 
-<button class="c-hamburger c-hamburger--htx">
-    <span>toggle menu</span>
-</button>
+    <a href="#cd-nav" class="cd-nav-trigger">
+        <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+        </button>
+    </a>
+
+    <div id="cd-nav" class="cd-nav">
+        <div class="cd-navigation-wrapper">
+            <div class="cd-half-block">
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li><a href="#0" class="selected">Work</a></li>
+                        <li><a href="#0">Services</a></li>
+                        <li><a href="#0">Approach</a></li>
+                        <li><a href="#0">Blog</a></li>
+                        <li><a href="#0">About</a></li>
+                        <li><a href="#0">Contact</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .cd-half-block -->
+
+            <div class="cd-half-block">
+                <address>
+                    <ul class="cd-contact-info">
+                        <li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+                        <li>0244-12345678</li>
+                        <li>
+                            <span>1201 S. Marquette Avenue</span>
+                            <span>#330</span>
+                            <span>Minneapolis, Minnesota 55403</span>
+                        </li>
+                        <li><img src="img/valtLogo.png" alt="mobileValtLogo" />VALTIRA</li>
+                    </ul>
+                </address>
+            </div> <!-- .cd-half-block -->
+        </div> <!-- .cd-navigation-wrapper -->
+    </div> <!-- .cd-nav -->
 
 <!-- header -->
 
-<header>
-    <div class="jumbotron home">
-    <nav class="topNav">
-        <a href="#">
-            <div class="brand">
-                <img src="img/valtLogo.png" id="valtLogo" alt="valtiraLogo" />
-                <span class="valtiraTxt"> Valtira</span>
+    <header>
+        <div class="jumbotron home">
+            <div class="jumboOverlay">
+                <nav class="topNav">
+                    <a href="index.html">
+                        <div class="brand">
+                            <img src="img/valtLogo.png" id="valtLogo" alt="valtiraLogo" />
+                            <span class="valtiraTxt"> Valtira</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <a href="#"><li>Home</li></a>
+                        <a href="services.html"><li>Services</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="#"><li>Contact</li></a>
+                    </ul>
+                </nav>
+                <section class="homepageHeader">
+                    <h1>Welcome to Valtira</h1>
+                    <div class="grn-underline"></div>
+                    <p>We do work that matters</p>
+                </section>
+
+                <div class="header-blocks">
+                    <a href="#next"><div class="down-button bounce"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
+                </div>
             </div>
-        </a>
-        <ul>
-            <a href="#"><li>Home</li></a>
-            <a href="services.html"><li>Services</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Contact</li></a>
-        </ul>
-    </nav>
-        <div class="header-blocks">
-            <h1>Welcome to Valtira</h1>
-            <div class="grn-underline"></div>
-            <p>We Do Work That Matters</p>
-            <a href="#next"><div class="down-button bounce"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
         </div>
-    </div>
-</header>
+    </header>
 
 <!-- content blocks -->
 
-<a name="next"></a>
+    <a name="next"></a>
     <main class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12">
@@ -63,7 +107,35 @@
         </div>
     </main>
 
-    <div class="dynamic-containers demo-1"></div>
+<!-- pinwheel -->
+
+        <div class="pinwheel_slider pinwheel_slider_set4">
+            <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
+                <div class="pinwheel_slideri carousel-feature">
+                <!-- pinwheel_slideri --><img src="img/pinwheel/stock1.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+                <div class="pinwheel_text carousel-caption">
+                <h4 data-anim="">
+                Hunting down big, bad code</h4>
+                </div>
+                </div>
+
+                <div class="pinwheel_slideri carousel-feature">
+                <!-- pinwheel_slideri --><img src="img/pinwheel/stock2.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+                <div class="pinwheel_text carousel-caption">
+                <h4 data-anim="">
+                Innovators in Web Development</h4>
+                </div>
+                </div>
+
+                <div class="pinwheel_slideri carousel-feature">
+                <!-- pinwheel_slideri --><img src="img/pinwheel/stock3.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+                <div class="pinwheel_text carousel-caption">
+                <h4 data-anim="">
+                Responsive Fluid Design</h4>
+                </div>
+                </div>
+            </div>
+        </div>
 
 <!-- content blocks -->
 
@@ -86,34 +158,34 @@
     <div class="dynamic-containers demo-1">
         <div id="slider" class="sl-slider-wrapper">
             <div class="sl-slider">
-                <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                     <div class="sl-slide-inner">
                         <div class="deco" data-icon="H"></div>
-                        <blockquote><p>You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.</p><cite>Matt Berg, Executive Director, Care Ventures Cooperative</cite></blockquote>
+                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Matt Berg, Executive Director, Care Ventures Cooperative</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                     <div class="sl-slide-inner">
                         <div class="deco" data-icon="q"></div>
-                        <blockquote><p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
+                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
                         <div class="deco" data-icon="O"></div>
-                        <blockquote><p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
+                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
                         <div class="deco" data-icon="I"></div>
-                        <blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Kathleen Becker, Director of Marketing, Famous Dave's</cite></blockquote>
+                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Kathleen Becker, Director of Marketing, Famous Dave's</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
                         <div class="deco" data-icon="t"></div>
-                        <blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Joell Morin, Online Marketing &amp; Project Manager,<br/> Bloomington Convention &amp; Visitors Bureau</cite></blockquote>
+                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Joell Morin, Online Marketing &amp; Project Manager,<br/> Bloomington Convention &amp; Visitors Bureau</cite></blockquote>
                     </div>
                 </div>
             </div>
@@ -168,7 +240,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 text-center">
             <div class="footer-blocks">
-                <h3>work that matters</h3>
+                <h2>work that matters</h2>
                 <div class="red-underline"></div>
             </div>
         </div>
@@ -192,11 +264,44 @@
 
 <!-- scripts -->
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/slider/jquery.ba-cond.min.js"></script>
 <script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/pinwheel.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
 </html>
+<script type="text/javascript">
+
+// scripts for navigation
+
+// scripts for pinwheel slider
+
+            jQuery(document).ready(function() {
+
+            args = {
+
+                animationEasing:"swing",
+                carouselSpeed:500,
+                autoPlay: 8000,rightButtonTag:   "#pinwheel_slider_1_next", leftButtonTag:   "#pinwheel_slider_1_prev",
+                preload: true,
+                largeFeatureWidth:450,
+                largeFeatureHeight:300,
+                smallFeatureWidth:250,
+                smallFeatureHeight:200,
+                smallFeatureOffset:30,
+                topPadding:0,
+                sidePadding:0,
+                minimize:false,
+                sliderMaxWidth:900,
+                sliderMaxHeight:350,
+                prettyphoto:true,
+                slider_handle:"pinwheel_slider_1"
+            };
+        var pinwheel_slider_1_c = jQuery("#pinwheel_slider_1").pinwheel(args);jQuery(window).on("debouncedresize",function() {
+                        pinwheel_slider_1_c.reload(args);
+                });jQuery("#pinwheel_slider_1 .wpsc_buy_button").css({ "background":"#3DB432","font-size":"14px","color":"#ffffff","border":"1px solid #3db432"});  });
+</script>

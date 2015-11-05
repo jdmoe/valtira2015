@@ -1,5 +1,7 @@
 @import 'mixins/mixins.scss';
 
+@import 'functions/functions.scss';
+
 /*  VARIABLES
 ============================================= */
 
@@ -13,6 +15,8 @@ $valblue:      #526EF2;
 
 $valgreen:     #5DCF5B;
 
+$valcard:      #FCFCFC;
+
 $gray-text:    #4A4A4A;
 
 $transparent:  transparent;
@@ -22,22 +26,53 @@ $link-hovered: #381E3A;
 /* CLEARFIX
 ============================================= */
 
+%centeredInScreen {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+%servicesHeader {
+  @include cover-background('../img/services/service-stock1.jpg');
+}
+
+%jumboOverlay {
+  background: rgba(54, 54, 54, 0.6);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+%serviceOverlay {
+  background: rgba(25, 25, 25, 0.6);
+  height: 500px;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 3;
+}
+
+%pre {
+  display: block;
+  @extend %mainFont;
+  padding: 9.5px;
+  margin: 0 0 10px 20px;
+  color: purple;
+  letter-spacing: 1px;
+  font-size: 13px !important;
+  position: relative;
+  text-decoration: none;
+  top: 15px;
+  font-family: Sans-serif !important;
+}
+
 %left {
   float: left;
-}
-
-%minimizedImg-left {
-  height: 300px !important;
-  position: relative;
-  top: 20px;
-  left: 16px;
-}
-
-%minimizedImg-right {
-  height: 300px !important;
-  position: relative;
-  top: 20px;
-  right: 16px;
 }
 
 %right {
@@ -63,7 +98,13 @@ $link-hovered: #381E3A;
 }
 
 %mainFont {
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+%headerFont {
+  font-family: 'Montserrat';
+  font-weight: 400;
 }
 
 %mainFontSize {
@@ -85,7 +126,7 @@ $link-hovered: #381E3A;
 
 %gray-bg {
   padding: 30px;
-  background: #F1F4F9;
+  background: #fff;
 }
 
 %rightCard {
@@ -113,43 +154,59 @@ $link-hovered: #381E3A;
   letter-spacing: 2px;
 }
 
+%minimizedImg-left {
+  height: 300px !important;
+  position: relative;
+  top: 20px;
+  left: 16px;
+}
+
+%minimizedImg-right {
+  height: 300px !important;
+  position: relative;
+  top: 20px;
+  right: 16px;
+}
+
 %page-Header {
-  font-size: 60px;
+  font-size: 8em !important;
+  font-weight: 600;
+  // over-ride bootstrap styles
   letter-spacing: 2px;
 }
 
 %purple-buttons {
   color: $valpurp;
   border: 2px solid $valpurp !important;
-  // over-ride bootstrap button styles
+  // over-ride bootstrap styles
 }
 
 %white-buttons {
   color: $valwhte;
   border: 2px solid $valwhte !important;
-  // over-ride bootstrap button styles
+  // over-ride bootstrap styles
 }
 
 %red-buttons {
   color: $valred;
   border: 2px solid $valred !important;
-  // over-ride bootstrap button styles
+  // over-ride bootstrap styles
 }
 
 %green-buttons {
   color: $valgreen;
   border: 2px solid $valgreen !important;
-  // over-ride bootstrap button styles
+  // over-ride bootstrap styles
 }
 
 %blue-buttons {
   color: $valblue;
   border: 2px solid $valblue !important;
-  // over-ride bootstrap button styles
+  // over-ride bootstrap styles
 }
 
 %content-blocks {
-  padding: 53px 0;
+  padding: 78px 0;
   width: 100%;
   margin:0 auto !important;
   text-align: center;
@@ -158,7 +215,7 @@ $link-hovered: #381E3A;
 }
 
 %header-blocks {
-  padding: 20em 0;
+  @extend %mainFont;
   background: transparent;
   margin: auto;
   text-align: center;
@@ -170,6 +227,7 @@ $link-hovered: #381E3A;
 }
 
 %footer-blocks-h3 {
+  font-family: Montserrat;
   font-size: 25px;
   font-weight: 100;
   letter-spacing: 3px;
@@ -177,6 +235,7 @@ $link-hovered: #381E3A;
 }
 
 %content-blocks-h2 {
+  font-family: Montserrat;
   font-size: 35px;
   font-weight: 100;
   letter-spacing: 3px;
@@ -192,6 +251,11 @@ $link-hovered: #381E3A;
 
 @include bp-mediumz {
 
+    .homepageHeader h1 {
+      line-height: 65px;
+      font-size: 35px;
+    }
+
     %content-blocks {
     padding: 10px 0;
     }
@@ -201,13 +265,11 @@ $link-hovered: #381E3A;
     }
 
     %cardHeader {
-    @extend %mainFont;
-    padding: 0;
+    padding: 2em;
     padding-bottom: 10px;
     }
 
     %cardContent {
-    padding:10px;
     letter-spacing: 2px;
     line-height: 26px;
     font-weight: 200;
@@ -220,7 +282,12 @@ $link-hovered: #381E3A;
 
     .content-blocks > p,
     .footer-blocks > p {
-    @extend %cardContent;
+    padding: 10px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: Open Sans;
+    font-size: 17px;
+    text-align: center;
     }
 
     %header-blocks-h2, %content-blocks-h2 {
@@ -232,7 +299,7 @@ $link-hovered: #381E3A;
     }
 
     %page-Header {
-    font-size: 50px;
+    font-size: 50px !important;
     margin-top: 120px;
     @include transition(0.8s);
     }
@@ -300,7 +367,7 @@ $link-hovered: #381E3A;
     width: 100%;
     height: 450px;
     position: relative;
-    background:$valred;
+    background:$transparent;
 }
 
 %threejs-container {
@@ -309,46 +376,6 @@ $link-hovered: #381E3A;
     position: relative;
     background:$valgreen;
 }
-
-/* SCROLL UP BTN
-============================================= */
-
-#cd-nav ul {
-  /* mobile first */
-  position: fixed;
-  width: 90%;
-  max-width: 400px;
-  right: 5%;
-  bottom: 20px;
-  visibility: hidden;
-  overflow: hidden;
-  z-index: 1;
-
-  transform: scale(0);
-  transform-origin: 100% 100%;
-  transition: transform 0.3s, visibility 0s 0.3s;
-}
-
-#cd-nav ul.is-visible {
-  visibility: visible;
-  transform: scale(1);
-  transition: transform 0.3s, visibility 0s 0s;
-}
-
-.cd-nav-trigger {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
-  width: 44px;
-  height: 44px;
-
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  z-index: 2;
-}
-
 
 /* BURGER ANIMATION
 ============================================= */
@@ -359,7 +386,7 @@ $link-hovered: #381E3A;
   margin: 0;
   z-index: 9;
   padding: 0;
-  right: 0;
+  right: 50px;
   top:0;
   width: 60px;
   height: 56px;
@@ -370,6 +397,12 @@ $link-hovered: #381E3A;
   border: none;
   cursor: pointer;
   transition: background 0.3s;
+}
+
+@media screen and (max-width: 650px) {
+  .c-hamburger {
+    right: 0;
+  }
 }
 
 .c-hamburger:focus {
@@ -406,7 +439,8 @@ $link-hovered: #381E3A;
 }
 
 .c-hamburger--htx {
-  background-color: $valpurp;
+    z-index: 9999999;
+  background-color: transparent;
 }
 
 .c-hamburger--htx span {
@@ -429,7 +463,8 @@ $link-hovered: #381E3A;
 
 /* active state, i.e. menu open */
 .c-hamburger--htx.is-active {
-  background-color: $valgreen;
+  background-color: #6E3772;
+  opacity: 0.95;
 }
 
 .c-hamburger--htx.is-active span {
@@ -464,65 +499,5 @@ div.breakers.cloud-based {
 }
 
 /* ============================================================
-  SHOW hidden BTN
+  VIDEO
 ============================================================ */
-
-#cd-nav ul {
-  /* mobile first */
-  position: fixed;
-  width: 90%;
-  max-width: 400px;
-  right: 5%;
-  bottom: 20px;
-  visibility: hidden;
-  overflow: hidden;
-  z-index: 1;
-
-  transform: scale(0);
-  transform-origin: 100% 100%;
-  transition: transform 0.3s, visibility 0s 0.3s;
-}
-
-#cd-nav ul.is-visible {
-  visibility: visible;
-  transform: scale(1);
-  transition: transform 0.3s, visibility 0s 0s;
-}
-
-.cd-nav-trigger {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
-  width: 44px;
-  height: 44px;
-
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  z-index: 2;
-}
-
-@media only screen and (min-width: 1170px) {
-  #cd-nav ul {
-    /* the navigation moves to the top */
-    position: absolute;
-    width: auto;
-    max-width: none;
-    bottom: auto;
-    top: 36px;
-    visibility: visible;
-    transform: scale(1);
-    transition: all 0s;
-  }
-
-  #cd-nav.is-fixed ul {
-    position: fixed;
-    width: 90%;
-    max-width: 400px;
-    bottom: 20px;
-    top: auto;
-    visibility: hidden;
-    transform: scale(0);
-  }
-}
