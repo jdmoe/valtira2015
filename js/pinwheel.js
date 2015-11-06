@@ -59,9 +59,9 @@
      * unless you know what you're doing. Most of them feed off the options
      * so most customization can be achieved by modifying the options values */
     var sliderwidth, sliderheight;
-    if(options.sliderMaxWidth==0 ) sliderwidth=$(this).width();
+    if(options.sliderMaxWidth === 0 ) sliderwidth=$(this).width();
     else sliderwidth=options.sliderMaxWidth;
-    if(options.sliderMaxHeight==0)  sliderheight=$(this).height();
+    if(options.sliderMaxHeight === 0)  sliderheight=$(this).height();
     else sliderheight=options.sliderMaxHeight;
     //alert(sliderwidth+" "+sliderheight);
 
@@ -96,7 +96,7 @@
      */
     var preload = function(callback) {
       // user may not want to preload images
-      if (options.preload == true) {
+      if (options.preload === true) {
         var $imageElements = pluginData.featuresContainer.find("img");
         var loadedImages = 0;
         var totalImages = $imageElements.length;
@@ -119,12 +119,12 @@
         // if user doesn't want preloader, then just go right to callback
         callback();
       }
-    }
+    };
 
     // Gets the feature container based on the number
     var getContainer = function(featureNum) {
       return pluginData.featuresArray[featureNum-1];
-    }
+    };
 
     // get a feature given it's set position (the position that doesn't change)
     var getBySetPos = function(position) {
@@ -132,16 +132,16 @@
         if ($(this).data().setPosition == position)
           return $(this);
       });
-    }
+    };
 
     // get previous feature number
     var getPreviousNum = function(num) {
-      if ((num - 1) == 0) {
+      if ((num - 1) === 0) {
         return pluginData.totalFeatureCount;
       } else {
         return num - 1;
       }
-    }
+    };
 
     // get next feature number
     var getNextNum = function(num) {
@@ -150,7 +150,7 @@
       } else {
         return num + 1;
       }
-    }
+    };
     /**
      * Because there are several options the user can set for the width and height
      * of the feature images, this function is used to determine which options were set
@@ -161,7 +161,7 @@
       pluginData.containerWidth = pluginData.featuresContainer.width();
       //pluginData.containerHeight = pluginData.featuresContainer.height();
     /* Added for responsiveness start - pinwheel */
-    if(options.trackerIndividual==true || options.trackerSummation==true)
+    if(options.trackerIndividual === true || options.trackerSummation === true)
                 pluginData.containerHeight=pluginData.sliderMaxHeight*(pluginData.containerWidth/pluginData.sliderMaxWidth)+20;
             else
                 pluginData.containerHeight=pluginData.sliderMaxHeight*(pluginData.containerWidth/pluginData.sliderMaxWidth);
@@ -199,7 +199,7 @@
         pluginData.smallFeatureHeight = $firstFeatureImage.height() * options.smallFeatureHeight;
       else
         pluginData.smallFeatureHeight = $firstFeatureImage.outerHeight() / 2;
-    }
+    };
 
     /**
      * Function to take care of setting up various aspects of the carousel,
@@ -275,7 +275,7 @@
         }
       //end of iframe code
 
-    }
+    };
 
     /**
      * Here all the position data is set for the features.
@@ -308,7 +308,7 @@
       // And everything after that center feature...
       var $nextFeatures = $centerFeature.nextAll();
       $nextFeatures.each(function (i) {
-        if ($(this).data('setPosition') != undefined) {
+        if ($(this).data('setPosition') !== undefined) {
           $(this).data('position',(i + 2));
         }
       });
@@ -323,7 +323,7 @@
           $(this).find('.carousel-caption p').prepend($numberTag);
         });
       }
-    }
+    };
 
     /**
      * This function will set up the two different types of trackers used
@@ -370,7 +370,7 @@
         // Insert into DOM
         $(pluginData.containerIDTag).append($tracker);
       }
-    }
+    };
 
     // Update the tracker information with the new centered feature
     var updateTracker = function(oldCenter, newCenter) {
@@ -392,7 +392,7 @@
         var $trackerContainer = pluginData.featuresContainer.find('.tracker-summation-container');
         $trackerContainer.find('.tracker-summation-current').text(newCenter);
       }
-    }
+    };
 
     /**
      * This function will set the autoplay for the carousel to
@@ -404,13 +404,13 @@
       clearTimeout(pluginData.timeoutVar);
 
       // set interval for moving if autoplay is set
-      if (!stop && options.autoPlay != 0) {
+      if (!stop && options.autoPlay !== 0) {
         var autoTime = (Math.abs(options.autoPlay) < options.carouselSpeed) ? options.carouselSpeed : Math.abs(options.autoPlay);
         pluginData.timeoutVar = setTimeout(function () {
           (options.autoPlay > 0) ? initiateMove(true,1) : initiateMove(false,1);
         }, autoTime);
       }
-    }
+    };
 
 
     // This is a helper function for the animateFeature function that
@@ -418,14 +418,14 @@
     var rotatePositions = function(direction) {
       $.each(pluginData.featuresArray, function () {
         var newPos;
-        if (direction == false) {
+        if (direction === false) {
           newPos = getNextNum($(this).data().position);
         } else {
           newPos = getPreviousNum($(this).data().position);
         }
         $(this).data('position',newPos);
       });
-    }
+    };
 
     /**
      * This function is used to animate the given feature to the given
@@ -438,7 +438,7 @@
       // Determine the old and new positions of the feature
       var oldPosition = $feature.data('position');
       var newPosition;
-      if (direction == true)
+      if (direction === true)
         newPosition = getPreviousNum(oldPosition);
       else
         newPosition = getNextNum(oldPosition);
@@ -518,7 +518,7 @@
               //Changed for Pinwheel (Caption should slide)
               //$feature.find(".carousel-caption").fadeTo("fast",0.85);
     /* Added for minimizing text on load - start */
-    if(options.minimize==false){
+    if(options.minimize === false){
         $feature.find(".carousel-caption").slideDown(400);
         jQuery(pluginData.containerIDTag).find(".pinwheel_center_slide .carousel-caption .texthide").css("display","block");
     }
@@ -555,7 +555,7 @@
                 // figure out what item was just in the center, and what item is now in the center
                 var newCenterItemNum = pluginData.featuresContainer.find(".carousel-feature").index($feature) + 1;
                 var oldCenterItemNum;
-                if (direction == false)
+                if (direction === false)
                   oldCenterItemNum = getNextNum(newCenterItemNum);
                 else
                   oldCenterItemNum = getPreviousNum(newCenterItemNum);
@@ -567,7 +567,7 @@
 
             // did all the the animations finish yet?
             var divide = pluginData.rotationsRemaining / pluginData.itemsToAnimate;
-            if (divide % 1 == 0) {
+            if (divide % 1 === 0) {
               // if so, set moving to false...
               pluginData.currentlyMoving = false;
               // change positions for all items...
@@ -600,7 +600,7 @@
           options.carouselSpeed,
           options.animationEasing)
         .end();
-    }
+    };
 
     /**
      * move the carousel to the left or to the right. The features that
@@ -615,7 +615,7 @@
 
       // Obtain the new feature positions based on the direction that the carousel is moving
       var $newCenter, $newLeft, $newRight, $newHidden;
-      if (direction == true) {
+      if (direction === true) {
         // Shift features to the left
         $newCenter = getContainer(getNextNum(pluginData.currentCenterNum));
         $newLeft = getContainer(pluginData.currentCenterNum);
@@ -720,18 +720,18 @@
     END - Code for Iframe fix
         ---------------------------------------------------- */
 
-    }
+    };
 
     // This is used to relegate carousel movement throughout the plugin
     // It will only initiate a move if the carousel isn't currently moving
     // It will set the animation queue to the number of rotations given
     var initiateMove = function(direction, rotations) {
-      if (pluginData.currentlyMoving == false) {
+      if (pluginData.currentlyMoving === false) {
         var queue = rotations * pluginData.itemsToAnimate;
         pluginData.rotationsRemaining = queue;
         move(direction);
       }
-    }
+    };
 
     /**
      * This will find the shortest distance to travel the carousel from
@@ -754,7 +754,7 @@
 
       // whichever is shorter
       return (goingToLeft < goingToRight) ? goingToLeft*-1 : goingToRight;
-    }
+    };
 
     // Move to the left if left button clicked
     $(options.leftButtonTag).on('click',function () {
@@ -777,7 +777,7 @@
         }
       })
       .mouseover(function () {
-        if (pluginData.currentlyMoving == false) {
+        if (pluginData.currentlyMoving === false) {
           var position = $(this).data('position');
           if (position == 2 || position == pluginData.totalFeatureCount) {
             //Changes for Pinwheel ( opacity )
@@ -790,7 +790,7 @@
         if (options.stopOnHover) options.autoPlay = 0;
       })
       .mouseout(function () {
-        if (pluginData.currentlyMoving == false) {
+        if (pluginData.currentlyMoving === false) {
           var position = $(this).data('position');
           if (position == 2 || position == pluginData.totalFeatureCount) {
             //Changes for Pinwheel ( opacity )
@@ -813,7 +813,7 @@
         var position = $(this).data('position');
         // if there are more than just feature divs within the container, they will
         // not have a position and it may come back as undefined. Throw these out
-        if (position != undefined) {
+        if (position !== undefined) {
           // if any of the links on a feature OTHER THAN the center feature were clicked,
           // initiate a carousel move but then throw the link action away
           if (position != 1) {

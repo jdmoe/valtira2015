@@ -134,6 +134,10 @@ nav.topNav {
     @extend %headerFont;
 }
 
+.valbeam {
+    @extend %valbeam;
+}
+
 .homepageHeader {
     @extend %centeredInScreen;
 }
@@ -340,7 +344,7 @@ nav.topNav {
 }
 
 .cloud-based {
-    @include cover-background('../img/services/breaker.png');
+    @include cover-background('../img/slitslider/slidestock3.png');
 }
 .cloud-based .content-blocks > p, .cloud-based h2 {
     color: sfc($valwhte, black);

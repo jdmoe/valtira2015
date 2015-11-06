@@ -6,18 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="css/link-hover.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="css/slitslider.css" />
-    <link rel='stylesheet' type="text/css" href="css/pincustom.css" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-
+    <link rel='stylesheet' type="text/css" href="css/animations.css" />
 </head>
 <body>
-
 
 <!-- hamburger -->
 
@@ -52,7 +46,6 @@
                             <span>#330</span>
                             <span>Minneapolis, Minnesota 55403</span>
                         </li>
-                        <li><img src="img/valtLogo.png" alt="mobileValtLogo" />VALTIRA</li>
                     </ul>
                 </address>
             </div> <!-- .cd-half-block -->
@@ -109,7 +102,7 @@
 
 <!-- pinwheel -->
 
-        <div class="pinwheel_slider pinwheel_slider_set4">
+        <div class="pinwheel_slider">
             <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
                 <div class="pinwheel_slideri carousel-feature">
                 <!-- pinwheel_slideri --><img src="img/pinwheel/stock1.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
@@ -137,6 +130,10 @@
             </div>
         </div>
 
+<!-- valtira beam -->
+
+    <img src="img/beam.png" alt="valtira beam" id="valbeam" class="valbeam" />
+
 <!-- content blocks -->
 
     <main class="container">
@@ -152,7 +149,6 @@
         </div>
     </main>
 
-
 <!-- slit slider -->
 
     <div class="dynamic-containers demo-1">
@@ -160,39 +156,56 @@
             <div class="sl-slider">
                 <div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                     <div class="sl-slide-inner">
-                        <div class="deco" data-icon="H"></div>
+                        <div class="deco" id="icon1"></div>
                         <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Matt Berg, Executive Director, Care Ventures Cooperative</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                     <div class="sl-slide-inner">
-                        <div class="deco" data-icon="q"></div>
+                        <div class="deco" id="icon2"></div>
                         <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" data-icon="O"></div>
+                        <div class="deco" id="icon3"></div>
                         <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" data-icon="I"></div>
+                        <div class="deco" id="icon4"></div>
                         <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Kathleen Becker, Director of Marketing, Famous Dave's</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" data-icon="t"></div>
+                        <div class="deco" id="icon5"></div>
                         <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Joell Morin, Online Marketing &amp; Project Manager,<br/> Bloomington Convention &amp; Visitors Bureau</cite></blockquote>
                     </div>
                 </div>
             </div>
-            <nav id="nav-arrows" class="nav-arrows">
-                <span class="nav-arrow-prev">Previous</span>
-                <span class="nav-arrow-next">Next</span>
+
+                    <div class="hoverEffects svg-wrap">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+                <path id="arrow-left-4" d="M15.946 48l0.003-10.33 47.411 0.003v-11.37h-47.414l0.003-10.304-15.309 16z" />
+            </svg>
+            <svg width="64" height="64" viewBox="0 0 64 64">
+                <path id="arrow-right-4" d="M48.058 48l-0.003-10.33-47.414 0.003v-11.37h47.418l-0.003-10.304 15.306 16z" />
+            </svg>
+        </div>
+            <nav id="nav-arrows" class="nav-roundslide">
+                <a class="prev" href="/item1">
+                    <span class="icon-wrap"><svg class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-left-4"></svg></span>
+                    <h3>Prev Client...</h3>
+                </a>
+                <a class="next" href="/item3">
+                    <span class="icon-wrap"><svg class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-right-4"></svg></span>
+                    <h3>Next Client...</h3>
+                </a>
             </nav>
+
+
             <nav id="nav-dots" class="nav-dots">
                 <span class="nav-dot-current"></span>
                 <span></span>
@@ -264,6 +277,7 @@
 
 <!-- scripts -->
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
@@ -272,11 +286,11 @@
 <script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/pinwheel.js"></script>
-<script type="text/javascript" src="js/nav.js"></script>
 </html>
 <script type="text/javascript">
 
 // scripts for navigation
+
 
 // scripts for pinwheel slider
 
