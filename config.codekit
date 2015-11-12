@@ -134,6 +134,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/coffee.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111890,
+		"inputAbbreviatedPath": "\/img\/coffee.jpg",
+		"outputAbbreviatedPath": "\/img\/coffee.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/computer.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -163,6 +174,17 @@
 		"initialSize": 138284,
 		"inputAbbreviatedPath": "\/img\/future.jpg",
 		"outputAbbreviatedPath": "\/img\/future.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/galaxy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 323499,
+		"inputAbbreviatedPath": "\/img\/galaxy.jpg",
+		"outputAbbreviatedPath": "\/img\/galaxy.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -453,7 +475,7 @@
 		},
 	"\/js\/min\/nav-min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/nav-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/nav-min-min.js",
@@ -582,6 +604,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/s-services.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/s-services.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/sass\/functions\/functions.scss": {
 		"createSourceMap": 0,

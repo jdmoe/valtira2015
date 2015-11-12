@@ -17,7 +17,7 @@ $valgreen:     #5DCF5B;
 
 $valcard:      #FCFCFC;
 
-$gray-text:    #4A4A4A;
+$gray-text:    #333743;
 
 $transparent:  transparent;
 
@@ -26,10 +26,40 @@ $link-hovered: #381E3A;
 /* CLEARFIX
 ============================================= */
 
+%svgs-sliders {
+  width: 100%;
+  background: $valwhte;
+  height: 100%;
+  text-align: center;
+}
+
+%svg-slider-inner {
+  width: 70em;
+  height: 100%;
+  margin: auto;
+  background: $valwhte;
+}
+
 %valbeam {
   width: 100%;
-  height: 2px;
+  height: 0.135em;
   position: relative;
+}
+
+%sideMenu {
+  display: none;
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  top: 30px;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background-color: orange;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition: width 0.3s, background-color 0.3s;
+  transition: width 0.3s, background-color 0.3s;
 }
 
 %centeredInScreen {
@@ -42,7 +72,11 @@ $link-hovered: #381E3A;
 }
 
 %servicesHeader {
-  @include cover-background('../img/services/service-stock1.jpg');
+  @include cover-background('../img/slitslider/slidestock1.png');
+}
+
+%servicesHeader2 {
+  @include cover-background('../img/slitslider/slidestock2.png');
 }
 
 %jumboOverlay {
@@ -87,14 +121,14 @@ $link-hovered: #381E3A;
 
 %inner-header-blocks {
   position: relative;
-  top: 60px;
+  top: 8em;
 }
 
 %cardContent {
   @extend %mainFont;
   @extend %mainFontSize;
   @extend %alignLeft;
-  padding: 20px;
+  padding: 50px;
   letter-spacing: 1px;
   line-height: 30px;
 }
@@ -114,7 +148,7 @@ $link-hovered: #381E3A;
 }
 
 %mainFontSize {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 %cardHeader {
@@ -147,9 +181,9 @@ $link-hovered: #381E3A;
   height: 70px;
   width: 70px;
   position: absolute;
-  top: 90%;
+  top: 98%;
   cursor: pointer;
-  left: 50%;
+  left: 75%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -212,8 +246,8 @@ $link-hovered: #381E3A;
 }
 
 %content-blocks {
-  padding: 78px 0;
-  width: 100%;
+  padding: 3em 0;
+  width: 80%;
   margin:0 auto !important;
   text-align: center;
   height: 450px;
@@ -228,7 +262,7 @@ $link-hovered: #381E3A;
 }
 
 %footer-blocks {
-  padding: 30px 0;
+  padding: 25px 0;
   background: $transparent;
 }
 
@@ -242,10 +276,10 @@ $link-hovered: #381E3A;
 
 %content-blocks-h2 {
   font-family: Montserrat;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 100;
   letter-spacing: 3px;
-  line-height:35px;
+  line-height: 40px;
 }
 
 %header-blocks-h2 {
@@ -255,66 +289,129 @@ $link-hovered: #381E3A;
   line-height:75px;
 }
 
+@include bp-large {
+
+  .homepageHeader > h1 {
+  font-size: 3em !important;
+  }
+
+  .card-descr > ul {
+  position: relative;
+  top: -1em;
+  font-size: 0.8em;
+  line-height: 1em;
+  }
+
+  %content-blocks {
+  padding: 10px 0;
+  width: 90%;
+  }
+
+  .content-blocks > p,
+  .footer-blocks > p {
+  padding: 10px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-size: 21px;
+  text-align: center;
+  }
+
+  %content-blocks {
+  padding: 38px 0;
+  }
+
+  %header-blocks-h2, %content-blocks-h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 33px;
+  @include transition(0.2s);
+  }
+
+}
+
 @include bp-mediumz {
 
-    .homepageHeader h1 {
-      line-height: 65px;
-      font-size: 35px;
-    }
+  %inner-header-blocks {
+  top: 10em;
+  }
 
-    %content-blocks {
-    padding: 10px 0;
-    }
+  %pre {
+    display: none;
+  }
 
-    %tiny-underline-left {
-    margin: 0 auto !important;
-    }
+  .card-descr > ul {
+  position: static;
+  top:0;
+  padding: 0;
+  }
 
-    %cardHeader {
-    padding: 2em;
-    padding-bottom: 10px;
-    }
+  .card-descr > h2 {
+  margin-left: 0 !important;
+  }
 
-    %cardContent {
-    letter-spacing: 2px;
-    line-height: 26px;
-    font-weight: 200;
-    text-align: center;
-    }
+  .lower-links {
+  text-align: left;
+  position: relative;
+  top: 20px;
+  }
 
-    %mainFontSize {
-    font-size: 16px;
-    }
+  .homepageHeader h1 {
+  line-height: 65px;
+  font-size: 35px;
+  }
 
-    .content-blocks > p,
-    .footer-blocks > p {
-    padding: 10px;
-    letter-spacing: 1px;
-    line-height: 30px;
-    font-family: Open Sans;
-    font-size: 17px;
-    text-align: center;
-    }
+  %content-blocks {
+  padding: 10px 0;
+  width: 100%;
+  }
 
-    %header-blocks-h2, %content-blocks-h2 {
-    font-size: 25px;
-    letter-spacing: 2px;
-    line-height: 30px;
-    font-weight: 200;
-    @include transition(0.2s);
-    }
+  %tiny-underline-left {
+  margin: 0 auto !important;
+  }
 
-    %page-Header {
-    font-size: 50px !important;
-    margin-top: 120px;
-    @include transition(0.8s);
-    }
+  %cardHeader {
+  padding: 2em;
+  padding-bottom: 10px;
+  }
 
-    %reset-H1  {
-    line-height: 35px;
-    font-size: 25px;
-    @include transition(0.8s);
-    }
+  %cardContent {
+  letter-spacing: 2px;
+  line-height: 26px;
+  font-weight: 200;
+  text-align: center;
+  }
+
+  %mainFontSize {
+  font-size: 16px;
+  }
+
+  .content-blocks > p,
+  .footer-blocks > p {
+  padding: 10px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  font-size: 17px;
+  }
+
+  %header-blocks-h2, %content-blocks-h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  font-weight: 200;
+  @include transition(0.2s);
+  }
+
+  %page-Header {
+  font-size: 50px !important;
+  margin-top: 120px;
+  @include transition(0.8s);
+  }
+
+  %reset-H1  {
+  line-height: 35px;
+  font-size: 25px;
+  @include transition(0.8s);
+  }
 }
 
 %footer-social {
@@ -364,14 +461,21 @@ $link-hovered: #381E3A;
     margin: 5px 0;
     text-align: center;
     display: block;
-    -webkit-box-shadow: 2px 9px 5px -6px rgba(0,0,0,0.58);
-    -moz-box-shadow: 2px 9px 5px -6px rgba(0,0,0,0.58);
-    box-shadow: 2px 9px 5px -6px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 2px 7px 20px -6px rgba(0,0,0,0.58);
+    -moz-box-shadow: 2px 7px 20px -6px rgba(0,0,0,0.58);
+    box-shadow: 2px 7px 20px -6px rgba(0,0,0,0.58);
 }
 
 %dynamic-containers {
     width: 100%;
     height: 450px;
+    position: relative;
+    background:$transparent;
+}
+
+%sm-dynamic-containers {
+    width: 100%;
+    height: 250px;
     position: relative;
     background:$transparent;
 }
@@ -383,116 +487,10 @@ $link-hovered: #381E3A;
     background:$valgreen;
 }
 
-/* BURGER ANIMATION
-============================================= */
-
-.c-hamburger {
-  position: fixed;
-  overflow: hidden;
-  margin: 0;
-  z-index: 9;
-  padding: 0;
-  right: 50px;
-  top:0;
-  width: 60px;
-  height: 56px;
-  font-size: 0;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
+.c-hamburger:before {
+  content:'\2630';
+  font-size: 2em;
 }
-
-@media screen and (max-width: 650px) {
-  .c-hamburger {
-    right: 0;
-  }
-}
-
-.c-hamburger:focus {
-  outline: none;
-}
-
-.c-hamburger span {
-  display: block;
-  position: absolute;
-  top: 24px;
-  left: 18px;
-  right: 18px;
-  height: 2px;
-  background: white;
-}
-
-.c-hamburger span::before,
-.c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  content: "";
-}
-
-.c-hamburger span::before {
-  top: -10px;
-}
-
-.c-hamburger span::after {
-  bottom: -10px;
-}
-
-.c-hamburger--htx {
-    z-index: 9999999;
-  background-color: transparent;
-}
-
-.c-hamburger--htx span {
-  transition: background 0s 0.3s;
-}
-
-.c-hamburger--htx span::before,
-.c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
-}
-
-.c-hamburger--htx span::before {
-  transition-property: top, transform;
-}
-
-.c-hamburger--htx span::after {
-  transition-property: bottom, transform;
-}
-
-/* active state, i.e. menu open */
-.c-hamburger--htx.is-active {
-  background-color: #6E3772;
-  opacity: 0.95;
-}
-
-.c-hamburger--htx.is-active span {
-  background: none;
-}
-
-.c-hamburger--htx.is-active span::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.c-hamburger--htx.is-active span::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-
-.c-hamburger--htx.is-active span::before,
-.c-hamburger--htx.is-active span::after {
-  transition-delay: 0s, 0.3s;
-}
-
-
 /* ============================================================
   SECTIONS parallax
 ============================================================ */

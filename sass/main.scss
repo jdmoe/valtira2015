@@ -41,9 +41,13 @@ header h3 {
     color: sfc($valwhte, black);
 }
 
-main,
-main h3 {
+section h3 {
     color: sfc(black, $gray-text);
+}
+
+section.homepageHeader h1,
+section.homepageHeader p {
+    color: sfc(black, $valwhte);
 }
 
 h2 {
@@ -67,38 +71,61 @@ small {
 
 /* HEADER / NESTING / INVERT COLORS
 ============================================= */
+
 .brand {
     position: absolute;
-    left: 0;
+    left: 1em;
 }
+
+a.hamburger-trigger:before {
+    content:'\2630';
+    position: relative;
+    font-family: FontAweseome;
+}
+
+.sideMenu li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.sideMenu li a {
+    color: $valwhte;
+    font-size: 20px;
+    position: relative;
+    left: 0.35em;
+}
+
 nav.topNav {
-    height: 30px;
-    text-align: center;
-    position: absolute;
-    height: 56px;
-    z-index: 2;
-    top: 0;
     width: 100%;
-
+    z-index: 9;
+    padding: 1.5em;
+    position: absolute;
         ul {
-        margin-right: 3em;
-        z-index: 5;
-        width: 780px;
-        height: 56px;
-        text-align: center;
-        position: relative;
-        top: 0;
-        display: inline-block;
-
-            li {
-            letter-spacing: 3px;
-            cursor: pointer;
-            padding: 15px;
-            color: $valwhte;
-            height: 56px;
-            display: inline-block;
+            width: 100%;
+            float: right;
+            text-align: center;
+                li {
+                    display: inline;
+                    text-decoration: none;
+                    list-style-type: none;
+                    @extend %mainFont;
+                    letter-spacing: 1px;
+                        a {
+                            padding: 1.5em;
+                            display: inline;
+                            color: $valwhte;
+                            float: right;
+                        }
+                }
         }
-    }
+}
+
+nav.topNav ul li a:hover {
+    background: rgba( 10, 10, 10, 0.3);
+    text-underline: none;
+    text-decoration: none;
+    list-style-type: none;
+    @include transition(0.4s);
 }
 
 .brand .valtiraTxt {
@@ -111,6 +138,12 @@ nav.topNav {
     @extend %inset;
 }
 
+aside.sideMenu li a img {
+    width: 3em;
+    position: relative;
+    top:-2.1em;
+    left: -20px;
+}
 
 @media screen and (max-width: 700px) {
    nav.topNav ul {
@@ -118,17 +151,89 @@ nav.topNav {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 789px) {
    nav.topNav ul {
         width: 400px;
     }
-    nav.topNav ul li:not(.brand) {
+    nav.topNav ul li a:not(.brand) {
         display: none;
+    }
+    nav.topNav {
+        height: 115px;
     }
 }
 
 /* CLASSES
 ============================================= */
+
+.svgs-sliders {
+    @extend %svgs-sliders;
+}
+
+.svg-slider-inner > img {
+    width: 12em;
+    @include transition(0.8s);
+}
+
+.svg-slider-inner {
+    @extend %svg-slider-inner;
+}
+
+.svg-slider-inner > img {
+    padding: 0;
+    margin: 3em;
+    margin-top: 5em;
+}
+
+#sqlicon {
+    width: 5em;
+}
+
+#mysqlicon {
+    width: 11em;
+}
+
+
+@include bp-large {
+
+    %svg-slider-inner {
+    width: 45em;
+    }
+
+    .svg-slider-inner img {
+    width: 8em;
+    padding: 0;
+    margin: 2em;
+    margin-top: 6em;
+    }
+
+    #sqlicon {
+    width: 5em;
+    }
+
+    #mysqlicon {
+    width: 7em;
+    }
+
+}
+
+@include bp-mediumz-small {
+
+  .svg-slider-inner img {
+  width: 9.5em;
+  padding: 0;
+  margin: 1em;
+  margin-top: 2em;
+  }
+
+  %svg-slider-inner {
+  width: 100%;
+  }
+}
+
+.sideMenu {
+    @extend %sideMenu;
+}
 
 #mainbox .card h2 {
     @extend %headerFont;
@@ -148,10 +253,10 @@ nav.topNav {
 
 .homepageHeader h1 {
     margin: 0;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     @extend %inset;
     @include transition(0.4s);
-    @extend %mainFont;
+    @extend %headerFont;
 }
 
 .homepageHeader p {
@@ -221,6 +326,12 @@ nav.topNav {
 
 .content-blocks {
     @extend %content-blocks;
+}
+
+.sm-content-blocks {
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 100px;
 }
 
 .header-blocks {
@@ -306,7 +417,17 @@ nav.topNav {
 }
 
 .lower-links li a:hover {
-    color: $valblue;
+    color: $valgreen;
+    @include transition(0.4s)
+}
+
+@include bp-mediumz-small {
+
+  .lower-links {
+  margin-left: 0;
+  padding: 1em;
+  width: 100%;
+  }
 }
 
 .footer-social {
@@ -337,6 +458,10 @@ nav.topNav {
 
 .dynamic-containers {
     @extend %dynamic-containers;
+}
+
+.sm-dynamic-containers {
+    @extend %sm-dynamic-containers;
 }
 
 .breakers {
@@ -372,7 +497,7 @@ nav.topNav {
 
 .home {
     height: 100vh;
-    @include cover-background('../img/computer.png');
+    @include cover-background('../img/galaxy.jpg');
 }
 
 .services {
@@ -382,9 +507,30 @@ nav.topNav {
 
 .social-circles {
     @include circle(50px, #999);
-    @include cover-background('../img/googleplus.svg');
+    background: #fff;
     cursor: pointer;
     text-align: center;
+}
+
+.social-circles > i {
+    position: relative;
+    top: 0.4em;
+}
+
+@include bp-large {
+
+    .social-circles {
+    @include circle(40px, #999);
+    @include transition(0.4s);
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    }
+    .social-circles > i {
+    font-size: 1.5em;
+    top:0.4em;
+    }
+
 }
 
 .minimizedImg-left {
@@ -395,9 +541,6 @@ nav.topNav {
     @extend %minimizedImg-right;
 }
 
-.social-circles:hover {
-    @include cover-background('../img/roll-googleplus.svg');
-}
 
 .down-button {
     @extend %down-button;
@@ -405,7 +548,7 @@ nav.topNav {
 
 .down-button:hover {
     @include transition(0.4s);
-    background:rgba(110, 55, 114, 0.8);
+    background: $valgreen;
 }
 
 .glyphicon-chevron-down:before {
@@ -428,11 +571,20 @@ nav.topNav {
 
 .card-descr > ul {
     @extend %cardContent;
+    @include transition(0.3s);
+}
+
+.card-descr > h2 {
+    margin-left: 1em;
+}
+
+.card-descr > div:nth-child(3) {
+        margin-left: 1.7em;
 }
 
 .card-descr ul > li {
     list-style-type: none;
-    padding: 5px 0 0 0;
+    padding: 15px 0 0 0;
 }
 
 .card-descr > h2 {
@@ -472,13 +624,20 @@ nav.topNav {
     @extend %jumboOverlay;
 }
 
-.servicesHeader .jumboOverlay {
+.servicesHeader .jumboOverlay,
+.servicesHeader2 .jumboOverlay
+{
     @extend %serviceOverlay;
 }
 
 .servicesHeader {
     @extend %servicesHeader;
 }
+
+.servicesHeader2 {
+    @extend %servicesHeader2;
+}
+
 
 /* IDs
 ============================================= */

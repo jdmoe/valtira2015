@@ -75,7 +75,7 @@
 @include sticky-footer(30px);
 
 @mixin bp-large {
-  @media only screen and (max-width: 60em) {
+  @media only screen and (max-width: 63em) {
     @content;
   }
 }
@@ -88,6 +88,12 @@
 
 @mixin bp-mediumz {
   @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-mediumz-small {
+  @media only screen and (max-width: 37em) {
     @content;
   }
 }
