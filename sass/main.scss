@@ -38,7 +38,7 @@
 
 header,
 header h3 {
-    color: sfc($valwhte, black);
+    color: sfc(orange, $valgreen);
 }
 
 section h3 {
@@ -47,7 +47,7 @@ section h3 {
 
 section.homepageHeader h1,
 section.homepageHeader p {
-    color: sfc(black, $valwhte);
+    color: sfc(yellow, $valwhte);
 }
 
 h2 {
@@ -75,6 +75,10 @@ small {
 .brand {
     position: absolute;
     left: 1em;
+}
+
+.brand:hover {
+    background: rgba( 10, 10, 10, 0.3);
 }
 
 a.hamburger-trigger:before {
@@ -166,6 +170,251 @@ aside.sideMenu li a img {
 /* CLASSES
 ============================================= */
 
+// start page styles
+
+.bleed-left-text p {
+    width: 28em;
+    line-height: 25px;
+    font-family: Open Sans;
+    font-weight: 400;
+}
+
+.bleed-left-text p,
+.bleed-right-text p { font-size: 1.1em; }
+
+.bleed-left-text h2,
+.bleed-right-text h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bleed-right-text p {
+    width: 20em;
+    line-height: 25px;
+    font-family: Open Sans;
+    font-weight: 400;
+}
+
+.bleed-right-text h2 {
+    float: right;
+    text-align: left;
+    position: relative;
+}
+.bleed-right-text p {
+    float: right;
+    clear: right;
+}
+
+.bleed-right-text h2 {
+    float: right;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    position: relative;
+    right: 3em;
+}
+
+.bleed-left-image,
+.bleed-left-text {
+    height: 36em;
+    float: left;
+    padding: 0.5em 0 0 3em;
+    box-sizing: border-box;
+}
+
+.bleed-right-image,
+.bleed-right-text {
+    height: 24em;
+    float: left;
+    padding: 0.5em 3em 0 0;
+    box-sizing: border-box;
+}
+
+.bleed-left-image {
+    width: 46%;
+}
+
+.bleed-left-text {
+    width: 54%;
+}
+
+.bleed-right-image {
+    width: 54%;
+}
+
+.bleed-right-text {
+    width: 46%;
+}
+
+.bleed-left-image {
+    @include cover-background('../img/su1.jpg');
+    box-shadow: 5px 5px 25px gray;
+}
+
+.bleed-right-image {
+    @include cover-background('../img/su2.jpg');
+    box-shadow: 5px 5px 25px gray;
+}
+
+@include bp-large {
+
+    .bleed-left-text p {
+    width: 22em;
+    line-height: 25px;
+    font-family: Open Sans;
+    font-weight: 400;
+    }
+
+    .bleed-right-text p {
+    width: 14em;
+    line-height: 25px;
+    font-family: Open Sans;
+    font-weight: 400;
+    }
+
+    .bleed-right-text h2 {
+    right: 0.5em;
+    font-size: 1.7em;
+    }
+
+  // content start
+
+  .bleed-left-image,
+  .bleed-left-text {
+    height: 43em;
+    float: left;
+    padding: 0.5em 0 0 2em;
+    box-sizing: border-box;
+  }
+
+  .bleed-right-image,
+  .bleed-right-text {
+    height: 36em;
+    float: left;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .bleed-left-image {
+    width: 42%;
+  }
+
+  .bleed-left-text {
+    width: 58%;
+  }
+
+  .bleed-right-image {
+    width: 55%;
+  }
+
+  .bleed-right-text {
+    width: 42%;
+  }
+
+  // content end
+}
+
+@include bp-mediumz {
+
+    .bleed-left-text p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+
+    .bleed-right-text p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+
+    .bleed-right-text h2,
+    .bleed-left-text h2 {
+    text-align: center;
+    float: none;
+    margin: 0 0 1em 0;
+    width: 100%;
+    padding: 0;
+    position: static;
+    }
+
+    // content start
+
+    .bleed-left-image,
+    .bleed-left-text {
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    }
+
+    .bleed-left-text,
+    .bleed-right-text { height: auto; }
+
+    .bleed-left-image { height: 36em; }
+    .bleed-right-image { height: 23em; }
+
+    .bleed-right-image,
+    .bleed-right-text {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+    }
+
+    .bleed-left-image {
+    width: 100%;
+    display: none;
+    }
+
+    .bleed-left-text {
+    width: 100%;
+    }
+
+    .bleed-right-image {
+    width: 92%;
+    margin: 1em;
+    }
+
+    .bleed-right-text {
+    width: 100%;
+    }
+}
+
+// end page styles
+
+.left-content-image {
+    @extend %left-content-image;
+    box-shadow: 5px 5px 25px gray;
+}
+
+.right-content-image {
+    @extend %right-content-image;
+    box-shadow: 5px 5px 25px gray;
+}
+
+.left-about-image {
+    @extend %left-about-image;
+    box-shadow: 5px 5px 25px gray;
+}
+
+.right-about-image {
+    @extend %right-about-image;
+    box-shadow: 5px 5px 25px gray;
+}
+
+.content-image-containers {
+    @extend %content-image-containers;
+}
+
+.content-caption-wrapper {
+    @extend %content-caption-wrapper;
+}
+
+.content-after-images {
+    @extend %content-after-images;
+}
+
 .svgs-sliders {
     @extend %svgs-sliders;
 }
@@ -255,12 +504,15 @@ aside.sideMenu li a img {
     margin: 0;
     letter-spacing: 0.1em;
     @extend %inset;
+    font-size: 5em;
     @include transition(0.4s);
     @extend %headerFont;
 }
 
 .homepageHeader p {
     margin: 1em;
+    font-size: 160%;
+    letter-spacing: 3px;
 }
 
 .purp-btn {
@@ -328,6 +580,18 @@ aside.sideMenu li a img {
     @extend %content-blocks;
 }
 
+.alignLeft {
+    @extend %alignLeft;
+}
+
+.pre2 {
+    @extend %pre2;
+}
+
+.page-blocks {
+    @extend %page-blocks;
+}
+
 .sm-content-blocks {
     padding-bottom: 0;
     padding-top: 0;
@@ -342,6 +606,16 @@ aside.sideMenu li a img {
 .inner-header-blocks p {
     color: $valwhte;
     @extend %mainFont;
+}
+
+.inner-header-blocks p {
+    margin-left: -1em;
+}
+
+.inner-header-blocks > div,
+.inner-header-blocks h2,
+.inner-header-blocks p {
+  @extend %centeredInScreen25;
 }
 
 .header-blocks p {
@@ -371,13 +645,14 @@ aside.sideMenu li a img {
     @extend %tiny-underline-grn;
 }
 
-.tiny-underline,
 .content-blocks > p,
 .footer-blocks > p {
-    margin-top: 1em;
     @extend %mainFontSize;
-    @include transition(0.4s);
     @extend %mainFont;
+}
+
+.tiny-underline {
+    margin: 1em;
 }
 
 .footer-blocks > h3 {
@@ -389,6 +664,10 @@ aside.sideMenu li a img {
     @extend %content-blocks-h2;
     @extend %inset;
     font-weight: 500;
+}
+
+.content-blocks > h2 {
+    line-height: 1em;
 }
 
 .header-blocks > h1 {
@@ -469,7 +748,10 @@ aside.sideMenu li a img {
 }
 
 .cloud-based {
-    @include cover-background('../img/slitslider/slidestock3.png');
+    @include cover-background('../img/slitslider/slidestock1.png');
+    clear: both;
+    position: relative;
+    top: 0.5em;
 }
 .cloud-based .content-blocks > p, .cloud-based h2 {
     color: sfc($valwhte, black);
@@ -487,6 +769,10 @@ aside.sideMenu li a img {
     @extend %inner-header-blocks;
 }
 
+.inner-header-blocks p {
+    margin-top: 2.7em;
+}
+
 .footer-links li {
     @extend %footer-links;
 }
@@ -496,7 +782,7 @@ aside.sideMenu li a img {
 }
 
 .home {
-    height: 100vh;
+    height: 100vh !important;
     @include cover-background('../img/galaxy.jpg');
 }
 
@@ -541,7 +827,6 @@ aside.sideMenu li a img {
     @extend %minimizedImg-right;
 }
 
-
 .down-button {
     @extend %down-button;
 }
@@ -569,6 +854,10 @@ aside.sideMenu li a img {
     @extend %right;
 }
 
+.card-descr > p {
+    @extend %contentFontStyles;
+}
+
 .card-descr > ul {
     @extend %cardContent;
     @include transition(0.3s);
@@ -579,7 +868,7 @@ aside.sideMenu li a img {
 }
 
 .card-descr > div:nth-child(3) {
-        margin-left: 1.7em;
+        margin-left: 1.8em;
 }
 
 .card-descr ul > li {
@@ -591,10 +880,14 @@ aside.sideMenu li a img {
     @extend %cardHeader;
 }
 
+.minimizedImg-right,
+.minimizedImg-left {
+    box-shadow: 0 10px 6px 0 gainsboro;
+}
+
 .card {
     background: $valcard;
     width: 565px;
-    box-shadow: 1px 1px 3px #888;
     min-height: 350px;
     padding: 10px;
     position: relative;
@@ -620,14 +913,25 @@ aside.sideMenu li a img {
     @extend %gray-bg;
 }
 
-.jumbotron .jumboOverlay {
+.jumbotron {
+    height: 100vh;
+    width: 100vw;
+}
+
+.jumboOverlay {
     @extend %jumboOverlay;
 }
 
-.servicesHeader .jumboOverlay,
-.servicesHeader2 .jumboOverlay
-{
-    @extend %serviceOverlay;
+.homeHeader .jumboOverlay {
+    @extend %jumboOverlay;
+}
+
+.servicesHeader .jumboOverlay {
+    @extend %greenOverlay;
+}
+
+.servicesHeader2 .jumboOverlay {
+    @extend %blueOverlay;
 }
 
 .servicesHeader {
@@ -638,6 +942,12 @@ aside.sideMenu li a img {
     @extend %servicesHeader2;
 }
 
+
+@include bp-mediumz {
+  .inner-header-blocks p {
+  margin-top: 4.2em;
+  }
+}
 
 /* IDs
 ============================================= */
@@ -742,5 +1052,13 @@ aside.sideMenu li a img {
     }
     .gray-bg {
         padding: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .pinwheel_slider .pinwheel_text {
+        font-size: 10px;
+        margin: -6px 0 14px;
+        z-index: 99;
     }
 }

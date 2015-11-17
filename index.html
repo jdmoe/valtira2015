@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel='stylesheet' type="text/css" href="css/animations.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -19,9 +22,9 @@
     <ul>
         <li><a href="" burger="01" class="hamburger-trigger"></a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="">Blog</a></li>
-        <li><a href="services.html">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="">Home</a></li>
         <li><a href="index.html" class="brand"><img src="img/valtLogo.png" alt="valtiraLogo" width="17%" /> VALTIRA</a></li>
@@ -52,71 +55,79 @@
     </div>
 </aside>
 
-<!-- header -->
+<!-- header video -->
 
-<div class="jumbotron home">
-    <div class="jumboOverlay">
-        <section class="homepageHeader">
-            <h1>Welcome to Valtira</h1>
-            <div class="grn-underline"></div>
-            <p>We do work that matters</p>
-        </section>
-        <div class="header-blocks">
-            <a href="#next"><div class="down-button"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
+<div class="vidWrap">
+    <div class="out-video">
+        <video autoplay loop muted poster="img/coffee.jpg" id="bgvid" width="100%" height="100%">
+                <source src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" type="video/mp4"/>
+        </video>
+        <div class="jumboOverlay">
+            <section class="homepageHeader">
+                <h1>Welcome to Valtira</h1>
+                <div class="grn-underline"></div>
+                <p>We do work that matters</p>
+            </section>
+            <div class="header-blocks">
+                <a href="#next"><div class="down-button"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
+            </div>
         </div>
     </div>
 </div>
 
+
 <!-- content blocks -->
 
-    <a name="next"></a>
-    <section class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="content-blocks">
-                    <h2>we challenge benchmarks &amp; push boundaries</h2>
-                    <div class="blu-underline"></div>
-                    <p>Whether you need a small, single page application or a large,
-                    complex responsive website, Valtira has the resources and skills to
-                    architect, design, and build a gorgeous, secure, scalable solution.</p>
-                    <a class="btn blue-btn btn-1 btn-1e" href="services.html">our services</a>
-                </div>
+<a name="next"></a>
+<section class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="content-blocks">
+                <h2>we challenge benchmarks &amp; push boundaries</h2>
+                <div class="blu-underline"></div>
+                <p>Whether you need a small, single page application or a large,
+                complex responsive website, Valtira has the resources and skills to
+                architect, design, and build a gorgeous, secure, scalable solution.</p>
+                <a class="btn blue-btn btn-1 btn-1e" href="services.html">our services</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- pinwheel -->
 
-        <div class="pinwheel_slider">
-            <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
-                <div class="pinwheel_slideri carousel-feature">
-                <!-- pinwheel_slideri --><img src="img/pinwheel/stock1.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
-                <div class="pinwheel_text carousel-caption">
-                <h4 data-anim="">
-                Hunting down big, bad code</h4>
-                </div>
-                </div>
-
-                <div class="pinwheel_slideri carousel-feature">
-                <!-- pinwheel_slideri --><img src="img/pinwheel/stock2.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
-                <div class="pinwheel_text carousel-caption">
-                <h4 data-anim="">
-                Innovators in Web Development</h4>
-                </div>
-                </div>
-
-                <div class="pinwheel_slideri carousel-feature">
-                <!-- pinwheel_slideri --><img src="img/pinwheel/stock3.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
-                <div class="pinwheel_text carousel-caption">
-                <h4 data-anim="">
-                Responsive Fluid Design</h4>
-                </div>
-                </div>
-            </div>
+<div class="pinwheel_slider">
+    <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
+        <div class="pinwheel_slideri carousel-feature">
+        <!-- pinwheel_slideri --><img src="img/pinwheel/stock1.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+        <div class="pinwheel_text carousel-caption">
+        <p>Hunting down big, bad code</p>
+        </div>
         </div>
 
-<!-- valtira beam -->
 
+        <div class="pinwheel_slideri carousel-feature">
+        <!-- pinwheel_slideri --><img src="img/pinwheel/stock2.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+        <div class="pinwheel_text carousel-caption">
+        <p>Hunting down big, bad code</p>
+        </div>
+        </div>
+
+        <div class="pinwheel_slideri carousel-feature">
+        <!-- pinwheel_slideri --><img src="img/pinwheel/stock3.png" alt="hunting down big bad code" data-anim="" class="slider_thumbnail full pinwheel_slider_thumbnail carousel-image " />
+        <div class="pinwheel_text carousel-caption">
+        <p>Hunting down big, bad code</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="pinwheel_prev" id="pinwheel_slider_1_prev"><img src="img/Back.png" alt="previous-slide" /></div>
+    <div class="pinwheel_next" id="pinwheel_slider_1_next"><img src="img/Next.png" alt="next-slide" /></div>
+
+</div>
+
+<!-- valtira beam -->
+    <br/>
     <img src="img/beam.png" alt="valtira beam" id="valbeam" class="valbeam" />
 
 <!-- content blocks -->
@@ -141,55 +152,39 @@
             <div class="sl-slider">
                 <div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                     <div class="sl-slide-inner">
-                        <div class="deco" id="icon1"></div>
-                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Matt Berg, Executive Director, Care Ventures Cooperative</cite></blockquote>
+                        <blockquote><p><em>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</em></p><cite>Matt Berg, Executive Director, Care Ventures Cooperative</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                     <div class="sl-slide-inner">
-                        <div class="deco" id="icon2"></div>
-                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
+                        <blockquote><p><em>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</em></p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" id="icon3"></div>
-                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
+                        <blockquote><p><em>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</em></p><cite>Jeff Korte, Communications Coordinator,<br/> The League of Minnesota Cities</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" id="icon4"></div>
-                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Kathleen Becker, Director of Marketing, Famous Dave's</cite></blockquote>
+                        <blockquote><p><em>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</em></p><cite>Kathleen Becker, Director of Marketing, Famous Dave's</cite></blockquote>
                     </div>
                 </div>
                 <div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="deco" id="icon5"></div>
-                        <blockquote><p>Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.</p><cite>Joell Morin, Online Marketing &amp; Project Manager,<br/> Bloomington Convention &amp; Visitors Bureau</cite></blockquote>
+                        <blockquote><p><em>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."</em></p><cite>Joell Morin, Online Marketing &amp; Project Manager,<br/> Bloomington Convention &amp; Visitors Bureau</cite></blockquote>
                     </div>
                 </div>
             </div>
 
-                    <div class="hoverEffects svg-wrap">
-            <svg width="64" height="64" viewBox="0 0 64 64">
-                <path id="arrow-left-4" d="M15.946 48l0.003-10.33 47.411 0.003v-11.37h-47.414l0.003-10.304-15.309 16z" />
-            </svg>
-            <svg width="64" height="64" viewBox="0 0 64 64">
-                <path id="arrow-right-4" d="M48.058 48l-0.003-10.33-47.414 0.003v-11.37h47.418l-0.003-10.304 15.306 16z" />
-            </svg>
-        </div>
-            <nav id="nav-arrows" class="nav-roundslide">
+            <nav class="nav-fillpath" id="nav-arrows">
                 <a class="prev" href="/item1">
-                    <span class="icon-wrap"><svg class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-left-4"></svg></span>
-                    <h3>Prev Client...</h3>
+                    <span class="icon-wrap"></span>
                 </a>
                 <a class="next" href="/item3">
-                    <span class="icon-wrap"><svg class="icon" width="32" height="32" viewBox="0 0 64 64"><use xlink:href="#arrow-right-4"></svg></span>
-                    <h3>Next Client...</h3>
+                    <span class="icon-wrap"></span>
                 </a>
             </nav>
-
 
             <nav id="nav-dots" class="nav-dots">
                 <span class="nav-dot-current"></span>

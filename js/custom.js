@@ -97,6 +97,8 @@ setInterval("$.show();", 100);
 
         x = window.innerWidth,
 
+        l = $('.brand');
+
         st = $('.side-trigger');
 
         if ( y > 85 || x <= 768 ) {
@@ -106,13 +108,6 @@ setInterval("$.show();", 100);
         } else {
 
             st.fadeOut( 100 );
-        }
-
-        if ( x < 768 ) {
-
-            st.style.display = "block";
-
-            st.show();
         }
 
     }); // end side nav functionality
@@ -155,22 +150,24 @@ setInterval("$.show();", 100);
     jQuery(document).ready(function() {
 
         args = {
-        animationEasing:"swing",
-        carouselSpeed:500,
-        autoPlay: 8000,rightButtonTag:"#pinwheel_slider_1_next", leftButtonTag:   "#pinwheel_slider_1_prev",
+        animationEasing: "swing",
+        carouselSpeed: 500,
+        autoPlay: 8000,
+        rightButtonTag: "#pinwheel_slider_1_next",
+        leftButtonTag: "#pinwheel_slider_1_prev",
         preload: true,
-        largeFeatureWidth:450,
-        largeFeatureHeight:300,
-        smallFeatureWidth:250,
-        smallFeatureHeight:200,
-        smallFeatureOffset:30,
-        topPadding:0,
-        sidePadding:0,
-        minimize:false,
-        sliderMaxWidth:900,
-        sliderMaxHeight:350,
-        prettyphoto:false,
-        slider_handle:"pinwheel_slider_1"
+        largeFeatureWidth: 450,
+        largeFeatureHeight: 300,
+        smallFeatureWidth: 250,
+        smallFeatureHeight: 200,
+        smallFeatureOffset: 30,
+        topPadding: 0,
+        sidePadding: 0,
+        minimize: false,
+        sliderMaxWidth: 900,
+        sliderMaxHeight: 350,
+        prettyphoto: false,
+        slider_handle: "pinwheel_slider_1"
         };
 
     var pinwheel_slider_1_c = jQuery("#pinwheel_slider_1").pinwheel(args);
@@ -178,60 +175,9 @@ setInterval("$.show();", 100);
 
         pinwheel_slider_1_c.reload(args);
 
-        });jQuery("#pinwheel_slider_1 .wpsc_buy_button")
-    .css({
-        "background":"#3DB432",
-        "font-size":"14px",
-        "color":"#ffffff",
-        "border":"1px solid #3db432"
-    });
+        });jQuery();
 });
 
-
-
-
-//////////////// PARALLAX EFFECT
-
-
-
-
-(function($) {
-
-    $.fn.parallax = function(options) {
-
-        var windowHeight = $(window).height();
-
-        // Establish default settings
-        var settings = $.extend({
-            speed        : 0.15
-        }, options);
-
-        // Iterate over each object in collection
-        return this.each( function() {
-
-        // Save a reference to the element
-        var $this = $(this);
-
-        // Set up Scroll Handler
-        $(document).scroll(function(){
-
-    var scrollTop = $(window).scrollTop();
-            var offset = $this.offset().top;
-            var height = $this.outerHeight();
-
-    // Check if above or below viewport
-    if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
-        return;
-    }
-
-    var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
-    // Apply the Y Background Position to Set the Parallax Effect
-        $this.css('background-position', 'center ' + yBgPosition + 'px');
-            });
-            });
-        };
-
-} (jQuery));
 
 
 
@@ -246,7 +192,7 @@ $(window).scroll(function() {
 
     $('.homepageHeader').css({
 
-        'opacity':(( 200 - scroll ) / 150) + 0.8 });
+        'opacity':(( 200 - scroll ) / 250) + 0.3 });
 
     $('.inner-header-blocks').css({
 
