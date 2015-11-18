@@ -132,6 +132,8 @@ nav.topNav ul li a:hover {
     @include transition(0.4s);
 }
 
+.active { background: rgba( 10, 10, 10, 0.3); }
+
 .brand .valtiraTxt {
     position: relative;
     left: 1em;
@@ -170,218 +172,42 @@ aside.sideMenu li a img {
 /* CLASSES
 ============================================= */
 
-// start page styles
-
-.bleed-left-text p {
-    width: 28em;
-    line-height: 25px;
-    font-family: Open Sans;
-    font-weight: 400;
-}
-
-.bleed-left-text p,
-.bleed-right-text p { font-size: 1.1em; }
-
-.bleed-left-text h2,
-.bleed-right-text h2 {
-    font-size: 26px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.bleed-right-text p {
-    width: 20em;
-    line-height: 25px;
-    font-family: Open Sans;
-    font-weight: 400;
-}
-
-.bleed-right-text h2 {
-    float: right;
-    text-align: left;
-    position: relative;
-}
-.bleed-right-text p {
-    float: right;
-    clear: right;
-}
-
-.bleed-right-text h2 {
-    float: right;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    position: relative;
-    right: 3em;
-}
-
-.bleed-left-image,
-.bleed-left-text {
-    height: 36em;
-    float: left;
-    padding: 0.5em 0 0 3em;
-    box-sizing: border-box;
-}
-
-.bleed-right-image,
-.bleed-right-text {
-    height: 24em;
-    float: left;
-    padding: 0.5em 3em 0 0;
-    box-sizing: border-box;
-}
-
-.bleed-left-image {
-    width: 46%;
-}
-
-.bleed-left-text {
-    width: 54%;
-}
-
-.bleed-right-image {
-    width: 54%;
-}
-
-.bleed-right-text {
-    width: 46%;
-}
-
-.bleed-left-image {
-    @include cover-background('../img/su1.jpg');
+.fullWidthImage {
+    width: 100%;
     box-shadow: 5px 5px 25px gray;
 }
 
-.bleed-right-image {
-    @include cover-background('../img/su2.jpg');
+.negativeLeftImage {
+    margin: 0.5em 2.5em 1.1em 0;
+    margin-left: -230px;
     box-shadow: 5px 5px 25px gray;
 }
 
-@include bp-large {
-
-    .bleed-left-text p {
-    width: 22em;
-    line-height: 25px;
-    font-family: Open Sans;
-    font-weight: 400;
-    }
-
-    .bleed-right-text p {
-    width: 14em;
-    line-height: 25px;
-    font-family: Open Sans;
-    font-weight: 400;
-    }
-
-    .bleed-right-text h2 {
-    right: 0.5em;
-    font-size: 1.7em;
-    }
-
-  // content start
-
-  .bleed-left-image,
-  .bleed-left-text {
-    height: 43em;
-    float: left;
-    padding: 0.5em 0 0 2em;
-    box-sizing: border-box;
-  }
-
-  .bleed-right-image,
-  .bleed-right-text {
-    height: 36em;
-    float: left;
-    padding: 1em;
-    box-sizing: border-box;
-  }
-
-  .bleed-left-image {
-    width: 42%;
-  }
-
-  .bleed-left-text {
-    width: 58%;
-  }
-
-  .bleed-right-image {
-    width: 55%;
-  }
-
-  .bleed-right-text {
-    width: 42%;
-  }
-
-  // content end
+.negativeRightImage {
+    margin: 0.8em 0 0 1.5em;
+    margin-right: -180px;
+    box-shadow: 5px 5px 15px gray;
 }
 
-@include bp-mediumz {
-
-    .bleed-left-text p {
+.lmfao {
+    background: transparent;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    }
-
-    .bleed-right-text p {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    }
-
-    .bleed-right-text h2,
-    .bleed-left-text h2 {
-    text-align: center;
-    float: none;
-    margin: 0 0 1em 0;
-    width: 100%;
-    padding: 0;
-    position: static;
-    }
-
-    // content start
-
-    .bleed-left-image,
-    .bleed-left-text {
-    width: 100%;
-    margin: 0;
-    padding: 1em;
-    }
-
-    .bleed-left-text,
-    .bleed-right-text { height: auto; }
-
-    .bleed-left-image { height: 36em; }
-    .bleed-right-image { height: 23em; }
-
-    .bleed-right-image,
-    .bleed-right-text {
-    margin: 0;
-    width: 100%;
-    padding: 1em;
-    }
-
-    .bleed-left-image {
-    width: 100%;
-    display: none;
-    }
-
-    .bleed-left-text {
-    width: 100%;
-    }
-
-    .bleed-right-image {
-    width: 92%;
-    margin: 1em;
-    }
-
-    .bleed-right-text {
-    width: 100%;
-    }
+    display: table;
 }
 
-// end page styles
+.lmfao > div {
+    display: table-cell;
+    width: 33.33333%;
+    height: 50%;
+    background: red;
+    float: left;
+    cursor: pointer;
+    @include transition(0.2s);
+}
+
+.lmfao > div:hover {
+    background:aqua;
+}
 
 .left-content-image {
     @extend %left-content-image;
@@ -445,6 +271,17 @@ aside.sideMenu li a img {
 
 @include bp-large {
 
+    .lmfao > div {
+    display: table-cell;
+    width: 50%;
+    height: 50%;
+    background: red;
+    float: left;
+    cursor: pointer;
+    @include transition(0.2s);
+    }
+
+
     %svg-slider-inner {
     width: 45em;
     }
@@ -468,16 +305,23 @@ aside.sideMenu li a img {
 
 @include bp-mediumz-small {
 
-  .svg-slider-inner img {
-  width: 9.5em;
-  padding: 0;
-  margin: 1em;
-  margin-top: 2em;
-  }
+    .lmfao > div {
+    display: table-cell;
+    width: 100%;
+    height: 33.3333%;
+    @include transition(0.2s);
+    }
 
-  %svg-slider-inner {
-  width: 100%;
-  }
+    .svg-slider-inner img {
+    width: 9.5em;
+    padding: 0;
+    margin: 1em;
+    margin-top: 2em;
+    }
+
+    %svg-slider-inner {
+    width: 100%;
+    }
 }
 
 .sideMenu {
@@ -670,6 +514,19 @@ aside.sideMenu li a img {
     line-height: 1em;
 }
 
+.contentParagraphBlocks {
+    @extend %contentParagraphBlocks;
+}
+
+.contentParagraphBlocks h2 {
+    font-size: 2.5em;
+    margin: 0;
+    @extend %headerFont;
+    letter-spacing: 1px;
+    text-align: center;
+    @extend %inset;
+}
+
 .header-blocks > h1 {
     @extend %page-Header;
     @extend %inset;
@@ -751,7 +608,6 @@ aside.sideMenu li a img {
     @include cover-background('../img/slitslider/slidestock1.png');
     clear: both;
     position: relative;
-    top: 0.5em;
 }
 .cloud-based .content-blocks > p, .cloud-based h2 {
     color: sfc($valwhte, black);
@@ -934,6 +790,14 @@ aside.sideMenu li a img {
     @extend %blueOverlay;
 }
 
+.singleServices .jumboOverlay {
+    @extend %singleServices;
+}
+
+.singleServices {
+    @extend %singleServices;
+}
+
 .servicesHeader {
     @extend %servicesHeader;
 }
@@ -942,11 +806,32 @@ aside.sideMenu li a img {
     @extend %servicesHeader2;
 }
 
+@include bp-large {
+
+    .mobilize {
+    width: 100%;
+    margin: 0;
+    margin: 1.5em 0;
+    }
+
+    .contentParagraphBlocks h2 {
+    font-size: 30px;
+    }
+}
 
 @include bp-mediumz {
-  .inner-header-blocks p {
-  margin-top: 4.2em;
-  }
+
+    .mobilize {
+    width: 100%;
+    margin: 0.5em 0 2.5em 0;
+    }
+
+    .contentParagraphBlocks h2 {
+    font-size: 25px;
+    }
+    .inner-header-blocks p {
+    margin-top: 4.2em;
+    }
 }
 
 /* IDs

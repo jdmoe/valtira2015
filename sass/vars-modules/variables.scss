@@ -169,6 +169,10 @@ $link-hovered: #381E3A;
   @include cover-background('../img/slitslider/slidestock2.png');
 }
 
+%singleServices {
+  @include cover-background('../img/su5.jpg');
+}
+
 %jumboOverlay {
   background: rgba(30,30,30,0.2);
   height: 100vh;
@@ -178,6 +182,15 @@ $link-hovered: #381E3A;
 }
 
 %greenOverlay {
+  /* background: rgba(93,207,91,0.6); */
+  height: 40em;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 3;
+}
+
+%singleServices {
   /* background: rgba(93,207,91,0.6); */
   height: 40em;
   width: 100vw;
@@ -215,6 +228,7 @@ $link-hovered: #381E3A;
   left: -6em;
   top: 1em;
   float: right;
+  width: 60%;
   height: 6.8em;
   border: 2px solid #5DCF5B;
   color: #5DCF5B;
@@ -263,7 +277,8 @@ $link-hovered: #381E3A;
 }
 
 %contentFontStyles {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 30px;
   width: 500px;
   font-family: 'Open Sans', 'Helvetica', sans-serif;
   padding: 0.6em 0 0 3em;
@@ -376,14 +391,21 @@ $link-hovered: #381E3A;
   background: $transparent;
 }
 
+%contentParagraphBlocks {
+  width: 75%;
+  padding: 4em 0;
+  @extend %contentFontStyles;
+  margin: 0 auto !important;
+}
+/*
 %pageContentWrapper {
   padding: 5em 0;
   width: 73%;
   margin:0 auto !important;
   text-align: center;
   background: $transparent;
-  }
-
+}
+*/
 %page-blocks {
   padding: 2em 0;
   width: 73%;
@@ -436,6 +458,14 @@ $link-hovered: #381E3A;
 
 @include bp-large {
 
+  %pre2 {
+  width: 230px;
+  }
+
+  %contentParagraphBlocks {
+  width: 90%;
+  }
+
   .homepageHeader > h1 {
   font-size: 3em !important;
   }
@@ -476,6 +506,19 @@ $link-hovered: #381E3A;
 }
 
 @include bp-mediumz {
+  %left-content-image,
+  %right-content-image {
+  width: 93%;
+  margin: 0 auto;
+  }
+
+  .mobilize {
+    width: 100%;
+  }
+
+  %contentParagraphBlocks {
+  width: 90%;
+  }
 
   #mainbox .card h2, .homepageHeader h1 {
   text-align: center;
@@ -486,7 +529,7 @@ $link-hovered: #381E3A;
   }
 
   %contentFontStyles {
-  font-size: 0.95em;
+  font-size: 1.15em;
   padding: 0;
   letter-spacing: 0;
   font-weight: 200;
@@ -612,7 +655,8 @@ $link-hovered: #381E3A;
   width: 75px;
   height: 2px;
   margin: 0 auto;
-  margin-top:20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 %tiny-underline-left {
