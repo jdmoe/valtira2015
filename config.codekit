@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/blog.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/blog.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/contact.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -522,6 +531,72 @@
 		"initialSize": 5842,
 		"inputAbbreviatedPath": "\/img\/valtLogo.png",
 		"outputAbbreviatedPath": "\/img\/valtLogo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/famousdaves.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.5175e+06,
+		"inputAbbreviatedPath": "\/img\/work\/famousdaves.png",
+		"outputAbbreviatedPath": "\/img\/work\/famousdaves.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/lmc.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 925857,
+		"inputAbbreviatedPath": "\/img\/work\/lmc.png",
+		"outputAbbreviatedPath": "\/img\/work\/lmc.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/macys.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 396492,
+		"inputAbbreviatedPath": "\/img\/work\/macys.png",
+		"outputAbbreviatedPath": "\/img\/work\/macys.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/medtronic.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 489043,
+		"inputAbbreviatedPath": "\/img\/work\/medtronic.png",
+		"outputAbbreviatedPath": "\/img\/work\/medtronic.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/scoutsoftware.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 568526,
+		"inputAbbreviatedPath": "\/img\/work\/scoutsoftware.png",
+		"outputAbbreviatedPath": "\/img\/work\/scoutsoftware.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/suncountry.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 165320,
+		"inputAbbreviatedPath": "\/img\/work\/suncountry.png",
+		"outputAbbreviatedPath": "\/img\/work\/suncountry.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

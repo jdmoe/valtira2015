@@ -2,6 +2,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 @import 'functions/functions.scss';
 
 @import 'mixins/mixins.scss';
@@ -171,6 +173,10 @@ aside.sideMenu li a img {
 
 /* CLASSES
 ============================================= */
+
+.contactMap {
+    @extend %contactMap;
+}
 
 .fullWidthImage {
     width: 100%;
@@ -537,12 +543,13 @@ aside.sideMenu li a img {
     margin-left: -4em;
     position: relative;
     top: 20px;
+    left: 1.5em;
 }
 
 .lower-links li {
     display: inline-block;
     cursor: pointer;
-    padding: 10px;
+    padding: 1em;
 }
 
 .lower-links li a {
@@ -553,16 +560,17 @@ aside.sideMenu li a img {
 }
 
 .lower-links li a:hover {
-    color: $valgreen;
+    color: $valblue;
     @include transition(0.4s)
 }
 
 @include bp-mediumz-small {
 
-  .lower-links {
-  margin-left: 0;
+  .lower-links li {
+  margin-left: 0.1em;
   padding: 1em;
-  width: 100%;
+  width: 20%;
+  position: static;
   }
 }
 
@@ -782,6 +790,14 @@ aside.sideMenu li a img {
     @extend %jumboOverlay;
 }
 
+.singleServices .jumboOverlay {
+    @extend %singleServicesOverlay;
+}
+
+.contactHeader .jumboOverlay {
+    @extend %singleServicesOverlay;
+}
+
 .servicesHeader .jumboOverlay {
     @extend %greenOverlay;
 }
@@ -792,6 +808,10 @@ aside.sideMenu li a img {
 
 .singleServices .jumboOverlay {
     @extend %singleServices;
+}
+
+.contactHeader {
+    @extend %contactHeader;
 }
 
 .singleServices {

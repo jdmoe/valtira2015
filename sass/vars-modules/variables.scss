@@ -26,6 +26,12 @@ $link-hovered: #381E3A;
 /* CLEARFIX
 ============================================= */
 
+%contactMap {
+  height: 70vh;
+  width: 100vw;
+  background: indianred;
+}
+
 %content-after-images {
   margin: auto;
   margin: 3em 0 0 0;
@@ -170,7 +176,11 @@ $link-hovered: #381E3A;
 }
 
 %singleServices {
-  @include cover-background('../img/su5.jpg');
+  @include cover-background('../img/su3.jpg');
+}
+
+%contactHeader {
+  @include cover-background('../img/su6.jpg');
 }
 
 %jumboOverlay {
@@ -179,6 +189,23 @@ $link-hovered: #381E3A;
   width: 100vw;
   bottom:0;
   position: absolute;
+}
+
+%singleServicesOverlay {
+  background: rgba(30,30,30,0.3);
+  height: 100vh;
+  width: 100vw;
+  bottom:0;
+  position: absolute;
+}
+
+%contactHeader {
+  /* background: rgba(93,207,91,0.6); */
+  height: 40em;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 3;
 }
 
 %greenOverlay {

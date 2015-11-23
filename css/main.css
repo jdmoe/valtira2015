@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 /* FUNCTIONS
 ============================================= */
  /* MIXINS
@@ -38,6 +39,11 @@ html, body {
 ============================================= */
 /* CLEARFIX
 ============================================= */
+.contactMap {
+  height: 70vh;
+  width: 100vw;
+  background: indianred; }
+
 .content-after-images {
   margin: auto;
   margin: 3em 0 0 0; }
@@ -194,7 +200,14 @@ html, body {
   background-size: cover; }
 
 .singleServices .jumboOverlay, .singleServices {
-  background: url("../img/su5.jpg") no-repeat center;
+  background: url("../img/su3.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.contactHeader {
+  background: url("../img/su6.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -206,6 +219,21 @@ html, body {
   width: 100vw;
   bottom: 0;
   position: absolute; }
+
+.singleServices .jumboOverlay, .contactHeader .jumboOverlay {
+  background: rgba(30, 30, 30, 0.3);
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  position: absolute; }
+
+.contactHeader {
+  /* background: rgba(93,207,91,0.6); */
+  height: 40em;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 3; }
 
 .servicesHeader .jumboOverlay {
   /* background: rgba(93,207,91,0.6); */
@@ -665,6 +693,11 @@ html, body {
 ============================================= */
 /* CLEARFIX
 ============================================= */
+.contactMap {
+  height: 70vh;
+  width: 100vw;
+  background: indianred; }
+
 .content-after-images {
   margin: auto;
   margin: 3em 0 0 0; }
@@ -821,7 +854,14 @@ html, body {
   background-size: cover; }
 
 .singleServices .jumboOverlay, .singleServices {
-  background: url("../img/su5.jpg") no-repeat center;
+  background: url("../img/su3.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.contactHeader {
+  background: url("../img/su6.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -833,6 +873,21 @@ html, body {
   width: 100vw;
   bottom: 0;
   position: absolute; }
+
+.singleServices .jumboOverlay, .contactHeader .jumboOverlay {
+  background: rgba(30, 30, 30, 0.3);
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  position: absolute; }
+
+.contactHeader {
+  /* background: rgba(93,207,91,0.6); */
+  height: 40em;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 3; }
 
 .servicesHeader .jumboOverlay {
   /* background: rgba(93,207,91,0.6); */
@@ -1587,12 +1642,13 @@ aside.sideMenu li a img {
   text-align: center;
   margin-left: -4em;
   position: relative;
-  top: 20px; }
+  top: 20px;
+  left: 1.5em; }
 
 .lower-links li {
   display: inline-block;
   cursor: pointer;
-  padding: 10px; }
+  padding: 1em; }
 
 .lower-links li a {
   letter-spacing: 1px;
@@ -1600,7 +1656,7 @@ aside.sideMenu li a img {
   color: #fff; }
 
 .lower-links li a:hover {
-  color: #5DCF5B;
+  color: #526EF2;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -1608,10 +1664,11 @@ aside.sideMenu li a img {
   transition: 0.4s; }
 
 @media only screen and (max-width: 37em) {
-  .lower-links {
-    margin-left: 0;
+  .lower-links li {
+    margin-left: 0.1em;
     padding: 1em;
-    width: 100%; } }
+    width: 20%;
+    position: static; } }
 .footer-social li {
   display: inline-block; }
 

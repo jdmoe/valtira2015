@@ -119,18 +119,20 @@ setInterval("$.show();", 100);
         links.fadeToggle("slow", function() {
         });
 
-    }); // end top nav click functionality
+    });
 
+        // animates the slide out functionality for the sidebar nav
         $('#burger').click(function() {
             classie.toggle( menuRight, 'cbp-spmenu-open' );
             disableOther( 'showRight' );
             $(this).toggleClass('open');
             });
 
-        // slide push menu scripts
+        // stores classes into variables for later use
         var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
             showRight = document.getElementById( 'showRight' );
 
+        // disables the slide over functionality if button's current class is not 'showRight'
         function disableOther( button ) {
             if( button !== 'showRight' ) {
                 classie.toggle( showRight, 'disabled' );
@@ -148,7 +150,7 @@ setInterval("$.show();", 100);
 
 
     jQuery(document).ready(function() {
-
+        // change thse object elements to manipulate the objects properties and customize
         args = {
         animationEasing: "swing",
         carouselSpeed: 500,
@@ -192,9 +194,75 @@ $(window).scroll(function() {
 
     $('.homepageHeader').css({
 
+        // animates the opacity of the header's text when scrolled out of viewport
         'opacity':(( 200 - scroll ) / 250) + 0.3 });
 
     $('.inner-header-blocks').css({
 
+        // animates the opacity of the header's text when scrolled out of viewport
         'opacity':(( 150 - scroll ) / 100) + 0.3 });
     });
+
+
+
+//////////////// AJAX FROM GOODNESS
+
+
+
+
+jQuery(document).ready(function($) {
+
+    if( $('.floating-labels').length > 0 )  {
+
+    floatLabels();
+
+    }
+
+    function floatLabels() {
+
+        var inputFields = $('.floating-labels .cd-label').next();
+
+        // loops through each input label checks to see if user is writing in the input
+        inputFields.each(function(){
+
+            var singleInput = $(this);
+
+            checkVal(singleInput);
+
+            singleInput.on('change keyup', function(){
+
+                checkVal(singleInput);
+            });
+        });
+    }
+
+    // moves input label to the top left if focused on writing within an input
+    function checkVal(inputField) {
+
+    ( inputField.val() === '' ) ? inputField.prev('.cd-label').removeClass('float') : inputField.prev('.cd-label').addClass('float');
+    }
+
+    // validates real email address exists and returns an error div if false
+    $('#submit').click(function() {
+
+        $('.error-message').hide();
+
+        var textEntered = $('.email').text();
+
+        var textResult = [];
+
+        $.each(textEntered.split(';'), function( index, item ) {
+
+            if (item.match(/^\S+@\S+\.\S+$/)) {
+
+                textResult.push(item);
+            }
+            else {
+                $('.error-message').show().removeClass('hide');
+            }
+        });
+        $('.email').html(textResult.join(';'));
+    });
+
+
+});
