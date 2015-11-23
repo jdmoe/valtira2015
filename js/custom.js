@@ -151,26 +151,52 @@ setInterval("$.show();", 100);
 
     jQuery(document).ready(function() {
         // change thse object elements to manipulate the objects properties and customize
-        args = {
-        animationEasing: "swing",
-        carouselSpeed: 500,
-        autoPlay: 8000,
-        rightButtonTag: "#pinwheel_slider_1_next",
-        leftButtonTag: "#pinwheel_slider_1_prev",
-        preload: true,
-        largeFeatureWidth: 450,
-        largeFeatureHeight: 300,
-        smallFeatureWidth: 250,
-        smallFeatureHeight: 200,
-        smallFeatureOffset: 30,
-        topPadding: 0,
-        sidePadding: 0,
-        minimize: false,
-        sliderMaxWidth: 900,
-        sliderMaxHeight: 350,
-        prettyphoto: false,
-        slider_handle: "pinwheel_slider_1"
-        };
+
+        if ($(window).width() < 630) {
+            args = {
+            animationEasing: "swing",
+            carouselSpeed: 500,
+            autoPlay: 3000,
+            rightButtonTag: "#pinwheel_slider_1_next",
+            leftButtonTag: "#pinwheel_slider_1_prev",
+            preload: true,
+            largeFeatureWidth: 450,
+            largeFeatureHeight: 300,
+            smallFeatureWidth: 250,
+            smallFeatureHeight: 200,
+            smallFeatureOffset: 30,
+            topPadding: 0,
+            bottomPadding: 0,
+            sidePadding: 0,
+            minimize: false,
+            sliderMaxWidth: 440,
+            sliderMaxHeight: 350,
+            prettyphoto: false,
+            slider_handle: "pinwheel_slider_1"
+            };
+        }
+        else {
+            args = {
+            animationEasing: "swing",
+            carouselSpeed: 500,
+            autoPlay: 8000,
+            rightButtonTag: "#pinwheel_slider_1_next",
+            leftButtonTag: "#pinwheel_slider_1_prev",
+            preload: true,
+            largeFeatureWidth: 450,
+            largeFeatureHeight: 300,
+            smallFeatureWidth: 250,
+            smallFeatureHeight: 200,
+            smallFeatureOffset: 30,
+            topPadding: 0,
+            sidePadding: 0,
+            minimize: false,
+            sliderMaxWidth: 900,
+            sliderMaxHeight: 350,
+            prettyphoto: false,
+            slider_handle: "pinwheel_slider_1"
+            };
+        }
 
     var pinwheel_slider_1_c = jQuery("#pinwheel_slider_1").pinwheel(args);
     jQuery(window).on("debouncedresize",function() {
@@ -178,7 +204,10 @@ setInterval("$.show();", 100);
         pinwheel_slider_1_c.reload(args);
 
         });jQuery();
+
 });
+
+
 
 
 

@@ -304,6 +304,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/services\/cloud.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/services\/cloud.png",
+		"outputAbbreviatedPath": "\/img\/services\/cloud.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/services\/cms.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/services\/cms.png",
+		"outputAbbreviatedPath": "\/img\/services\/cms.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/services\/service-stock1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -597,6 +619,17 @@
 		"initialSize": 165320,
 		"inputAbbreviatedPath": "\/img\/work\/suncountry.png",
 		"outputAbbreviatedPath": "\/img\/work\/suncountry.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/work\/treefrogs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/work\/treefrogs.png",
+		"outputAbbreviatedPath": "\/img\/work\/treefrogs.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
