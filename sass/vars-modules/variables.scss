@@ -172,15 +172,27 @@ $link-hovered: #381E3A;
 }
 
 %servicesHeader2 {
-  @include cover-background('../img/slitslider/slidestock2.png');
+  @include cover-background('../img/su2.jpg');
 }
 
-%singleServices {
+%workHeader {
   @include cover-background('../img/su3.jpg');
 }
 
+%aboutHeader {
+  @include cover-background('../img/su4.jpg');
+}
+
+%singleWork {
+  @include cover-background('../img/work/macys.png');
+}
+
+%singleServices {
+  @include cover-background('../img/services/user_experience.jpg');
+}
+
 %contactHeader {
-  @include cover-background('../img/su6.jpg');
+  @include cover-background('../img/su1.jpg');
 }
 
 %jumboOverlay {
@@ -199,15 +211,6 @@ $link-hovered: #381E3A;
   position: absolute;
 }
 
-%contactHeader {
-  /* background: rgba(93,207,91,0.6); */
-  height: 40em;
-  width: 100vw;
-  position: relative;
-  top: 0;
-  z-index: 3;
-}
-
 %greenOverlay {
   /* background: rgba(93,207,91,0.6); */
   height: 40em;
@@ -217,17 +220,8 @@ $link-hovered: #381E3A;
   z-index: 3;
 }
 
-%singleServices {
-  /* background: rgba(93,207,91,0.6); */
-  height: 40em;
-  width: 100vw;
-  position: relative;
-  top: 0;
-  z-index: 3;
-}
-
 %blueOverlay {
-  /* background: rgba(82,110,242,0.6); */
+  background: rgba(82,82,82,0.6);
   height: 40em;
   width: 100vw;
   position: relative;

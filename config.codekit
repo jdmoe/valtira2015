@@ -11,11 +11,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/approach.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/approach.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/blog.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/blog.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/careers.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/careers.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -61,6 +79,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/functions\/functions.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/jquery.lazyView.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/jquery.lazyView.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -293,6 +320,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/services\/app.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100204,
+		"inputAbbreviatedPath": "\/img\/services\/app.jpg",
+		"outputAbbreviatedPath": "\/img\/services\/app.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/services\/breaker.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -308,7 +346,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
+		"initialSize": 510748,
 		"inputAbbreviatedPath": "\/img\/services\/cloud.png",
 		"outputAbbreviatedPath": "\/img\/services\/cloud.png",
 		"outputPathIsOutsideProject": 0,
@@ -319,9 +357,42 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
+		"initialSize": 265412,
 		"inputAbbreviatedPath": "\/img\/services\/cms.png",
 		"outputAbbreviatedPath": "\/img\/services\/cms.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/services\/creative.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123938,
+		"inputAbbreviatedPath": "\/img\/services\/creative.jpg",
+		"outputAbbreviatedPath": "\/img\/services\/creative.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/services\/design.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95543,
+		"inputAbbreviatedPath": "\/img\/services\/design.jpg",
+		"outputAbbreviatedPath": "\/img\/services\/design.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/services\/marketing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 114799,
+		"inputAbbreviatedPath": "\/img\/services\/marketing.jpg",
+		"outputAbbreviatedPath": "\/img\/services\/marketing.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -366,6 +437,17 @@
 		"initialSize": 329663,
 		"inputAbbreviatedPath": "\/img\/services\/stock3.jpg",
 		"outputAbbreviatedPath": "\/img\/services\/stock3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/services\/user_experience.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 69627,
+		"inputAbbreviatedPath": "\/img\/services\/user_experience.jpg",
+		"outputAbbreviatedPath": "\/img\/services\/user_experience.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -561,7 +643,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4.5175e+06,
+		"initialSize": 436790,
 		"inputAbbreviatedPath": "\/img\/work\/famousdaves.png",
 		"outputAbbreviatedPath": "\/img\/work\/famousdaves.png",
 		"outputPathIsOutsideProject": 0,
@@ -583,7 +665,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 396492,
+		"initialSize": 465587,
 		"inputAbbreviatedPath": "\/img\/work\/macys.png",
 		"outputAbbreviatedPath": "\/img\/work\/macys.png",
 		"outputPathIsOutsideProject": 0,
@@ -594,7 +676,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 489043,
+		"initialSize": 552955,
 		"inputAbbreviatedPath": "\/img\/work\/medtronic.png",
 		"outputAbbreviatedPath": "\/img\/work\/medtronic.png",
 		"outputPathIsOutsideProject": 0,
@@ -605,7 +687,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 568526,
+		"initialSize": 396155,
 		"inputAbbreviatedPath": "\/img\/work\/scoutsoftware.png",
 		"outputAbbreviatedPath": "\/img\/work\/scoutsoftware.png",
 		"outputPathIsOutsideProject": 0,
@@ -616,7 +698,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 165320,
+		"initialSize": 545873,
 		"inputAbbreviatedPath": "\/img\/work\/suncountry.png",
 		"outputAbbreviatedPath": "\/img\/work\/suncountry.png",
 		"outputPathIsOutsideProject": 0,
@@ -627,7 +709,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
+		"initialSize": 757751,
 		"inputAbbreviatedPath": "\/img\/work\/treefrogs.png",
 		"outputAbbreviatedPath": "\/img\/work\/treefrogs.png",
 		"outputPathIsOutsideProject": 0,
@@ -642,6 +724,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/js\/AnimOnScroll.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/AnimOnScroll.js",
+		"outputAbbreviatedPath": "\/js\/min\/AnimOnScroll-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/bootstrap.min.js": {
 		"fileType": 64,
@@ -687,12 +780,45 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/imagesloaded.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/imagesloaded.js",
+		"outputAbbreviatedPath": "\/js\/min\/imagesloaded-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/jquery.lazyView.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.lazyView.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.lazyView-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/jquery.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/jquery.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/masonry.pkgd.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/masonry.pkgd.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/masonry.pkgd.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -733,7 +859,7 @@
 		},
 	"\/js\/min\/nice-scroll-min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/nice-scroll-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/nice-scroll-min-min.js",
@@ -852,6 +978,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/stepsForm.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/stepsForm.js",
+		"outputAbbreviatedPath": "\/js\/min\/stepsForm-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/three.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -868,6 +1005,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/s-services.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/s-work.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/s-work.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

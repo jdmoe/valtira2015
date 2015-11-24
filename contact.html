@@ -5,28 +5,33 @@
     <title>Valtira | Contact</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lazyView.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel='stylesheet' type="text/css" href="css/animations.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 
 <!-- nav -->
 
+<div class="lazyView" style="visibility: hidden">
 <nav class="topNav">
     <ul>
         <li><a href="#" burger="01" class="hamburger-trigger"></a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html" class="brand"><img src="img/valtLogo.png" alt="valtiraLogo" width="17%" /> VALTIRA</a></li>
     </ul>
 </nav>
+</div>
 
 <!-- side popup nav -->
 
@@ -40,7 +45,7 @@
     </div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="">Approach</a>
+    <a href="approach.html">Approach</a>
     <a href="work.html">Work</a>
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
@@ -55,7 +60,7 @@
 
 <!-- header -->
 
-<header class="singleServices">
+<header class="contactHeader">
     <div class="jumboOverlay">
         <main class="container">
             <div class="row">
@@ -65,6 +70,7 @@
                         <div class="grn-underline"></div>
                         <p>Valtira has a unique approach to delivering robust web solutions. We work with your team &amp; offer the skills that compliment.</p>
                     </div>
+                    <a href="#next" class="down-anchor"><span></span></a>
                 </div>
             </div>
         </main>
@@ -72,6 +78,9 @@
 </header>
 
 <!-- main services boxes -->
+<div class="lazyView" style="visibility: hidden">
+
+<a name="next"></a>
 
     <div class="container">
         <div class="row">
@@ -175,7 +184,7 @@
         </div>
     </fieldset>
 </form>
-
+</div>
 <!-- footer -->
 
 <footer id="footer">
@@ -184,13 +193,13 @@
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
             <ul class="lower-links">
-            <li><a href="#">Work</a></li>
+            <li><a href="work.html">Work</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#">Approach</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -222,6 +231,7 @@
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyView.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
@@ -229,4 +239,10 @@
 <script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/pinwheel.js"></script>
+<script>
+    $(document).ready(function () {
+    $('.lazyView').lazyView();
+    });
+
+</script>
 </html>

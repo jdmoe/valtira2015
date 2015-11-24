@@ -1,4 +1,4 @@
-/* MIXINS
+ /* MIXINS
 ============================================= */
 /* line 59, ../../sass/mixins/mixins.scss */
 html, body {
@@ -27,141 +27,105 @@ html, body {
 ============================================= */
 /* CLEARFIX
 ============================================= */
+/*
+%pageContentWrapper {
+  padding: 5em 0;
+  width: 73%;
+  margin:0 auto !important;
+  text-align: center;
+  background: $transparent;
+}
+*/
+@media only screen and (max-width: 63em) {
+  /* line 490, ../../sass/vars-modules/variables.scss */
+  .homepageHeader > h1 {
+    font-size: 3em !important;
+  }
+
+  /* line 494, ../../sass/vars-modules/variables.scss */
+  .card-descr > ul {
+    position: relative;
+    top: 0.6em;
+    left: 10px;
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+
+  /* line 508, ../../sass/vars-modules/variables.scss */
+  .content-blocks > p,
+  .footer-blocks > p {
+    padding: 10px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    font-size: 21px;
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 40em) {
-  /* line 262, ../../sass/vars-modules/variables.scss */
+  /* line 537, ../../sass/vars-modules/variables.scss */
+  .mobilize {
+    width: 100%;
+  }
+
+  /* line 545, ../../sass/vars-modules/variables.scss */
+  #mainbox .card h2, .homepageHeader h1 {
+    text-align: center;
+  }
+
+  /* line 549, ../../sass/vars-modules/variables.scss */
+  .card-descr ul > li {
+    text-align: center;
+  }
+
+  /* line 569, ../../sass/vars-modules/variables.scss */
+  div.breakers.cloud-based {
+    z-index: 0;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 1000%;
+  }
+
+  /* line 576, ../../sass/vars-modules/variables.scss */
+  .brand {
+    background-color: rgba(10, 10, 10, 0.3);
+  }
+
+  /* line 588, ../../sass/vars-modules/variables.scss */
+  .card-descr > ul {
+    position: static;
+    top: 0;
+    padding: 0;
+  }
+
+  /* line 594, ../../sass/vars-modules/variables.scss */
+  .card-descr > h2 {
+    margin-left: 0 !important;
+  }
+
+  /* line 598, ../../sass/vars-modules/variables.scss */
+  .lower-links {
+    text-align: left;
+    position: relative;
+    top: 20px;
+  }
+
+  /* line 604, ../../sass/vars-modules/variables.scss */
+  .homepageHeader h1 {
+    line-height: 65px;
+    font-size: 35px;
+  }
+
+  /* line 635, ../../sass/vars-modules/variables.scss */
   .content-blocks > p,
   .footer-blocks > p {
     padding: 10px;
     letter-spacing: 1px;
     line-height: 30px;
-    font-family: Open Sans;
     font-size: 17px;
-    text-align: center;
   }
 }
-/* BURGER ANIMATION
-============================================= */
-/* line 361, ../../sass/vars-modules/variables.scss */
-.c-hamburger {
-  position: fixed;
-  overflow: hidden;
-  margin: 0;
-  z-index: 9;
-  padding: 0;
-  right: 0;
-  top: 0;
-  width: 60px;
-  height: 56px;
-  font-size: 0;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-/* line 380, ../../sass/vars-modules/variables.scss */
-.c-hamburger:focus {
-  outline: none;
-}
-
-/* line 384, ../../sass/vars-modules/variables.scss */
-.c-hamburger span {
-  display: block;
-  position: absolute;
-  top: 24px;
-  left: 18px;
-  right: 18px;
-  height: 2px;
-  background: white;
-}
-
-/* line 395, ../../sass/vars-modules/variables.scss */
-.c-hamburger span::before,
-.c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  content: "";
-}
-
-/* line 405, ../../sass/vars-modules/variables.scss */
-.c-hamburger span::before {
-  top: -10px;
-}
-
-/* line 409, ../../sass/vars-modules/variables.scss */
-.c-hamburger span::after {
-  bottom: -10px;
-}
-
-/* line 413, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx {
-  background-color: #422544;
-}
-
-/* line 417, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx span {
-  transition: background 0s 0.3s;
-}
-
-/* line 422, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx span::before,
-.c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
-}
-
-/* line 427, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx span::before {
-  transition-property: top, transform;
-}
-
-/* line 431, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx span::after {
-  transition-property: bottom, transform;
-}
-
-/* active state, i.e. menu open */
-/* line 436, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx.is-active {
-  background-color: #5dcf5b;
-}
-
-/* line 440, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx.is-active span {
-  background: none;
-}
-
-/* line 444, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx.is-active span::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-/* line 449, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx.is-active span::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-
-/* line 455, ../../sass/vars-modules/variables.scss */
-.c-hamburger--htx.is-active span::before,
-.c-hamburger--htx.is-active span::after {
-  transition-delay: 0s, 0.3s;
-}
-
-/* ============================================================
-  SECTIONS parallax
-============================================================ */
-/* line 464, ../../sass/vars-modules/variables.scss */
-div.breakers.cloud-based {
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+/* line 737, ../../sass/vars-modules/variables.scss */
+.c-hamburger:before {
+  content: '\2630';
+  font-size: 2em;
 }

@@ -185,13 +185,13 @@ aside.sideMenu li a img {
 
 .negativeLeftImage {
     margin: 0.5em 2.5em 1.1em 0;
-    margin-left: -230px;
+    margin-left: -170px;
     box-shadow: 5px 5px 25px gray;
 }
 
 .negativeRightImage {
     margin: 0.8em 0 0 1.5em;
-    margin-right: -180px;
+    margin-right: -170px;
     box-shadow: 5px 5px 15px gray;
 }
 
@@ -791,14 +791,26 @@ aside.sideMenu li a img {
 }
 
 .singleServices .jumboOverlay {
-    @extend %singleServicesOverlay;
+    @extend %blueOverlay;
+}
+
+.aboutHeader .jumboOverlay {
+    @extend %blueOverlay;
 }
 
 .contactHeader .jumboOverlay {
-    @extend %singleServicesOverlay;
+    @extend %blueOverlay;
+}
+
+.singleWork .jumboOverlay {
+    @extend %blueOverlay;
 }
 
 .servicesHeader .jumboOverlay {
+    @extend %greenOverlay;
+}
+
+.workHeader .jumboOverlay {
     @extend %greenOverlay;
 }
 
@@ -808,6 +820,18 @@ aside.sideMenu li a img {
 
 .singleServices .jumboOverlay {
     @extend %singleServices;
+}
+
+.singleWork {
+    @extend %singleWork;
+}
+
+.aboutHeader {
+    @extend %aboutHeader;
+}
+
+.workHeader {
+    @extend %workHeader;
 }
 
 .contactHeader {
@@ -848,6 +872,7 @@ aside.sideMenu li a img {
 
     .contentParagraphBlocks h2 {
     font-size: 25px;
+    margin-top: 1em;
     }
     .inner-header-blocks p {
     margin-top: 4.2em;

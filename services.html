@@ -5,28 +5,33 @@
     <title>Valtira | Services</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.lazyView.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel='stylesheet' type="text/css" href="css/animations.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 
 <!-- nav -->
 
+<div class="lazyView" style="visibility: hidden">
 <nav class="topNav">
     <ul>
         <li><a href="#" burger="01" class="hamburger-trigger"></a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html" class="brand"><img src="img/valtLogo.png" alt="valtiraLogo" width="17%" /> VALTIRA</a></li>
     </ul>
 </nav>
+</div>
 
 <!-- side popup nav -->
 
@@ -40,7 +45,7 @@
     </div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="">Approach</a>
+    <a href="approach.html">Approach</a>
     <a href="work.html">Work</a>
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
@@ -65,6 +70,7 @@
                         <div class="grn-underline"></div>
                         <p> Valtira has a unique approach to delivering robust web solutions. We work with your team &amp; offer the skills that compliment.</p>
                     </div>
+                    <a href="#next" class="down-anchor"><span></span></a>
                 </div>
             </div>
         </main>
@@ -72,6 +78,8 @@
 </header>
 
 <!-- main services boxes -->
+<div class="lazyView" style="visibility: hidden">
+<a name="next"></a>
 
     <div class="container">
         <div class="row">
@@ -82,17 +90,18 @@
             </div>
         </div>
     </div>
+</div>
 
 <!-- main services grid
 ================================================
 FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
 ==============================================-->
 
-<div class="lmfao">
+<div class="lmfao contentFade effect-1" id="contentFade">
     <!-- web development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su4.jpg" alt="img15"/>
+            <img src="img/services/user_experience.jpg" alt="img15"/>
             <figcaption>
                 <h2>Web development</h2></a>
                 <p>some cool description.</p>
@@ -103,7 +112,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <!-- web application development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su2.jpg" alt="img15"/>
+            <img src="img/services/app.jpg" alt="img15"/>
             <figcaption>
                 <h2>web Applications</h2>
                 <p>some cool description.</p>
@@ -114,7 +123,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <!-- web application development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su5.jpg" alt="img15"/>
+            <img src="img/services/creative.jpg" alt="img15"/>
             <figcaption>
                 <h2>Technology Integrations</h2>
                 <p>some cool description.</p>
@@ -125,7 +134,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <!-- web application development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su2.jpg" alt="img15"/>
+            <img src="img/services/cloud.png" alt="img15"/>
             <figcaption>
                 <h2>Cloud Solutions</h2>
                 <p>some cool description.</p>
@@ -136,7 +145,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <!-- web application development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su4.jpg" alt="img15"/>
+            <img src="img/services/cms.png" alt="img15"/>
             <figcaption>
                 <h2>Content Management</h2>
                 <p>some cool description.</p>
@@ -147,7 +156,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <!-- web application development -->
     <div class="grid">
         <figure class="effect-chico">
-            <img src="img/su2.jpg" alt="img15"/>
+            <img src="img/services/marketing.jpg" alt="img15"/>
             <figcaption>
                 <h2>Digital Marketing</h2>
                 <p>some cool description.</p>
@@ -156,21 +165,66 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
         </figure>
     </div>
 </div>
+<!-- prefooter -->
 
-<!-- content blocks -->
-
-    <main class="container">
+    <section class="container contact-div-trigger">
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 <div class="content-blocks">
-                    <h2>method to the madness</h2>
-                    <div class="grn-underline"></div>
-                    <p> Valtira has a unique approach to delivering robust web solutions. We work with your team &amp; offer the skills that compliment.</p>
-                    <a class="btn purp-btn btn-3 btn-3e">our approach</a>
+                    <h2>interested in learning more?</h2>
+                    <div class="prp-underline"></div>
+                    <p> If you have a complex web project that requires the best in design, development, or digital marketing, Valtira has the solution. Let us know how we can help and let's do work that matters.</p>
+                    <a class="btn purp-btn btn-3 btn-3e contact-btn-trigger">get in touch</a>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+<!-- hidden form -->
+
+    <section class="pop-up-contact-div">
+        <form id="theForm" class="simform" autocomplete="off">
+            <div class="simform-inner">
+                <ol class="questions">
+                    <li>
+                        <span><label for="q1">What's your favorite movie?</label></span>
+                        <input id="q1" name="q1" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q2">Where do you live?</label></span>
+                        <input id="q2" name="q2" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q3">What time do you got to work?</label></span>
+                        <input id="q3" name="q3" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q4">How do you like your veggies?</label></span>
+                        <input id="q4" name="q4" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q5">What book inspires you?</label></span>
+                        <input id="q5" name="q5" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q6">What's your profession?</label></span>
+                        <input id="q6" name="q6" type="text"/>
+                    </li>
+                </ol><!-- /questions -->
+                <button class="submit" type="submit">Send answers</button>
+                <div class="controls">
+                    <button class="next"></button>
+                    <div class="progress"></div>
+                    <span class="number">
+                        <span class="number-current"></span>
+                        <span class="number-total"></span>
+                    </span>
+                    <span class="error-message"></span>
+                </div><!-- / controls -->
+            </div><!-- /simform-inner -->
+            <span class="final-message"></span>
+        </form><!-- /simform -->
+    </section>
 
 <!-- footer -->
 
@@ -180,13 +234,13 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
             <ul class="lower-links">
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Approach</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -222,6 +276,7 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyView.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
@@ -229,4 +284,39 @@ FOR GRID: IMAGE SIZE MUST ALL BE SAME: 825 X 550
 <script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/pinwheel.js"></script>
+<script type="text/javascript" src="js/stepsForm.js"></script>
+<script>
+    $(document).ready(function () {
+
+    var theForm = document.getElementById( 'theForm' );
+
+    new stepsForm( theForm, {
+        onSubmit : function( form ) {
+            // hide form
+            classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+            /*
+            form.submit()
+            or
+            AJAX request (maybe show loading indicator while we don't have an answer..)
+            */
+
+            // let's just simulate something...
+            var messageEl = theForm.querySelector( '.final-message' );
+            messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+            classie.addClass( messageEl, 'show' );
+            }
+        });
+    $(".pop-up-contact-div").hide();
+    $(function() {
+            $(".contact-btn-trigger").click(function() {
+                $(".contact-div-trigger").hide();
+                $(".pop-up-contact-div").show();
+            });
+        });
+                $('.lazyView').lazyView();
+
+    });
+
+</script>
 </html>

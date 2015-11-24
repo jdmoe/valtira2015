@@ -1,3 +1,4 @@
+
 /* -----------------------------------------------------------------------------
 
 GENERAL STYLES FOR SIDE MENU
@@ -95,7 +96,7 @@ GENERAL STYLES FOR SIDE MENU
 .cbp-spmenu a {
     display: block;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     font-weight: 300;
@@ -1188,12 +1189,19 @@ h2.sl-trans-elems {
     transform: translateY(-50%);
 }
 
-.nav-fillpath a.prev {
+.nav-fillpath a.prev-slider {
     left: 0;
 }
 
-.nav-fillpath a.next {
+.nav-fillpath a.next-slider {
     right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-fillpath a.prev-slider,
+    .nav-fillpath a.next-slider {
+        display: none;
+    }
 }
 
 .nav-fillpath a svg {
@@ -1248,8 +1256,8 @@ h2.sl-trans-elems {
     transform-origin: 50% 0%;
 }
 
-.nav-fillpath a.next::before,
-.nav-fillpath a.next .icon-wrap::before {
+.nav-fillpath a.next-slider::before,
+.nav-fillpath a.next-slider .icon-wrap::before {
     -webkit-transform: translateX(-50%) rotate(135deg);
     transform: translateX(-50%) rotate(135deg);
     -webkit-transform-origin: 50% 0%;
@@ -1265,8 +1273,8 @@ h2.sl-trans-elems {
     transform-origin: 0 0;
 }
 
-.nav-fillpath a.next::after,
-.nav-fillpath a.next .icon-wrap::after {
+.nav-fillpath a.next-slider::after,
+.nav-fillpath a.next-slider .icon-wrap::after {
     -webkit-transform: translateX(-50%) rotate(45deg);
     transform: translateX(-50%) rotate(45deg);
     -webkit-transform-origin: 100% 0%;
@@ -1284,8 +1292,8 @@ h2.sl-trans-elems {
     transform: translateX(-50%) rotate(-125deg);
 }
 
-.nav-fillpath a.next:hover::before,
-.nav-fillpath a.next:hover .icon-wrap::before {
+.nav-fillpath a.next-slider:hover::before,
+.nav-fillpath a.next-slider:hover .icon-wrap::before {
     -webkit-transform: translateX(-50%) rotate(125deg);
     transform: translateX(-50%) rotate(125deg);
 }
@@ -1296,8 +1304,8 @@ h2.sl-trans-elems {
     transform: translateX(-50%) rotate(-55deg);
 }
 
-.nav-fillpath a.next:hover::after,
-.nav-fillpath a.next:hover .icon-wrap::after {
+.nav-fillpath a.next-slider:hover::after,
+.nav-fillpath a.next-slider:hover .icon-wrap::after {
     -webkit-transform: translateX(-50%) rotate(55deg);
     transform: translateX(-50%) rotate(55deg);
 }
@@ -1308,11 +1316,52 @@ h2.sl-trans-elems {
 VIDEO STYLES
 
 ----------------------------------------------------------------------------- */
+
+
 .vidWrap {
-    width:100%;
+    position: relative;
+    width:100vw;
     height:100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vidWrap {
+    background: url('../img/coffee.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+/*
 video#bgvid {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -1326,8 +1375,6 @@ video#bgvid {
     min-height: 800px;
     width: auto;
 }
-
-/*
 
 @media screen and (max-width: 2521px) {
  video#bgvid {
@@ -1772,7 +1819,7 @@ Form
   background: url("../img/contact-icons/cd-required.svg") no-repeat top right;
 }
 .cd-form .error-message p {
-  background: #E05350;
+  background: #5DCF5B;
   color: #ffffff;
   font-size: 1.4rem;
   text-align: center;
@@ -1934,4 +1981,553 @@ FLoating labels
   .js .floating-labels .cd-label {
     top: 20px;
   }
+}
+
+/* -----------------------------------------------------------------------------
+
+HIDDEN FORM
+
+----------------------------------------------------------------------------- */
+
+.simform {
+    position: relative;
+    margin: 0 auto;
+    padding: 2em 0;
+    max-width: 860px;
+    width: 100%;
+    text-align: left;
+    font-size: 2.5em;
+}
+
+.simform .submit {
+    display: none;
+}
+
+/* Question list style */
+.simform ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    -webkit-transition: height 0.4s;
+    transition: height 0.4s;
+}
+
+.simform ol:before {
+    content: '';
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.35em;
+}
+
+.questions li {
+    z-index: 100;
+    position: relative;
+    visibility: hidden;
+    height: 0;
+    -webkit-transition: visibility 0s 0.4s, height 0s 0.4s;
+    transition: visibility 0s 0.4s, height 0s 0.4s;
+}
+
+.questions li.current,
+.no-js .questions li {
+    visibility: visible;
+    height: auto;
+    -webkit-transition: none;
+    transition: none;
+}
+
+/* Labels */
+.questions li > span {
+    display: block;
+    overflow: hidden;
+}
+
+.questions li > span label {
+    color: #422544;
+    display: block;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.questions li.current > span label,
+.no-js .questions li > span label {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.show-next .questions li.current > span label {
+    -webkit-animation: moveUpFromDown 0.4s both;
+    animation: moveUpFromDown 0.4s both;
+}
+
+@-webkit-keyframes moveUpFromDown {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@keyframes moveUpFromDown {
+    from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+/* Input field */
+.questions input {
+    display: block;
+    margin: 0.3em 0 0 0;
+    padding: 0.5em 1em 0.5em 0.7em;
+    width: calc(100% - 2em);
+    border: none;
+    background: transparent;
+    color: #422544;
+    font-size: 1em;
+    line-height: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.questions .current input,
+.no-js .questions input {
+    opacity: 1;
+}
+
+.questions input:focus,
+.simform button:focus {
+    outline: none;
+}
+
+/* Next question button */
+.next {
+    position: absolute;
+    top: 3.7em;
+    right: 0;
+    bottom: 2.15em; /* padding-bottom of form plus progress bar height */
+    display: block;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background: none;
+    color: rgba(0,0,0,0.4);
+    text-align: center;
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+    pointer-events: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.next:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+.next::after {
+    content: "\f0a9";
+    color: #422544;
+    font-family: FontAwesome;
+}
+
+.next.show {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Progress bar */
+.simform .progress {
+    width: 0%;
+    height: 0.15em;
+    background: rgba(0,0,0,0.3);
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.simform .progress::before {
+    position: absolute;
+    top: auto;
+    width: 100%;
+    height: inherit;
+    background: rgba(0,0,0,0.05);
+    content: '';
+}
+
+/* Number indicator */
+.simform .number {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    margin: 0.4em 0;
+    width: 3em;
+    font-weight: 700;
+    font-size: 0.4em;
+    color: #422544;
+}
+
+.simform .number:after {
+    position: absolute;
+    left: 50%;
+    content: '/';
+    opacity: 0.4;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.simform .number span {
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+
+.simform .number .number-current {
+    float: left;
+}
+
+.simform .number-next {
+    position: absolute;
+    left: 0;
+}
+
+.simform.show-next .number-current {
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.simform.show-next .number-next {
+    -webkit-animation: moveUpFromDown 0.4s both;
+    animation: moveUpFromDown 0.4s both;
+}
+
+/* Error and final message */
+.simform .error-message,
+.simform .final-message {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 2.7em;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.simform .error-message {
+    padding: 0.4em 3.5em 0 0;
+    width: 100%;
+    color: #5DCF5B;
+    font-style: italic;
+    font-size: 0.6em;
+}
+
+.final-message {
+    top: 30%;
+    left: 0;
+    padding: 0.2em;
+    width: 100%;
+    color: #422544;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.error-message.show,
+.final-message.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.final-message.show {
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+/* Final hiding of form / showing message */
+.simform-inner.hide {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+/* No JS Fallback */
+.no-js .simform {
+    font-size: 1.75em;
+}
+
+.no-js .questions li {
+    padding: 0 0 2em;
+}
+
+.no-js .simform .submit {
+    display: block;
+    float: right;
+    padding: 10px 20px;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.4);
+}
+
+.no-js .simform .controls {
+    display: none;
+}
+
+/* Remove IE clear cross */
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+/* Adjust form for smaller screens */
+@media screen and (max-width: 44.75em) {
+    .simform {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 33.5625em) {
+    .simform {
+        font-size: 1.7em;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+
+HIDDEN FORM CONT.
+
+----------------------------------------------------------------------------- */
+
+.codrops-header {
+    margin: 0 auto;
+    padding: 3em 1em;
+    text-align: center;
+    color: rgba(0,0,0,0.35);
+}
+
+.codrops-header h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.codrops-header h1 span {
+    display: block;
+    padding: 0 0 0.6em 0.1em;
+    font-size: 0.6em;
+    opacity: 0.7;
+}
+
+/* To Navigation Style */
+.codrops-top {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.69em;
+    line-height: 2.2;
+}
+
+.codrops-top a {
+    display: inline-block;
+    padding: 0 1em;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.codrops-top span.right {
+    float: right;
+}
+
+.codrops-top span.right a {
+    display: block;
+    float: left;
+}
+
+.codrops-icon:before {
+    content: "\f09b";
+    font-family: FontAwesome;
+}
+
+.codrops-icon-drop:before {
+    content: "\f09b";
+    font-family: FontAwesome;
+}
+
+.codrops-icon-prev:before {
+    content: "\f09b";
+    font-family: FontAwesome;
+}
+
+section.related {
+    padding: 3em 1em 4em;
+    background: #465650;
+    color: rgba(0,0,0,0.4);
+    font-size: 1.5em;
+}
+
+.related > a {
+    max-width: 80%;
+    border: 2px solid rgba(0,0,0,0.3);
+    display: inline-block;
+    text-align: center;
+    margin: 20px 10px;
+    padding: 25px;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.related a:hover {
+    border-color: rgba(0,0,0,0.6);
+}
+
+.related a img {
+    max-width: 100%;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.related a:hover img,
+.related a:active img {
+    opacity: 1;
+}
+
+.related a h3 {
+    margin: 0;
+    padding: 0.5em 0 0.3em;
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 0.75em;
+    text-align: left;
+}
+
+@media screen and (max-width: 44.75em) {
+    section { padding: 1em 2em; }
+}
+
+@media screen and (max-width: 25em) {
+    .codrops-header { font-size: 0.8em; }
+    section.related { font-size: 1.2em; }
+    .codrops-icon span { display: none; }
+}
+
+/* -----------------------------------------------------------------------------
+
+OFFSET IMAGES
+
+----------------------------------------------------------------------------- */
+
+.left-offset,
+.right-offset {
+    width: 105%;
+    position: relative;
+    box-shadow: 5px 5px 15px gainsboro;
+}
+
+.left-offset {
+    top: -2em;
+    left: 5em;
+}
+
+.right-offset {
+    top: 4em;
+    right: 5em;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .left-offset {
+        width: 100%;
+        position: static;
+    }
+
+    .right-offset {
+        display: none;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+
+SCROLL DOWN
+
+----------------------------------------------------------------------------- */
+
+.down-anchor span {
+    position: absolute;
+    bottom: -9em;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.down-anchor span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+.down-anchor span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: sdb 3s infinite;
+    animation: sdb 3s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }

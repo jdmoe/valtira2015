@@ -5,10 +5,11 @@
     <title>Valtira | Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.lazyView.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel='stylesheet' type="text/css" href="css/animations.css" />
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,20 +18,19 @@
 <body>
 
 <!-- nav -->
-
+<div class="lazyView" style="visibility: hidden">
 <nav class="topNav">
     <ul>
         <li><a href="#" burger="01" class="hamburger-trigger"></a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="index.html" class="brand"><img src="img/valtLogo.png" alt="valtiraLogo" width="17%" /> VALTIRA</a></li>
     </ul>
 </nav>
-
+</div>
 <!-- side popup nav -->
 
 <aside class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -43,7 +43,7 @@
     </div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="">Approach</a>
+    <a href="approach.html">Approach</a>
     <a href="work.html">Work</a>
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
@@ -57,29 +57,27 @@
 </aside>
 
 <!-- header video -->
-
 <div class="vidWrap">
-    <div class="out-video">
-        <video autoplay loop muted poster="img/coffee.jpg" id="bgvid" width="100%" height="100%">
-            <source src="videos/agile.mp4" />
-            <!-- <source src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" type="video/mp4"/> -->
+    <div class="jumboOverlay">
+        <!-- to change poster homepage image on mobile
+        change the 'fullscreen-bg__video' class -->
+        <div class="lazyView" style="visibility: hidden">
+        <video loop muted autoplay poster="" class="fullscreen-bg__video">
+            <source src="videos/agile.mp4" type="video/mp4">
         </video>
-        <div class="jumboOverlay">
-            <section class="homepageHeader">
-                <h1>Welcome to Valtira</h1>
-                <div class="grn-underline"></div>
-                <p>We do work that matters</p>
-            </section>
-            <div class="header-blocks">
-                <a href="#next"><div class="down-button"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
-            </div>
+        </div>
+        <section class="homepageHeader">
+            <h1>Welcome to Valtira</h1>
+            <div class="grn-underline"></div>
+            <p>We do work that matters</p>
+        </section>
+        <div class="header-blocks">
+            <a href="#next"><div class="down-button"><i class="glyphicon glyphicon-chevron-down fa-2x"></i></div></a>
         </div>
     </div>
 </div>
-
-
 <!-- content blocks -->
-
+<div class="lazyView" style="visibility: hidden">
 <a name="next"></a>
 <section class="container">
     <div class="row">
@@ -95,9 +93,9 @@
         </div>
     </div>
 </section>
-
+</div>
 <!-- pinwheel -->
-
+<div class="lazyView" style="visibility: hidden">
 <div class="pinwheel_slider">
     <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
         <div class="pinwheel_slideri carousel-feature">
@@ -145,7 +143,7 @@
             </div>
         </div>
     </section>
-
+</div>
 <!-- slit slider -->
 
     <div class="dynamic-containers demo-1">
@@ -179,10 +177,10 @@
             </div>
 
             <nav class="nav-fillpath" id="nav-arrows">
-                <a class="prev" href="/item1">
+                <a class="prev-slider" href="/item1">
                     <span class="icon-wrap"></span>
                 </a>
-                <a class="next" href="/item3">
+                <a class="next-slider" href="/item3">
                     <span class="icon-wrap"></span>
                 </a>
             </nav>
@@ -199,18 +197,65 @@
 
 <!-- prefooter -->
 
-    <section class="container">
+    <section class="container contact-div-trigger">
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 <div class="content-blocks">
                     <h2>interested in learning more?</h2>
                     <div class="prp-underline"></div>
                     <p> If you have a complex web project that requires the best in design, development, or digital marketing, Valtira has the solution. Let us know how we can help and let's do work that matters.</p>
-                    <a class="btn purp-btn btn-3 btn-3e">get in touch</a>
+                    <a class="btn purp-btn btn-3 btn-3e contact-btn-trigger">get in touch</a>
                 </div>
             </div>
         </div>
     </section>
+
+<!-- hidden form -->
+
+    <section class="pop-up-contact-div">
+        <form id="theForm" class="simform" autocomplete="off">
+            <div class="simform-inner">
+                <ol class="questions">
+                    <li>
+                        <span><label for="q1">What's your favorite movie?</label></span>
+                        <input id="q1" name="q1" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q2">Where do you live?</label></span>
+                        <input id="q2" name="q2" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q3">What time do you got to work?</label></span>
+                        <input id="q3" name="q3" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q4">How do you like your veggies?</label></span>
+                        <input id="q4" name="q4" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q5">What book inspires you?</label></span>
+                        <input id="q5" name="q5" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q6">What's your profession?</label></span>
+                        <input id="q6" name="q6" type="text"/>
+                    </li>
+                </ol><!-- /questions -->
+                <button class="submit" type="submit">Send answers</button>
+                <div class="controls">
+                    <button class="next"></button>
+                    <div class="progress"></div>
+                    <span class="number">
+                        <span class="number-current"></span>
+                        <span class="number-total"></span>
+                    </span>
+                    <span class="error-message"></span>
+                </div><!-- / controls -->
+            </div><!-- /simform-inner -->
+            <span class="final-message"></span>
+        </form><!-- /simform -->
+    </section>
+
 
 <!-- footer -->
 
@@ -220,13 +265,13 @@
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
             <ul class="lower-links">
-            <li><a href="#">Work</a></li>
+            <li><a href="work.html">Work</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#">Approach</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -260,6 +305,7 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyView.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
@@ -267,4 +313,40 @@
 <script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/pinwheel.js"></script>
+<script type="text/javascript" src="js/stepsForm.js"></script>
+<script>
+    $(document).ready(function () {
+
+    var theForm = document.getElementById( 'theForm' );
+
+    new stepsForm( theForm, {
+        onSubmit : function( form ) {
+            // hide form
+            classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+            /*
+            form.submit()
+            or
+            AJAX request (maybe show loading indicator while we don't have an answer..)
+            */
+
+            // let's just simulate something...
+            var messageEl = theForm.querySelector( '.final-message' );
+            messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+            classie.addClass( messageEl, 'show' );
+            }
+        });
+    $(".pop-up-contact-div").hide();
+    $(function() {
+            $(".contact-btn-trigger").click(function() {
+                $(".contact-div-trigger").hide();
+                $(".pop-up-contact-div").show();
+            });
+        });
+
+        $('.lazyView').lazyView();
+
+    });// end scripts
+
+</script>
 </html>
