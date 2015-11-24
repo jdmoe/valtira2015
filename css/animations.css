@@ -1351,7 +1351,7 @@ VIDEO STYLES
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 794px) {
   .vidWrap {
     background: url('../img/coffee.jpg') center center / cover no-repeat;
   }

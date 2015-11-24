@@ -96,8 +96,8 @@ $link-hovered: #381E3A;
     left: 0;
     @include cover-background('../img/su1.jpg');
   }
-    %right-about-image {
-    display: none;
+  %right-about-image {
+  display: none;
   }
   %right-content-image {
     display: none;
@@ -109,7 +109,6 @@ $link-hovered: #381E3A;
 }
 
 %content-caption-wrapper {
-  background: orange;
   height: 30px;
   width: 50vw;
   position: relative;

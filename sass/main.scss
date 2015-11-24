@@ -205,7 +205,6 @@ aside.sideMenu li a img {
     display: table-cell;
     width: 33.33333%;
     height: 50%;
-    background: red;
     float: left;
     cursor: pointer;
     @include transition(0.2s);
@@ -281,7 +280,6 @@ aside.sideMenu li a img {
     display: table-cell;
     width: 50%;
     height: 50%;
-    background: red;
     float: left;
     cursor: pointer;
     @include transition(0.2s);
@@ -560,7 +558,7 @@ aside.sideMenu li a img {
 }
 
 .lower-links li a:hover {
-    color: $valblue;
+    color: $valgreen;
     @include transition(0.4s)
 }
 
