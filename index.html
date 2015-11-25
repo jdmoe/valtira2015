@@ -11,12 +11,8 @@
     <meta property="og:description" content="We challenge benchmarks &amp; push boundaries"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.lazyView.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel='stylesheet' type="text/css" href="css/animations.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -100,7 +96,6 @@
 </section>
 </div>
 <!-- pinwheel -->
-<div class="lazyView" style="visibility: hidden">
 <div class="pinwheel_slider">
     <div id="pinwheel_slider_1" class="pinwheel_slider_handle">
         <div class="pinwheel_slideri carousel-feature">
@@ -143,7 +138,7 @@
                     <h2>method to the madness</h2>
                     <div class="grn-underline"></div>
                     <p>Valtira provides a unique and proven approach through all phases of your project. Our goal is to provide a framework for an iterative, phased process which allows for feedback and the ability to adapt to shifting priorities.</p>
-                    <a class="btn green-btn btn-2 btn-2e">our approach</a>
+                    <a class="btn green-btn btn-2 btn-2e" href="approach.html">our approach</a>
                 </div>
             </div>
         </div>
@@ -310,47 +305,14 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.lazyView.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.lazyView.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript" src="js/slider/jquery.ba-cond.min.js"></script>
-<script type="text/javascript" src="js/slider/jquery.slitslider.js"></script>
+<script type="text/javascript" src="js/jquery.slitslider.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/pinwheel.js"></script>
 <script type="text/javascript" src="js/stepsForm.js"></script>
-<script>
-    $(document).ready(function () {
-
-    var theForm = document.getElementById( 'theForm' );
-
-    new stepsForm( theForm, {
-        onSubmit : function( form ) {
-            // hide form
-            classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-
-            /*
-            form.submit()
-            or
-            AJAX request (maybe show loading indicator while we don't have an answer..)
-            */
-
-            // let's just simulate something...
-            var messageEl = theForm.querySelector( '.final-message' );
-            messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-            classie.addClass( messageEl, 'show' );
-            }
-        });
-    $(".pop-up-contact-div").hide();
-    $(function() {
-            $(".contact-btn-trigger").click(function() {
-                $(".contact-div-trigger").hide();
-                $(".pop-up-contact-div").show();
-            });
-        });
-
-        $('.lazyView').lazyView();
-
-    });// end scripts
-</script>
 </html>

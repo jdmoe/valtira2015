@@ -61,7 +61,7 @@
 
             setTimeout(doProcess, 5);
         }
-    };
+    }
 
     function addProcess(func) {
 
@@ -69,7 +69,7 @@
 
         if (!isProcessing)
             doProcess();
-    };
+    }
 
     $.fn.lazyView = function () {
 
@@ -87,7 +87,7 @@
 
                         var seenWrapper = function () {
                             doSeen($element);
-                        }
+                        };
 
                         setSeen($element);
                         addProcess(seenWrapper);
