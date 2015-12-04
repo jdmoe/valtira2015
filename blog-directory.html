@@ -1,0 +1,65 @@
+<%@ taglib uri="http://www.dasein.org/taglibs/util" prefix="dsn" %>
+
+<div id="main" class="blog-home">
+
+<section id="content">
+	<div class="row">
+		<div id="posts">
+				
+				<dsn:collection var="articles" />
+				
+				<c:choose>
+					<c:when test="${not empty param.month}">
+			    	<c:set var="m" value="${param.month}" />
+			    	<dsn:calendar var="c" time="${m}" />
+			    	<cms:pageFilter var="results" parentPage="${cms.page}" filter="${c}" />
+		
+			      <c:forEach var="r" items="${results}">
+			        <dsn:collection collection="${articles}" item="${r.publishedVersion}" />
+			      </c:forEach>
+			    </c:when>
+			    <c:when test="${not empty param.tag}">
+			    	<c:set var="t" value="${param.tag}" />
+			    	<cms:pageFilter var="results" parentPage="${cms.page}" filter="${t}" mode="TAG" />
+			      
+			      <c:forEach var="r" items="${results}">
+			        <dsn:collection collection="${articles}" item="${r.publishedVersion}" />
+			      </c:forEach>
+			    </c:when>
+					
+					<c:otherwise> 
+						<c:set var="c" value="0" />
+						<c:forEach var="link" items="${blog.links}" varStatus="status" >
+							
+							<c:if test="${link.navigable && c < 5 && not empty link.page.content.source}">
+								<c:set var="article" value="${link.page}" />
+								<dsn:collection collection="${articles}" item="${article}" />
+								<c:set var="c" value="${c + 1}" />
+							</c:if>
+							
+						</c:forEach>
+					</c:otherwise>  
+				</c:choose>
+				
+				<c:set var="c" value="0" />
+				<c:forEach var="article" items="${articles}">
+					
+					<article <c:if test="${c == 4}">class="last"</c:if>>
+						<cms:url var="url" target="${article}" />
+						<h3><a  class="articleTitle" href="<c:out value="${url}" />"><c:out value="${article.longTitle[cms.locale]}" /></a></h3>
+						
+						<cms:compile var="content" content="${article.description}" linksTagged="false" />
+						<c:out value="${content}" escapeXml="false" />
+						
+						<a class="articleReadMore" href="<c:out value="${url}" />">Read full post</a>
+					</article>
+					<c:set var="c" value="${c + 1}" />
+				</c:forEach>	
+		</div>
+	</div>
+
+</section>
+
+<%-- Bring in Contact Us Module --%>
+<cms:url var="turl" type="template" objectId="61603" />
+<c:import url="${turl}" charEncoding="utf-8" />
